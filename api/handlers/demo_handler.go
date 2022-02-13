@@ -12,8 +12,8 @@ type DemoHandler struct {
 	demoService service.IDemoService
 }
 
-func NewDemoHandler(demoService service.IDemoService) *DemoHandler {
-	return &DemoHandler{
+func NewDemoHandler(demoService service.IDemoService) DemoHandler {
+	return DemoHandler{
 		demoService: demoService,
 	}
 }
