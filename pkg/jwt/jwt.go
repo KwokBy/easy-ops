@@ -20,28 +20,27 @@ type Token struct {
 }
 
 // New 创建一个新的Token
-func New() string {
+func New(data Data) (string, error) {
 	// 使用SigningMethodHS256生成签名的方法
 	claims := jwt.NewWithClaims(jwt.SigningMethodHS256, Token{
 		&jwt.RegisteredClaims{
+			// 过期时间
 			ExpiresAt: jwt.NewNumericDate(time.Now().Add(time.Hour * 24)),
-			IssuedAt:  jwt.NewNumericDate(time.Now()),
-			NotBefore: jwt.NewNumericDate(time.Now()),
+			// 签名时间
+			IssuedAt: jwt.NewNumericDate(time.Now()),
 		},
-		Data{
-			1,
-		},
+		data,
 	})
 	// TODO 签名用配置文件管理
 	token, err := claims.SignedString([]byte("secret"))
 	if err != nil {
-		panic(err)
+		return "", err
 	}
-	return token
+	return token, nil
 }
 
 // IsValid 校验token是否有效
-func IsValid(token string) bool {
+func IsValid(token string) (bool, error) {
 	tt, err := jwt.ParseWithClaims(token, &Token{}, func(token *jwt.Token) (interface{}, error) {
 		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
 			return nil, fmt.Errorf("unexpected signing method: %v", token.Header["alg"])
@@ -51,12 +50,12 @@ func IsValid(token string) bool {
 	})
 	if err != nil {
 		fmt.Println(err)
-		return false
+		return false, err
 	}
 	if !tt.Valid {
-		return false
+		return false, nil
 	}
-	return true
+	return true, nil
 }
 
 // GetUserIDFromToken 获取用户ID
