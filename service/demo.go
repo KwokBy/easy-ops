@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+
 	"github.com/KwokBy/easy-ops/repo"
 )
 
@@ -15,15 +16,15 @@ func NewDemoService(demoRepo repo.IDemoRepo) IDemoService {
 	}
 }
 
-func (d *demoService) GetLongDemo(ctx context.Context) (string,error) {
-	demos,err:= d.demoRepo.GetDemos(ctx)
-	if err!= nil {
-		return "",err
+func (d *demoService) GetLongDemo(ctx context.Context) (string, error) {
+	demos, err := d.demoRepo.GetDemos(ctx)
+	if err != nil {
+		return "", err
 	}
-	for _,demo := range demos {
+	for _, demo := range demos {
 		if len(demo.Name) > 10 {
-			return demo.Name,nil
+			return demo.Name, nil
 		}
 	}
-	return "" ,nil
+	return "", nil
 }

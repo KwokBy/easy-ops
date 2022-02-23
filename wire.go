@@ -19,6 +19,7 @@ func InitServer() *app.Server {
 		repo.NewMysqlDemoRepo,
 		service.NewDemoService,
 		handlers.NewDemoHandler,
+		handlers.NewUserHandler,
 		api.NewRouter,
 		app.NewServer,
 		app.NewGinEngine,

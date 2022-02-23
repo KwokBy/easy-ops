@@ -23,7 +23,8 @@ func InitServer() *app.Server {
 	iDemoRepo := repo.NewMysqlDemoRepo(db)
 	iDemoService := service.NewDemoService(iDemoRepo)
 	demoHandler := handlers.NewDemoHandler(iDemoService)
-	router := api.NewRouter(demoHandler)
+	userHandler := handlers.NewUserHandler()
+	router := api.NewRouter(demoHandler, userHandler)
 	server := app.NewServer(engine, router)
 	return server
 }
