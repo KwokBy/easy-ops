@@ -1,0 +1,2 @@
+2022/02/23 - 17:05:37.062	[31mfatal[0m	/Users/doubleguo/code/personal/easy-ops/pkg/zlog/zlog.go:102	demo: %+vguoguoliang
+2022/02/23 - 17:21:23.814	[31merror[0m	/Users/doubleguo/code/personal/easy-ops/pkg/zlog/zlog.go:78	test error
