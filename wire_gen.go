@@ -12,6 +12,7 @@ import (
 	"github.com/KwokBy/easy-ops/app"
 	"github.com/KwokBy/easy-ops/repo"
 	"github.com/KwokBy/easy-ops/service"
+	"github.com/google/wire"
 )
 
 // Injectors from wire.go:
@@ -24,7 +25,14 @@ func InitServer() *app.Server {
 	iDemoService := service.NewDemoService(iDemoRepo)
 	demoHandler := handlers.NewDemoHandler(iDemoService)
 	userHandler := handlers.NewUserHandler()
-	router := api.NewRouter(demoHandler, userHandler)
-	server := app.NewServer(engine, router)
+	apiRouter := &api.Router{
+		Demo: demoHandler,
+		User: userHandler,
+	}
+	server := app.NewServer(engine, apiRouter)
 	return server
 }
+
+// wire.go:
+
+var router = wire.NewSet(wire.Struct(new(api.Router), "*"))

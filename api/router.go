@@ -9,27 +9,19 @@ import (
 )
 
 type Router struct {
-	demo handlers.DemoHandler
-	user handlers.UserHandler
+	Demo handlers.DemoHandler
+	User handlers.UserHandler
 }
 
 func (r *Router) With(engine *gin.Engine) {
 	demo := engine.Group("/api/v1/demo", JWTAuth())
 	{
-		demo.GET("/", r.demo.GetLongDemo)
+		demo.GET("/", r.Demo.GetLongDemo)
 	}
 	user := engine.Group("/api/v1/user")
 	{
-		user.POST("/login", r.user.Login)
+		user.POST("/login", r.User.Login)
 	}
-}
-
-func NewRouter(demo handlers.DemoHandler, user handlers.UserHandler) *Router {
-	router := &Router{
-		demo: demo,
-		user: user,
-	}
-	return router
 }
 
 func JWTAuth() gin.HandlerFunc {

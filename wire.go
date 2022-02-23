@@ -12,6 +12,9 @@ import (
 	"github.com/google/wire"
 )
 
+// router 解决参数过多
+var router = wire.NewSet(wire.Struct(new(api.Router), "*"))
+
 // InitServer Injectors from wire.go:
 func InitServer() *app.Server {
 	wire.Build(
@@ -20,7 +23,7 @@ func InitServer() *app.Server {
 		service.NewDemoService,
 		handlers.NewDemoHandler,
 		handlers.NewUserHandler,
-		api.NewRouter,
+		router,
 		app.NewServer,
 		app.NewGinEngine,
 	)
