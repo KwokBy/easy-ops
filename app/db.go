@@ -10,10 +10,10 @@ import (
 func InitGormMySql() *gorm.DB {
 	db, err := gorm.Open(mysql.Open(fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=True&loc=Local&&timeout=30s",
 		"root",
-		"12345678",
+		"Gl987963951",
 		"127.0.0.1",
 		3306,
-		"kwok_ops",
+		"easy_ops",
 	)), &gorm.Config{})
 	if err != nil {
 		panic(err)

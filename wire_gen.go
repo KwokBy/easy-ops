@@ -35,4 +35,5 @@ func InitServer() *app.Server {
 
 // wire.go:
 
+// router 解决参数过多
 var router = wire.NewSet(wire.Struct(new(api.Router), "*"))
