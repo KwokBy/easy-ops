@@ -1,9 +1,11 @@
 package handlers
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/KwokBy/easy-ops/pkg/zlog"
+	"github.com/gorilla/websocket"
 
 	"github.com/KwokBy/easy-ops/service"
 	"github.com/gin-gonic/gin"
@@ -33,4 +35,25 @@ func (d *DemoHandler) GetLongDemo(c *gin.Context) {
 	zlog.Debugf("demo: %+v", demo)
 	zlog.Warnf("demo: %+v", demo)
 	c.JSON(http.StatusOK, demo)
+}
+
+var wsupgrader = websocket.Upgrader{
+	ReadBufferSize:  1024,
+	WriteBufferSize: 1024,
+}
+
+func (d *DemoHandler) Wshandler(c *gin.Context) {
+	conn, err := wsupgrader.Upgrade(c.Writer, c.Request, nil)
+	if err != nil {
+		fmt.Println("Failed to set websocket upgrade: %w", err)
+		return
+	}
+
+	for {
+		t, msg, err := conn.ReadMessage()
+		if err != nil {
+			break
+		}
+		conn.WriteMessage(t, msg)
+	}
 }

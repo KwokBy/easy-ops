@@ -14,14 +14,19 @@ type Router struct {
 }
 
 func (r *Router) With(engine *gin.Engine) {
-	demo := engine.Group("/api/v1/demo", JWTAuth())
+	demo := engine.Group("/api/v1/demo")
 	{
 		demo.GET("/", r.Demo.GetLongDemo)
+		demo.GET("/ws", r.Demo.Wshandler)
 	}
 	user := engine.Group("/api/v1/user")
 	{
 		user.POST("/login", r.User.Login)
 	}
+	engine.LoadHTMLFiles("index.html")
+	engine.GET("/", func(c *gin.Context) {
+		c.HTML(200, "index.html", nil)
+	})
 }
 
 func JWTAuth() gin.HandlerFunc {
