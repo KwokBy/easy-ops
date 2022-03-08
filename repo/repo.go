@@ -41,5 +41,19 @@ type IHostRepo interface {
 
 // IMirrorRepo represent the mirror repository contract
 type IMirrorRepo interface {
-	
+	// GetMirrorsByAdmin return mirrors by admin
+	GetMirrorsByAdmin(ctx context.Context, admin string) ([]models.Mirror, error)
+	// AddAdmin add admin
+	AddAdmin(ctx context.Context, mirrorId, admin string) error
+	// AddMirror add mirror
+	AddMirror(ctx context.Context, mirror models.Mirror) error
+	// DeleteMirror delete mirror
+	DeleteMirror(ctx context.Context, id int64) error
+}
+
+type ITaskRepo interface {
+	// GetTasksByUsername return tasks by username
+	GetTasksByUsername(ctx context.Context, username string) ([]models.Task, error)
+	// AddTask add task
+	AddTask(ctx context.Context, task models.Task) error
 }
