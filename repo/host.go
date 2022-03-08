@@ -11,7 +11,7 @@ type mysqlHostRepo struct {
 	DB *gorm.DB
 }
 
-func NewMysqlHostRepo(DB *gorm.DB) IHostRepo {
+func NewMysqlHostRepo(DB *gorm.DB) HostRepo {
 	return &mysqlHostRepo{DB}
 }
 

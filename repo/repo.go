@@ -13,8 +13,8 @@ type IDemoRepo interface {
 	GetDemos(ctx context.Context) ([]models.Demo, error)
 }
 
-// IUserRepo represent the user repository contract
-type IUserRepo interface {
+// UserRepo represent the user repository contract
+type UserRepo interface {
 	// GetUsersByNameAndPwd return user by name and pwd
 	GetUsersByNameAndPwd(ctx context.Context, name, pwd string) (models.User, error)
 	// UpdateUser update user
@@ -27,8 +27,8 @@ type IUserRepo interface {
 	GetUsers(ctx context.Context) ([]models.User, error)
 }
 
-// IHostRepo represent the host repository contract
-type IHostRepo interface {
+// HostRepo represent the host repository contract
+type HostRepo interface {
 	// GetHostsByUsername return hosts by username
 	GetHostsByUsername(ctx context.Context, username string) ([]models.Host, error)
 	// AddHost add host
@@ -39,8 +39,8 @@ type IHostRepo interface {
 	DeleteHost(ctx context.Context, id int64) error
 }
 
-// IMirrorRepo represent the mirror repository contract
-type IMirrorRepo interface {
+// MirrorRepo represent the mirror repository contract
+type MirrorRepo interface {
 	// GetMirrorsByAdmin return mirrors by admin
 	GetMirrorsByAdmin(ctx context.Context, admin string) ([]models.Mirror, error)
 	// AddAdmin add admin
@@ -51,7 +51,7 @@ type IMirrorRepo interface {
 	DeleteMirror(ctx context.Context, id int64) error
 }
 
-type ITaskRepo interface {
+type TaskRepo interface {
 	// GetTasksByUsername return tasks by username
 	GetTasksByUsername(ctx context.Context, username string) ([]models.Task, error)
 	// AddTask add task

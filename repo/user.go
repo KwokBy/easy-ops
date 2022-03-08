@@ -11,7 +11,7 @@ type mysqlUserRepo struct {
 	DB *gorm.DB
 }
 
-func NewMysqlUserRepo(DB *gorm.DB) IUserRepo {
+func NewMysqlUserRepo(DB *gorm.DB) UserRepo {
 	return &mysqlUserRepo{DB}
 }
 

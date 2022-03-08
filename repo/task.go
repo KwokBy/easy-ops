@@ -11,7 +11,7 @@ type mysqlTaskRepo struct {
 	DB *gorm.DB
 }
 
-func NewMysqlTaskRepo(DB *gorm.DB) ITaskRepo {
+func NewMysqlTaskRepo(DB *gorm.DB) TaskRepo {
 	return &mysqlTaskRepo{DB}
 }
 

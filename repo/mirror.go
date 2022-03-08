@@ -12,7 +12,7 @@ type mysqlMirrorRepo struct {
 	DB *gorm.DB
 }
 
-func NewMysqlMirrorRepo(DB *gorm.DB) IMirrorRepo {
+func NewMysqlMirrorRepo(DB *gorm.DB) MirrorRepo {
 	return &mysqlMirrorRepo{DB}
 }
 
