@@ -25,6 +25,8 @@ type UserRepo interface {
 	DeleteUser(ctx context.Context, id int64) error
 	// GetUsers return all users
 	GetUsers(ctx context.Context) ([]models.User, error)
+	// GetUserByName return user by name
+	GetUserByName(ctx context.Context, name string) (models.User, error)
 }
 
 // HostRepo represent the host repository contract

@@ -58,3 +58,13 @@ func (u *mysqlUserRepo) GetUsers(ctx context.Context) ([]models.User, error) {
 	}
 	return users, nil
 }
+
+// GetUserByName 获取用户
+func (u *mysqlUserRepo) GetUserByName(ctx context.Context, name string) (
+	models.User, error) {
+	var user models.User
+	if err := u.DB.Model(user).Where("user_name = ?", name).Error; err != nil {
+		return models.User{}, err
+	}
+	return user, nil
+}
