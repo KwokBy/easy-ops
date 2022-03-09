@@ -10,6 +10,9 @@ type Host struct {
 	Name        string    `gorm:"column:name" json:"name" form:"name"`
 	Desc        string    `gorm:"column:desc" json:"desc" form:"desc"`
 	Port        int64     `gorm:"column:port" json:"port" form:"port"`
+	Password    string    `gorm:"column:password" json:"password" form:"password"`
+	SSHType     string    `gorm:"column:ssh_type" json:"ssh_type" form:"ssh_type"`
+	SSHKeyPath  string    `gorm:"column:ssh_key_path" json:"ssh_key_path" form:"ssh_key_path"`
 	UpdatedTime time.Time `gorm:"column:updated_time" json:"updated_time" form:"updated_time"`
 	CreatedTime time.Time `gorm:"column:created_time" json:"created_time" form:"created_time"`
 }

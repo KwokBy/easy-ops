@@ -32,7 +32,7 @@ func (u *userService) Login(ctx context.Context, username, password string) (mod
 		zlog.Errorf("[Login] GetUsersByNameAndPwd error: user not found")
 		return user, fmt.Errorf("用户名或密码错误/用户不存在")
 	}
-	token, err := jwt.New(jwt.Data{UserID: 1})
+	token, err := jwt.New(jwt.Data{UserID: user.ID})
 	if err != nil {
 		zlog.Errorf("[Login] 获取token失败: %s", err.Error())
 		return user, fmt.Errorf("获取token失败: %s", err.Error())
