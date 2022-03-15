@@ -10,8 +10,9 @@ import (
 )
 
 type Router struct {
-	Demo handlers.DemoHandler
-	User handlers.UserHandler
+	Demo  handlers.DemoHandler
+	User  handlers.UserHandler
+	WsSsh handlers.WsSshHandler
 }
 
 func (r *Router) With(engine *gin.Engine) {
@@ -24,10 +25,10 @@ func (r *Router) With(engine *gin.Engine) {
 	{
 		user.POST("/login", r.User.Login)
 	}
-	engine.LoadHTMLFiles("index.html")
-	engine.GET("/", func(c *gin.Context) {
-		c.HTML(200, "index.html", nil)
-	})
+	// engine.LoadHTMLFiles("index.html")
+	// engine.GET("/", func(c *gin.Context) {
+	// 	c.HTML(200, "index.html", nil)
+	// })
 	engine.GET("/getAsyncRoutes", func(c *gin.Context) {
 		response.OKWithData([]PermissionRouter{
 			{
@@ -65,6 +66,10 @@ func (r *Router) With(engine *gin.Engine) {
 		},
 			"获取成功", c)
 	})
+	wsSsh := engine.Group("/api/v1/ws")
+	{
+		wsSsh.GET("/ssh", r.WsSsh.WSSSH)
+	}
 }
 
 type PermissionRouter struct {

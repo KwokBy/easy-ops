@@ -4,3 +4,538 @@
 2022/02/23 - 17:19:37.225	[34minfo[0m	/Users/doubleguo/code/personal/easy-ops/pkg/zlog/zlog.go:66	demo: guoguoliang
 2022/03/05 - 15:31:04.570	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	demo: 
 2022/03/08 - 23:45:25.614	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	demo: 
+2022/03/14 - 11:35:26.602	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	code
+env
+
+2022/03/14 - 17:57:58.033	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	code
+env
+
+2022/03/15 - 17:04:01.686	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"l"}
+2022/03/15 - 17:04:01.911	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"l"}
+2022/03/15 - 17:04:01.911	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:04:01.912	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:04:01.958	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:04:01.960	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:04:29.263	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\u0016"}
+2022/03/15 - 17:04:29.264	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\u0016"}
+2022/03/15 - 17:04:48.621	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: 
+2022/03/15 - 17:04:52.935	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: 
+2022/03/15 - 17:05:13.391	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"ls"}
+2022/03/15 - 17:05:14.238	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:05:14.239	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:05:20.781	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"ls"}
+2022/03/15 - 17:05:22.261	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:05:22.262	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:05:24.190	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\u0016"}
+2022/03/15 - 17:05:24.191	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\u0016"}
+2022/03/15 - 17:05:25.231	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:05:25.232	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:05:35.611	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"ls"}
+2022/03/15 - 17:09:40.318	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: Last login: Tue Mar 15 17:04:56 2022 from 59.41.161.248
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~
+2022/03/15 - 17:09:40.439	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/15 - 17:09:41.809	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"ls"}
+2022/03/15 - 17:09:42.548	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:09:42.549	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:09:49.333	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"l"}
+2022/03/15 - 17:09:49.334	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"l"}
+2022/03/15 - 17:09:49.763	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:09:49.764	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:09:50.157	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:09:50.158	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:10:52.796	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"l"}
+2022/03/15 - 17:10:52.798	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"l"}
+2022/03/15 - 17:10:52.957	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:52.957	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:53.315	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:10:53.315	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:10:56.467	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:56.468	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:56.651	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:56.652	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:56.804	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:56.805	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:56.987	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:56.988	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:57.179	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:57.179	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:57.371	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:57.372	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:57.548	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:57.549	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:57.746	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:10:57.747	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:16:47.091	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":158}
+2022/03/15 - 17:16:47.161	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":207}
+2022/03/15 - 17:16:49.114	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":207}
+2022/03/15 - 17:16:50.733	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":158}
+2022/03/15 - 17:16:52.916	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":158}
+2022/03/15 - 17:16:52.941	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":157}
+2022/03/15 - 17:16:52.980	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":155}
+2022/03/15 - 17:16:53.006	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":151}
+2022/03/15 - 17:16:53.026	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":144}
+2022/03/15 - 17:16:53.044	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":141}
+2022/03/15 - 17:16:53.079	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":137}
+2022/03/15 - 17:16:53.107	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":131}
+2022/03/15 - 17:16:53.128	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":129}
+2022/03/15 - 17:16:53.147	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":127}
+2022/03/15 - 17:16:53.166	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":124}
+2022/03/15 - 17:16:53.196	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":122}
+2022/03/15 - 17:16:53.219	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":116}
+2022/03/15 - 17:16:53.244	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":113}
+2022/03/15 - 17:16:53.266	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":111}
+2022/03/15 - 17:16:53.288	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":108}
+2022/03/15 - 17:16:53.322	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":106}
+2022/03/15 - 17:16:53.343	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":103}
+2022/03/15 - 17:16:53.357	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":103}
+2022/03/15 - 17:16:53.375	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:16:53.389	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":100}
+2022/03/15 - 17:16:53.409	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":98}
+2022/03/15 - 17:16:53.422	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":97}
+2022/03/15 - 17:16:53.442	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":96}
+2022/03/15 - 17:16:53.456	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":95}
+2022/03/15 - 17:17:06.486	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":95}
+2022/03/15 - 17:17:06.510	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":95}
+2022/03/15 - 17:17:06.543	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":96}
+2022/03/15 - 17:17:06.577	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":97}
+2022/03/15 - 17:17:06.597	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":98}
+2022/03/15 - 17:17:06.656	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":99}
+2022/03/15 - 17:17:06.677	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:06.720	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:06.724	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:06.742	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":104}
+2022/03/15 - 17:17:06.760	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":105}
+2022/03/15 - 17:17:06.777	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":106}
+2022/03/15 - 17:17:06.810	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":108}
+2022/03/15 - 17:17:06.828	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":112}
+2022/03/15 - 17:17:06.844	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":114}
+2022/03/15 - 17:17:06.863	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":116}
+2022/03/15 - 17:17:06.893	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":118}
+2022/03/15 - 17:17:06.908	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":119}
+2022/03/15 - 17:17:06.940	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":119}
+2022/03/15 - 17:17:07.779	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":118}
+2022/03/15 - 17:17:07.792	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":118}
+2022/03/15 - 17:17:07.825	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":115}
+2022/03/15 - 17:17:07.842	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":113}
+2022/03/15 - 17:17:07.858	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":111}
+2022/03/15 - 17:17:07.875	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":109}
+2022/03/15 - 17:17:07.918	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":106}
+2022/03/15 - 17:17:07.941	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:07.957	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:08.102	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:08.164	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:08.274	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:08.290	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:08.309	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:08.325	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:08.340	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:08.358	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:08.373	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:08.390	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:08.441	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":100}
+2022/03/15 - 17:17:09.742	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":100}
+2022/03/15 - 17:17:09.761	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":100}
+2022/03/15 - 17:17:09.775	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":100}
+2022/03/15 - 17:17:09.796	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:09.811	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:09.829	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:09.876	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:09.893	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:09.911	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:09.926	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:09.960	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:09.981	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.010	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.024	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.045	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.062	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.082	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.111	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.125	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.145	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.163	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.193	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.210	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.243	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.259	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.275	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.292	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.307	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.329	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:10.353	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:10.375	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:10.391	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:10.410	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:10.442	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:10.459	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:10.474	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:10.490	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:10.509	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:10.526	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:10.544	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:10.567	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:10.590	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:10.607	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:10.630	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.660	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.674	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.692	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.710	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.724	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.776	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.792	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:10.860	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":103}
+2022/03/15 - 17:17:10.891	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":103}
+2022/03/15 - 17:17:10.917	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":103}
+2022/03/15 - 17:17:10.966	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":104}
+2022/03/15 - 17:17:10.999	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":105}
+2022/03/15 - 17:17:11.029	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":105}
+2022/03/15 - 17:17:11.062	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":106}
+2022/03/15 - 17:17:11.082	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":107}
+2022/03/15 - 17:17:11.139	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":108}
+2022/03/15 - 17:17:11.164	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":109}
+2022/03/15 - 17:17:11.193	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":109}
+2022/03/15 - 17:17:11.217	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":110}
+2022/03/15 - 17:17:11.243	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":110}
+2022/03/15 - 17:17:11.278	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":110}
+2022/03/15 - 17:17:11.297	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":110}
+2022/03/15 - 17:17:14.735	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":110}
+2022/03/15 - 17:17:14.750	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":110}
+2022/03/15 - 17:17:14.766	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":110}
+2022/03/15 - 17:17:14.785	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":109}
+2022/03/15 - 17:17:14.800	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":109}
+2022/03/15 - 17:17:14.817	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":109}
+2022/03/15 - 17:17:14.835	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":108}
+2022/03/15 - 17:17:14.867	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":108}
+2022/03/15 - 17:17:14.885	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":107}
+2022/03/15 - 17:17:14.919	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":107}
+2022/03/15 - 17:17:14.935	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":106}
+2022/03/15 - 17:17:14.950	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":106}
+2022/03/15 - 17:17:14.966	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":106}
+2022/03/15 - 17:17:14.984	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":105}
+2022/03/15 - 17:17:15.000	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":105}
+2022/03/15 - 17:17:15.016	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":105}
+2022/03/15 - 17:17:15.034	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":104}
+2022/03/15 - 17:17:15.050	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":104}
+2022/03/15 - 17:17:15.066	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":104}
+2022/03/15 - 17:17:15.085	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":103}
+2022/03/15 - 17:17:15.100	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":103}
+2022/03/15 - 17:17:15.117	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:15.133	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:15.150	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:15.166	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":102}
+2022/03/15 - 17:17:15.185	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:15.325	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:16.189	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:16.203	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:16.238	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:16.254	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:16.286	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:16.308	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":101}
+2022/03/15 - 17:17:16.332	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":100}
+2022/03/15 - 17:17:16.352	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":100}
+2022/03/15 - 17:17:16.369	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":100}
+2022/03/15 - 17:17:16.393	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":99}
+2022/03/15 - 17:17:16.419	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":99}
+2022/03/15 - 17:17:16.434	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":99}
+2022/03/15 - 17:17:16.455	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":98}
+2022/03/15 - 17:17:16.481	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":98}
+2022/03/15 - 17:17:16.501	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":98}
+2022/03/15 - 17:17:16.535	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":98}
+2022/03/15 - 17:17:16.551	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":98}
+2022/03/15 - 17:17:16.567	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"rows":24,"cols":98}
+2022/03/15 - 17:17:18.126	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"l"}
+2022/03/15 - 17:17:18.127	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"l"}
+2022/03/15 - 17:25:57.701	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: Last login: Tue Mar 15 17:09:40 2022 from 59.41.161.248
+
+2022/03/15 - 17:25:57.821	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~[0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/15 - 17:26:07.883	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"l"}
+2022/03/15 - 17:26:07.884	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"l"}
+2022/03/15 - 17:26:08.001	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:26:08.001	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:26:08.905	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:26:08.906	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:26:37.757	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: Last login: Tue Mar 15 17:25:58 2022 from 59.41.161.248
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~
+2022/03/15 - 17:26:37.877	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/15 - 17:26:41.369	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"l"}
+2022/03/15 - 17:26:41.371	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"l"}
+2022/03/15 - 17:26:41.466	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:26:41.466	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"s"}
+2022/03/15 - 17:26:41.736	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:26:41.737	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"\r"}
+2022/03/15 - 17:26:53.602	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"l"}
+2022/03/15 - 17:26:53.602	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":2,"cmd":"l"}
+2022/03/15 - 17:28:14.900	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: 
+2022/03/15 - 17:28:15.246	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: Last login: Tue Mar 15 17:26:38 2022 from 59.41.161.248
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~
+2022/03/15 - 17:28:15.367	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/15 - 17:28:18.232	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: 
+2022/03/15 - 17:28:18.583	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: Last login: Tue Mar 15 17:28:15 2022 from 59.41.161.248
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~
+2022/03/15 - 17:28:18.702	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/15 - 17:28:24.094	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: 
+2022/03/15 - 17:28:24.435	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: Last login: Tue Mar 15 17:28:19 2022 from 59.41.161.248
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~
+2022/03/15 - 17:28:24.554	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/15 - 17:28:29.710	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: 
+2022/03/15 - 17:28:32.411	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: Last login: Tue Mar 15 17:28:25 2022 from 59.41.161.248
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~
+2022/03/15 - 17:28:32.532	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/15 - 17:28:33.985	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"l"}
+2022/03/15 - 17:28:33.987	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:28:33.987	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"l"}
+2022/03/15 - 17:28:33.988	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:28:34.120	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"s"}
+2022/03/15 - 17:28:34.122	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:28:34.122	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"s"}
+2022/03/15 - 17:28:34.123	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:29:20.552	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: 
+2022/03/15 - 17:29:21.097	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: Last login: Tue Mar 15 17:28:33 2022 from 59.41.161.248
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~
+2022/03/15 - 17:29:21.218	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/15 - 17:29:34.327	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: 
+2022/03/15 - 17:29:34.700	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: Last login: Tue Mar 15 17:29:21 2022 from 59.41.161.248
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~
+2022/03/15 - 17:29:34.821	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/15 - 17:29:37.794	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: 
+2022/03/15 - 17:29:38.109	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: Last login: Tue Mar 15 17:29:35 2022 from 59.41.161.248
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~
+2022/03/15 - 17:29:38.228	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/15 - 17:29:52.543	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: 
+2022/03/15 - 17:29:59.133	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: Last login: Tue Mar 15 17:29:38 2022 from 59.41.161.248
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~
+2022/03/15 - 17:29:59.252	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/15 - 17:30:19.425	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: 
+2022/03/15 - 17:30:19.774	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: Last login: Tue Mar 15 17:29:59 2022 from 59.41.161.248
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~
+2022/03/15 - 17:30:19.893	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/15 - 17:30:20.854	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: 
+2022/03/15 - 17:30:21.211	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: Last login: Tue Mar 15 17:30:20 2022 from 59.41.161.248
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~
+2022/03/15 - 17:30:21.331	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/15 - 17:30:39.721	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: 
+2022/03/15 - 17:30:42.318	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: Last login: Tue Mar 15 17:30:21 2022 from 59.41.161.248
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~
+2022/03/15 - 17:30:42.438	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/15 - 17:30:43.649	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"bA=="}
+2022/03/15 - 17:30:43.650	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:43.650	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"l"}
+2022/03/15 - 17:30:43.652	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:43.757	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [32ml[39ms
+2022/03/15 - 17:30:43.782	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"cw=="}
+2022/03/15 - 17:30:43.783	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:43.783	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"s"}
+2022/03/15 - 17:30:43.784	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:43.878	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [32ml[32ms[39m
+2022/03/15 - 17:30:44.527	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"DQ=="}
+2022/03/15 - 17:30:44.528	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:44.528	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"\r"}
+2022/03/15 - 17:30:44.528	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:44.598	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [?1l>
+]2;ls --color=tty]1;ls[0m[01;34mgo[0m
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~[0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/15 - 17:30:47.127	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"Yw=="}
+2022/03/15 - 17:30:47.128	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:47.128	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"c"}
+2022/03/15 - 17:30:47.129	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:47.217	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"ZA=="}
+2022/03/15 - 17:30:47.218	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[27 91 49 109 27 91 51 49 109 99 27 91 48 109 27 91 51 57 109 100 32 47 104 111 109 101 8 8 8 8 8 8 8] 0 0} {0 0}}
+2022/03/15 - 17:30:47.218	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"d"}
+2022/03/15 - 17:30:47.219	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[27 91 49 109 27 91 51 49 109 99 27 91 48 109 27 91 51 57 109 100 32 47 104 111 109 101 8 8 8 8 8 8 8] 0 0} {0 0}}
+2022/03/15 - 17:30:47.239	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [1m[31mc[0m[39md /home[0m[32mc[32md[39m
+2022/03/15 - 17:30:47.363	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"IA=="}
+2022/03/15 - 17:30:47.364	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:47.364	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":" "}
+2022/03/15 - 17:30:47.365	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:47.478	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [1C
+2022/03/15 - 17:30:48.400	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"Lw=="}
+2022/03/15 - 17:30:48.401	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:48.401	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"/"}
+2022/03/15 - 17:30:48.402	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:48.438	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [4m/[24m
+2022/03/15 - 17:30:49.880	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"DQ=="}
+2022/03/15 - 17:30:49.881	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:49.882	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"\r"}
+2022/03/15 - 17:30:49.882	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:49.998	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn:     [?1l>
+]2;cd /]1;cd[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:/]1;/[0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m / [49m[34m[39m [K[?1h=
+2022/03/15 - 17:30:50.913	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"bA=="}
+2022/03/15 - 17:30:50.913	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:50.913	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"l"}
+2022/03/15 - 17:30:50.914	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:50.958	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [32ml[39ms
+2022/03/15 - 17:30:51.063	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"cw=="}
+2022/03/15 - 17:30:51.064	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:51.065	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"s"}
+2022/03/15 - 17:30:51.066	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:51.078	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [32ml[32ms[39m
+2022/03/15 - 17:30:51.224	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"DQ=="}
+2022/03/15 - 17:30:51.224	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:51.225	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"\r"}
+2022/03/15 - 17:30:51.225	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:51.319	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [?1l>
+]2;ls --color=tty]1;ls[0m[01;36mbin[0m   [01;34mdata[0m  [01;34metc[0m   [01;36mlib[0m    [01;34mlost+found[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34mrun[0m   [01;34msrv[0m  [30;42mtmp[0m  [01;34mvar[0m
+[01;34mboot[0m  [01;34mdev[0m   [01;34mhome[0m  [01;36mlib64[0m  [01;34mmedia[0m       [01;34mopt[0m  [01;34mroot[0m  [01;36msbin[0m  [01;34msys[0m  [01;34musr[0m
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:/]1;/[0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m / [49m[34m[39m [K[?1h=
+2022/03/15 - 17:30:56.078	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"bA=="}
+2022/03/15 - 17:30:56.079	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:56.079	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"l"}
+2022/03/15 - 17:30:56.080	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:56.119	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [32ml[39ms
+2022/03/15 - 17:30:56.263	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"bA=="}
+2022/03/15 - 17:30:56.264	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:56.265	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"l"}
+2022/03/15 - 17:30:56.267	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:56.358	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [32ml[32ml[39m
+2022/03/15 - 17:30:56.432	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"bA=="}
+2022/03/15 - 17:30:56.433	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:56.433	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"l"}
+2022/03/15 - 17:30:56.433	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:56.478	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [1m[31ml[1m[31ml[1m[31ml[0m[39m
+2022/03/15 - 17:30:56.711	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"DQ=="}
+2022/03/15 - 17:30:56.712	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:56.712	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"\r"}
+2022/03/15 - 17:30:56.713	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:56.839	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [?1l>
+]2;lll]1;lllzsh: command not found: lll
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:/]1;/[0m[27m[24m[J[39m[0m[49m[40m[39m [31m✘ [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m / [49m[34m[39m [K[?1h=
+2022/03/15 - 17:30:59.320	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"dw=="}
+2022/03/15 - 17:30:59.321	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:59.322	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"w"}
+2022/03/15 - 17:30:59.323	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:59.358	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [32mw[39mget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo[85D
+2022/03/15 - 17:30:59.480	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"bw=="}
+2022/03/15 - 17:30:59.481	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:59.481	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"o"}
+2022/03/15 - 17:30:59.483	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:59.598	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [1m[31mw[1m[31mo[0m[39m                                                                                    [84D
+2022/03/15 - 17:30:59.727	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"IA=="}
+2022/03/15 - 17:30:59.729	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:59.729	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":" "}
+2022/03/15 - 17:30:59.731	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:30:59.838	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn:  
+2022/03/15 - 17:31:00.137	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"fw=="}
+2022/03/15 - 17:31:00.138	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:00.139	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":""}
+2022/03/15 - 17:31:00.140	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:00.199	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: 
+2022/03/15 - 17:31:00.336	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"fw=="}
+2022/03/15 - 17:31:00.337	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:00.337	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":""}
+2022/03/15 - 17:31:00.338	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:00.438	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[32mw[39m[0m[39mget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo[85D
+2022/03/15 - 17:31:00.695	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"fw=="}
+2022/03/15 - 17:31:00.696	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:00.696	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":""}
+2022/03/15 - 17:31:00.697	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:00.798	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [39m                                                                                      [86D
+2022/03/15 - 17:31:01.767	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"dw=="}
+2022/03/15 - 17:31:01.768	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:01.768	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"w"}
+2022/03/15 - 17:31:01.769	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:01.878	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [32mw[39mget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo[85D
+2022/03/15 - 17:31:01.918	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"aA=="}
+2022/03/15 - 17:31:01.920	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:01.920	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"h"}
+2022/03/15 - 17:31:01.920	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:01.998	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [1m[31mw[1m[31mh[0m[39m                                                                                    [84D
+2022/03/15 - 17:31:03.600	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"DQ=="}
+2022/03/15 - 17:31:03.601	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:03.601	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"\r"}
+2022/03/15 - 17:31:03.601	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:03.678	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [?1l>
+]2;wh]1;whzsh: command not found: wh
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:/]1;/[0m[27m[24m[J[39m[0m[49m[40m[39m [31m✘ [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m / [49m[34m[39m [K[?1h=
+2022/03/15 - 17:31:05.406	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"dw=="}
+2022/03/15 - 17:31:05.407	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:05.407	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"w"}
+2022/03/15 - 17:31:05.408	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:05.478	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [32mw[39mh
+2022/03/15 - 17:31:06.007	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"aA=="}
+2022/03/15 - 17:31:06.008	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:06.008	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"h"}
+2022/03/15 - 17:31:06.009	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:06.078	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [1m[31mw[1m[31mh[0m[39m
+2022/03/15 - 17:31:06.391	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"bw=="}
+2022/03/15 - 17:31:06.392	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:06.393	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"o"}
+2022/03/15 - 17:31:06.394	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:06.439	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[32mw[0m[32mh[32mo[39m
+2022/03/15 - 17:31:06.711	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"IA=="}
+2022/03/15 - 17:31:06.712	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:06.712	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":" "}
+2022/03/15 - 17:31:06.713	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:06.798	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn:  
+2022/03/15 - 17:31:07.639	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"YQ=="}
+2022/03/15 - 17:31:07.641	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:07.641	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"a"}
+2022/03/15 - 17:31:07.642	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:07.758	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: a
+2022/03/15 - 17:31:07.815	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"bQ=="}
+2022/03/15 - 17:31:07.816	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:07.817	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"m"}
+2022/03/15 - 17:31:07.817	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:07.878	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: m
+2022/03/15 - 17:31:08.296	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"IA=="}
+2022/03/15 - 17:31:08.297	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:08.298	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":" "}
+2022/03/15 - 17:31:08.300	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:08.359	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn:  
+2022/03/15 - 17:31:09.166	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"aQ=="}
+2022/03/15 - 17:31:09.167	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:09.167	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"i"}
+2022/03/15 - 17:31:09.168	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:09.198	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: i
+2022/03/15 - 17:31:09.695	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"DQ=="}
+2022/03/15 - 17:31:09.696	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:09.697	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"\r"}
+2022/03/15 - 17:31:09.698	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:09.798	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [?1l>
+]2;who am i]1;whoroot     pts/0        2022-03-15 17:30 (59.41.161.248)
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:/]1;/[0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m / [49m[34m[39m [K[?1h=
+2022/03/15 - 17:31:12.336	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"G09B"}
+2022/03/15 - 17:31:12.337	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:12.337	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"\u001bOA"}
+2022/03/15 - 17:31:12.338	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:12.438	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [32mwho[39m am i
+2022/03/15 - 17:31:13.606	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"fw=="}
+2022/03/15 - 17:31:13.608	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:13.608	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":""}
+2022/03/15 - 17:31:13.610	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:13.638	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: 
+2022/03/15 - 17:31:13.807	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"fw=="}
+2022/03/15 - 17:31:13.808	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:13.809	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":""}
+2022/03/15 - 17:31:13.810	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:13.878	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: 
+2022/03/15 - 17:31:13.991	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"fw=="}
+2022/03/15 - 17:31:13.992	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:13.992	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":""}
+2022/03/15 - 17:31:13.993	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:14.118	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: 
+2022/03/15 - 17:31:14.183	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"fw=="}
+2022/03/15 - 17:31:14.184	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:14.184	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":""}
+2022/03/15 - 17:31:14.185	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:14.238	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: 
+2022/03/15 - 17:31:18.071	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"fw=="}
+2022/03/15 - 17:31:18.072	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:18.072	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":""}
+2022/03/15 - 17:31:18.073	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:18.198	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: 
+2022/03/15 - 17:31:18.271	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"fw=="}
+2022/03/15 - 17:31:18.271	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:18.272	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":""}
+2022/03/15 - 17:31:18.273	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:18.319	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [1m[31mw[1m[31mh[0m[39m[39mo
+2022/03/15 - 17:31:18.471	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"fw=="}
+2022/03/15 - 17:31:18.472	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:18.473	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":""}
+2022/03/15 - 17:31:18.474	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:18.558	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[32mw[39m[0m[39mh
+2022/03/15 - 17:31:18.648	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"fw=="}
+2022/03/15 - 17:31:18.648	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:18.649	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":""}
+2022/03/15 - 17:31:18.649	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/15 - 17:31:18.678	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [39m        [8D

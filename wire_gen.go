@@ -25,9 +25,11 @@ func InitServer() *app.Server {
 	iDemoService := service.NewDemoService(iDemoRepo)
 	demoHandler := handlers.NewDemoHandler(iDemoService)
 	userHandler := handlers.NewUserHandler()
+	wsSshHandler := handlers.NewWsSshHandler()
 	apiRouter := &api.Router{
-		Demo: demoHandler,
-		User: userHandler,
+		Demo:  demoHandler,
+		User:  userHandler,
+		WsSsh: wsSshHandler,
 	}
 	server := app.NewServer(engine, apiRouter)
 	return server

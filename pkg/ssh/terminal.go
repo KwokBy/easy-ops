@@ -1,4 +1,4 @@
-package service
+package ssh
 
 import (
 	"github.com/KwokBy/easy-ops/models"

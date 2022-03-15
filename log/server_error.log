@@ -1,2 +1,145 @@
 2022/02/23 - 17:05:37.062	[31mfatal[0m	/Users/doubleguo/code/personal/easy-ops/pkg/zlog/zlog.go:102	demo: %+vguoguoliang
 2022/02/23 - 17:21:23.814	[31merror[0m	/Users/doubleguo/code/personal/easy-ops/pkg/zlog/zlog.go:78	test error
+2022/03/15 - 16:44:53.873	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:44:56.071	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:44:56.290	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:44:57.659	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:44:57.809	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:44:58.648	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:44:59.632	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:45:05.282	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:45:09.338	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:45:10.242	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:45:10.432	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:45:10.666	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:45:10.667	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:45:10.835	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:45:10.954	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:46:05.684	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/15 - 16:46:05.685	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:46:18.450	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:46:18.657	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[Unmarshal] Unmarshal data error: json: cannot unmarshal string into Go struct field wsMsg.type of type int
+2022/03/15 - 16:46:54.672	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 16:46:54.674	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:46:57.838	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 16:46:57.839	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:47:09.727	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/15 - 16:47:09.727	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:50:04.409	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 16:50:04.410	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:50:08.716	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 16:50:08.718	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:50:23.669	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/15 - 16:50:23.670	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:51:26.495	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 16:51:26.496	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:51:31.685	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 16:51:31.685	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:51:43.192	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/15 - 16:51:43.195	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:54:30.143	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 16:54:30.146	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:55:42.668	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 16:55:42.668	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:56:06.529	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 16:56:06.530	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:57:39.886	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 16:57:39.888	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:57:42.250	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 16:57:42.252	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:58:02.009	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 16:58:02.010	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:58:23.864	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 16:58:23.865	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:58:25.850	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 16:58:25.851	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 16:59:20.086	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/15 - 16:59:20.089	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:01:21.355	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/15 - 17:01:21.357	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:01:21.357	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/15 - 17:01:21.357	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/15 - 17:01:21.357	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/15 - 17:01:21.362	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:01:21.362	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:01:21.362	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:01:46.503	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/15 - 17:01:46.503	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/15 - 17:01:46.504	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:01:46.505	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:01:59.163	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 17:01:59.164	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:02:18.865	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/15 - 17:02:18.867	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:04:48.622	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 17:04:48.626	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:04:52.935	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/15 - 17:04:52.936	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:19:33.490	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[NewSSHClient] Dial error: dial tcp 106.55.161.12:22: i/o timeout
+2022/03/15 - 17:20:38.143	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[NewSSHClient] Dial error: dial tcp 106.55.161.12:22: i/o timeout
+2022/03/15 - 17:22:00.118	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[NewSSHClient] Dial error: dial tcp 106.55.161.12:22: i/o timeout
+2022/03/15 - 17:22:20.175	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[NewSSHClient] Dial error: dial tcp 106.55.161.12:22: i/o timeout
+2022/03/15 - 17:22:40.960	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[NewSSHClient] Dial error: dial tcp 106.55.161.12:22: i/o timeout
+2022/03/15 - 17:23:30.367	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[NewSSHClient] Dial error: dial tcp 106.55.161.12:22: i/o timeout
+2022/03/15 - 17:28:14.901	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 17:28:14.902	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:28:18.232	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 17:28:18.234	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:28:24.094	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 17:28:24.098	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:28:29.710	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 17:28:29.711	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:28:33.986	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:28:33.988	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:28:34.121	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:28:34.122	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:29:20.552	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 17:29:20.554	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:29:34.328	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 17:29:34.330	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:29:37.795	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 17:29:37.796	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:29:52.544	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/15 - 17:29:52.545	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:30:19.426	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 17:30:19.427	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:30:20.855	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 17:30:20.856	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:30:39.721	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/15 - 17:30:39.722	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/15 - 17:30:43.651	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:30:43.783	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:30:47.129	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:30:47.218	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:30:47.364	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:30:48.401	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:30:50.914	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:30:51.065	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:30:56.080	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:30:56.266	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:30:56.433	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:30:59.322	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:30:59.482	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:30:59.730	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:00.139	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:00.338	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:00.697	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:01.769	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:01.920	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:05.408	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:06.009	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:06.393	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:06.713	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:07.642	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:07.817	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:08.299	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:09.168	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:12.338	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:13.609	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:13.809	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:13.993	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:14.185	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:18.073	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:18.273	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:18.473	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/15 - 17:31:18.649	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0

@@ -23,6 +23,7 @@ func InitServer() *app.Server {
 		service.NewDemoService,
 		handlers.NewDemoHandler,
 		handlers.NewUserHandler,
+		handlers.NewWsSshHandler,
 		router,
 		app.NewServer,
 		app.NewGinEngine,
