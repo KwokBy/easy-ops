@@ -18,6 +18,14 @@ type UserService interface {
 }
 
 type HostService interface {
+	// GetHostsByUsername 根据用户名获取主机列表
+	GetHostsByUsername(ctx context.Context, username string) ([]models.Host, error)
+	// AddHost 添加主机
+	AddHost(ctx context.Context, host models.Host) error
+	// DeleteHost 删除主机
+	DeleteHost(ctx context.Context, id int64) error
+	// UpdateHost 更新主机信息
+	UpdateHost(ctx context.Context, host models.Host) error
 }
 
 type MirrorService interface {

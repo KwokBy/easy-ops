@@ -48,3 +48,4 @@ func (h *mysqlHostRepo) UpdateHost(ctx context.Context, host models.Host) error 
 	}
 	return nil
 }
+
