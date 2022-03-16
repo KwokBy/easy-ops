@@ -23,7 +23,7 @@ func NewSSHClient(h models.Host) (*ssh.Client, error) {
 	config := &ssh.ClientConfig{
 		// ssh 连接time out 时间一秒钟, 如果ssh验证错误 会在一秒内返回
 		Timeout:         time.Second,
-		User:            h.Username,
+		User:            h.Name,
 		HostKeyCallback: ssh.InsecureIgnoreHostKey(),
 	}
 	// 判断登录类型
