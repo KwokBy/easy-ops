@@ -15,6 +15,10 @@ func NewMysqlHostRepo(DB *gorm.DB) HostRepo {
 	return &mysqlHostRepo{DB}
 }
 
+func (h *mysqlHostRepo) TableName() string {
+	return "t_host"
+}
+
 // GetHostsByUsername 根据用户名获取主机列表
 func (h *mysqlHostRepo) GetHostsByUsername(ctx context.Context, username string) (
 	[]models.Host, error) {
@@ -48,4 +52,3 @@ func (h *mysqlHostRepo) UpdateHost(ctx context.Context, host models.Host) error 
 	}
 	return nil
 }
-

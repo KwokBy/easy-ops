@@ -143,3 +143,8 @@
 2022/03/15 - 17:31:18.273	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
 2022/03/15 - 17:31:18.473	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
 2022/03/15 - 17:31:18.649	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/16 - 14:25:38.166	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/16 - 14:25:38.176	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/16 - 14:25:42.688	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/16 - 14:25:45.005	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/16 - 14:25:45.157	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0

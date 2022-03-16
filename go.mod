@@ -16,9 +16,9 @@ require (
 
 require (
 	github.com/BurntSushi/toml v1.0.0 // indirect
-	github.com/fatih/color v1.13.0
+	github.com/DATA-DOG/go-sqlmock v1.5.0
+	github.com/golang/mock v1.6.0
 	github.com/gorilla/websocket v1.5.0
-	github.com/mattn/go-isatty v0.0.14
 	github.com/mitchellh/go-homedir v1.1.0
 	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0 // indirect

@@ -539,3 +539,36 @@ env
 2022/03/15 - 17:31:18.649	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":""}
 2022/03/15 - 17:31:18.649	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
 2022/03/15 - 17:31:18.678	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [39m        [8D
+2022/03/16 - 14:25:34.264	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: Last failed login: Wed Mar 16 05:34:41 CST 2022 from 222.186.141.194 on ssh:notty
+There were 1176 failed login attempts since the last successful login.
+Last login: Tue Mar 15 17:30:42 2022 from 59.41.161.248
+
+2022/03/16 - 14:25:38.166	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: 
+2022/03/16 - 14:25:40.894	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: Last login: Wed Mar 16 14:25:36 2022 from 59.41.163.6
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~
+2022/03/16 - 14:25:41.015	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/16 - 14:25:42.687	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"ls"}
+2022/03/16 - 14:25:42.690	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/16 - 14:25:42.932	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"DQ=="}
+2022/03/16 - 14:25:42.933	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/16 - 14:25:42.933	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"\r"}
+2022/03/16 - 14:25:42.934	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/16 - 14:25:43.054	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [?1l>
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~[0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=
+2022/03/16 - 14:25:45.003	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"bA=="}
+2022/03/16 - 14:25:45.005	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/16 - 14:25:45.005	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"l"}
+2022/03/16 - 14:25:45.006	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/16 - 14:25:45.096	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [32ml[39mll
+2022/03/16 - 14:25:45.155	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"cw=="}
+2022/03/16 - 14:25:45.156	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/16 - 14:25:45.157	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"s"}
+2022/03/16 - 14:25:45.158	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/16 - 14:25:45.215	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [32ml[32ms[39m 
+2022/03/16 - 14:25:45.381	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"DQ=="}
+2022/03/16 - 14:25:45.382	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/16 - 14:25:45.382	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:66	[ReceiveWsMsg] read data from wsConn: {"type":1,"cmd":"\r"}
+2022/03/16 - 14:25:45.382	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	&{{[] 0 0} {0 0}}
+2022/03/16 - 14:25:45.455	[34minfo[0m	D:/code/easy-ops/pkg/zlog/zlog.go:62	[flushComboOutput] write data to websocketConn: [?1l>
+]2;ls --color=tty]1;ls[0m[01;34mgo[0m
+[1m[7m#[27m[1m[0m                                                                                                                        ]2;root@VM-0-3-centos:~]1;~[0m[27m[24m[J[39m[0m[49m[40m[39m [33m⚡[40m[39m [33mroot@VM-0-3-centos [44m[30m[30m ~ [49m[34m[39m [K[?1h=

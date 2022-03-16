@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+	"time"
 
 	"github.com/KwokBy/easy-ops/models"
 	"github.com/KwokBy/easy-ops/pkg/zlog"
@@ -31,6 +32,8 @@ func (h *hostService) GetHostsByUsername(ctx context.Context, username string) (
 
 // AddHost 添加主机
 func (h *hostService) AddHost(ctx context.Context, host models.Host) error {
+	host.UpdatedTime = time.Now()
+	host.CreatedTime = time.Now()
 	if err := h.hostRepo.AddHost(ctx, host); err != nil {
 		zlog.Errorf("add host error: %s", err.Error())
 		return err
