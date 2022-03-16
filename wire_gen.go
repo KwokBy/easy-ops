@@ -26,10 +26,14 @@ func InitServer() *app.Server {
 	demoHandler := handlers.NewDemoHandler(iDemoService)
 	userHandler := handlers.NewUserHandler()
 	wsSshHandler := handlers.NewWsSshHandler()
+	hostRepo := repo.NewMysqlHostRepo(db)
+	hostService := service.NewHostService(hostRepo)
+	hostHandler := handlers.NewHostHandler(hostService)
 	apiRouter := &api.Router{
 		Demo:  demoHandler,
 		User:  userHandler,
 		WsSsh: wsSshHandler,
+		Host:  hostHandler,
 	}
 	server := app.NewServer(engine, apiRouter)
 	return server

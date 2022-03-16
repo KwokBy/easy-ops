@@ -20,10 +20,13 @@ func InitServer() *app.Server {
 	wire.Build(
 		app.InitGormMySql,
 		repo.NewMysqlDemoRepo,
+		repo.NewMysqlHostRepo,
 		service.NewDemoService,
+		service.NewHostService,
 		handlers.NewDemoHandler,
 		handlers.NewUserHandler,
 		handlers.NewWsSshHandler,
+		handlers.NewHostHandler,
 		router,
 		app.NewServer,
 		app.NewGinEngine,

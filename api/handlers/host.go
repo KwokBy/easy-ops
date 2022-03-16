@@ -16,14 +16,20 @@ func NewHostHandler(service service.HostService) HostHandler {
 	return HostHandler{hostService: service}
 }
 
+// GetGetHostsReq 获取主机列表请求参数
+type GetGetHostsReq struct {
+	Username string `json:"username"`
+}
+
 // GetHosts 获取用户有权限的主机列表
 func (h *HostHandler) GetHosts(c *gin.Context) {
-	var username string
-	if err := c.ShouldBind(&username); err != nil {
+	var req GetGetHostsReq
+	if err := c.ShouldBind(&req); err != nil {
 		zlog.Errorf("get username form uri error: %s", err.Error())
 		response.FailWithData(err, "get username form uri error", c)
+		return
 	}
-	hosts, err := h.hostService.GetHostsByUsername(c, username)
+	hosts, err := h.hostService.GetHostsByUsername(c, req.Username)
 	if err != nil {
 		zlog.Errorf("get hosts by username error: %s", err.Error())
 		response.FailWithData(err, "get hosts by username error", c)

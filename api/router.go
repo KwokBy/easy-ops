@@ -13,6 +13,7 @@ type Router struct {
 	Demo  handlers.DemoHandler
 	User  handlers.UserHandler
 	WsSsh handlers.WsSshHandler
+	Host  handlers.HostHandler
 }
 
 func (r *Router) With(engine *gin.Engine) {
@@ -25,10 +26,13 @@ func (r *Router) With(engine *gin.Engine) {
 	{
 		user.POST("/login", r.User.Login)
 	}
-	// engine.LoadHTMLFiles("index.html")
-	// engine.GET("/", func(c *gin.Context) {
-	// 	c.HTML(200, "index.html", nil)
-	// })
+	host := engine.Group("/api/v1/host")
+	{
+		host.POST("/get", r.Host.GetHosts)
+		host.POST("/add", r.Host.AddHost)
+		host.POST("/delete", r.Host.DeleteHost)
+		host.POST("/update", r.Host.UpdateHost)
+	}
 	engine.GET("/getAsyncRoutes", func(c *gin.Context) {
 		response.OKWithData([]PermissionRouter{
 			{
@@ -92,11 +96,6 @@ type Child struct {
 	Meta Meta   `json:"meta"`
 }
 
-//   // 添加不同按钮权限到/permission/button页面中
-//   function setDifAuthority(authority, routes) {
-// 	routes.children[1].meta.authority = [authority];
-// 	return routes;
-//   }
 func JWTAuth() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		token := c.Request.Header.Get("Authorization")

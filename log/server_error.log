@@ -148,3 +148,4 @@
 2022/03/16 - 14:25:42.688	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
 2022/03/16 - 14:25:45.005	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
 2022/03/16 - 14:25:45.157	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/16 - 16:53:57.267	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	get username form uri error: json: cannot unmarshal object into Go value of type string
