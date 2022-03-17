@@ -19,7 +19,7 @@ type UserService interface {
 
 type HostService interface {
 	// GetHostsByUsername 根据用户名获取主机列表
-	GetHostsByUsername(ctx context.Context, username string) ([]models.Host, error)
+	GetHostsByUsername(ctx context.Context, owner string) ([]models.Host, error)
 	// AddHost 添加主机
 	AddHost(ctx context.Context, host models.Host) error
 	// DeleteHost 删除主机

@@ -212,18 +212,18 @@ func (mr *MockHostRepoMockRecorder) DeleteHost(ctx, id interface{}) *gomock.Call
 }
 
 // GetHostsByUsername mocks base method.
-func (m *MockHostRepo) GetHostsByUsername(ctx context.Context, username string) ([]models.Host, error) {
+func (m *MockHostRepo) GetHostsByUsername(ctx context.Context, owner string) ([]models.Host, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetHostsByUsername", ctx, username)
+	ret := m.ctrl.Call(m, "GetHostsByUsername", ctx, owner)
 	ret0, _ := ret[0].([]models.Host)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
 
 // GetHostsByUsername indicates an expected call of GetHostsByUsername.
-func (mr *MockHostRepoMockRecorder) GetHostsByUsername(ctx, username interface{}) *gomock.Call {
+func (mr *MockHostRepoMockRecorder) GetHostsByUsername(ctx, owner interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetHostsByUsername", reflect.TypeOf((*MockHostRepo)(nil).GetHostsByUsername), ctx, username)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetHostsByUsername", reflect.TypeOf((*MockHostRepo)(nil).GetHostsByUsername), ctx, owner)
 }
 
 // UpdateHost mocks base method.
@@ -358,16 +358,16 @@ func (mr *MockTaskRepoMockRecorder) AddTask(ctx, task interface{}) *gomock.Call 
 }
 
 // GetTasksByUsername mocks base method.
-func (m *MockTaskRepo) GetTasksByUsername(ctx context.Context, username string) ([]models.Task, error) {
+func (m *MockTaskRepo) GetTasksByUsername(ctx context.Context, owner string) ([]models.Task, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetTasksByUsername", ctx, username)
+	ret := m.ctrl.Call(m, "GetTasksByUsername", ctx, owner)
 	ret0, _ := ret[0].([]models.Task)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
 
 // GetTasksByUsername indicates an expected call of GetTasksByUsername.
-func (mr *MockTaskRepoMockRecorder) GetTasksByUsername(ctx, username interface{}) *gomock.Call {
+func (mr *MockTaskRepoMockRecorder) GetTasksByUsername(ctx, owner interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTasksByUsername", reflect.TypeOf((*MockTaskRepo)(nil).GetTasksByUsername), ctx, username)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTasksByUsername", reflect.TypeOf((*MockTaskRepo)(nil).GetTasksByUsername), ctx, owner)
 }

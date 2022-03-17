@@ -20,10 +20,10 @@ func (h *mysqlHostRepo) TableName() string {
 }
 
 // GetHostsByUsername 根据用户名获取主机列表
-func (h *mysqlHostRepo) GetHostsByUsername(ctx context.Context, username string) (
+func (h *mysqlHostRepo) GetHostsByUsername(ctx context.Context, owner string) (
 	[]models.Host, error) {
 	var hosts []models.Host
-	if err := h.DB.Where("username = ?", username).Find(&hosts).Error; err != nil {
+	if err := h.DB.Where("owner = ?", owner).Find(&hosts).Error; err != nil {
 		return nil, err
 	}
 	return hosts, nil

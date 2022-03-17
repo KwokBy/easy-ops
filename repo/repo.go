@@ -31,8 +31,8 @@ type UserRepo interface {
 
 // HostRepo represent the host repository contract
 type HostRepo interface {
-	// GetHostsByUsername return hosts by username
-	GetHostsByUsername(ctx context.Context, username string) ([]models.Host, error)
+	// GetHostsByUsername return hosts by owner
+	GetHostsByUsername(ctx context.Context, owner string) ([]models.Host, error)
 	// AddHost add host
 	AddHost(ctx context.Context, host models.Host) error
 	// UpdateHost update host
@@ -54,8 +54,8 @@ type MirrorRepo interface {
 }
 
 type TaskRepo interface {
-	// GetTasksByUsername return tasks by username
-	GetTasksByUsername(ctx context.Context, username string) ([]models.Task, error)
+// GetTasksByUsername return tasks by username
+GetTasksByUsername(ctx context.Context, username string) ([]models.Task, error)
 	// AddTask add task
 	AddTask(ctx context.Context, task models.Task) error
 }

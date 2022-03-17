@@ -20,11 +20,11 @@ func NewHostService(hostRepo repo.HostRepo) HostService {
 }
 
 // GetHostsByUsername 根据用户名获取主机列表
-func (h *hostService) GetHostsByUsername(ctx context.Context, username string) (
+func (h *hostService) GetHostsByUsername(ctx context.Context, owner string) (
 	[]models.Host, error) {
-	hosts, err := h.hostRepo.GetHostsByUsername(ctx, username)
+	hosts, err := h.hostRepo.GetHostsByUsername(ctx, owner)
 	if err != nil {
-		zlog.Errorf("get hosts by username error: %s", err.Error())
+		zlog.Errorf("get hosts by owner error: %s", err.Error())
 		return nil, err
 	}
 	return hosts, nil

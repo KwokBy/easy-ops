@@ -4,7 +4,7 @@ import "time"
 
 type Host struct {
 	ID          int64     `gorm:"column:id" json:"id" form:"id"`
-	Username    string    `gorm:"column:username" json:"username" form:"username"`
+	Owner       string    `gorm:"column:owener" json:"owner" form:"owner"`
 	HostName    string    `gorm:"column:host_name" json:"host_name" form:"host_name"`
 	Host        string    `gorm:"column:host" json:"host" form:"host"`
 	Name        string    `gorm:"column:name" json:"name" form:"name"`

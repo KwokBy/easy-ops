@@ -22,7 +22,7 @@ func TestRunSSHTerminal(t *testing.T) {
 					HostName: "106.55.161.12",
 					Host:     "106.55.161.12",
 					Port:     22,
-					Username: "root",
+					Owner: "root",
 					Password: "Gl@987963951",
 					SSHType:  "password",
 				},
