@@ -20,9 +20,9 @@ func TestRunSSHTerminal(t *testing.T) {
 			args: args{
 				h: models.Host{
 					HostName: "106.55.161.12",
-					Host:     "106.55.161.12",
+					Host:     "106.55.161.12:22",
 					Port:     22,
-					Owner: "root",
+					Owner:    "root",
 					Password: "Gl@987963951",
 					SSHType:  "password",
 				},

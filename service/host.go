@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+	"fmt"
 	"time"
 
 	"github.com/KwokBy/easy-ops/models"
@@ -34,6 +35,13 @@ func (h *hostService) GetHostsByUsername(ctx context.Context, owner string) (
 func (h *hostService) AddHost(ctx context.Context, host models.Host) error {
 	host.UpdatedTime = time.Now()
 	host.CreatedTime = time.Now()
+	host.Owner = "doubleguo"
+	host.Host = fmt.Sprintf("%s:%d", host.HostName, host.Port)
+	// 使用公秘钥
+	host.SSHType = "ssh-key"
+	if host.Password != "" {
+		host.SSHType = "ssh-password"
+	}
 	if err := h.hostRepo.AddHost(ctx, host); err != nil {
 		zlog.Errorf("add host error: %s", err.Error())
 		return err

@@ -33,6 +33,7 @@ func (h *HostHandler) GetHosts(c *gin.Context) {
 	if err != nil {
 		zlog.Errorf("get hosts by owner error: %s", err.Error())
 		response.FailWithData(err, "get hosts by owner error", c)
+		return
 	}
 	response.OKWithData(hosts, "get hosts by owner success", c)
 }
@@ -43,10 +44,12 @@ func (h *HostHandler) AddHost(c *gin.Context) {
 	if err := c.ShouldBind(&host); err != nil {
 		zlog.Errorf("add host error: %s", err.Error())
 		response.FailWithData(err, "add host error", c)
+		return
 	}
 	if err := h.hostService.AddHost(c, host); err != nil {
 		zlog.Errorf("add host error: %s", err.Error())
 		response.FailWithData(err, "add host error", c)
+		return
 	}
 	response.OKWithData(nil, "add host success", c)
 }
@@ -57,10 +60,12 @@ func (h *HostHandler) DeleteHost(c *gin.Context) {
 	if err := c.ShouldBind(&id); err != nil {
 		zlog.Errorf("delete host error: %s", err.Error())
 		response.FailWithData(err, "delete host error", c)
+		return
 	}
 	if err := h.hostService.DeleteHost(c, id); err != nil {
 		zlog.Errorf("delete host error: %s", err.Error())
 		response.FailWithData(err, "delete host error", c)
+		return
 	}
 	response.OKWithData(nil, "delete host success", c)
 }
@@ -71,10 +76,12 @@ func (h *HostHandler) UpdateHost(c *gin.Context) {
 	if err := c.ShouldBind(&host); err != nil {
 		zlog.Errorf("update host error: %s", err.Error())
 		response.FailWithData(err, "update host error", c)
+		return
 	}
 	if err := h.hostService.UpdateHost(c, host); err != nil {
 		zlog.Errorf("update host error: %s", err.Error())
 		response.FailWithData(err, "update host error", c)
+		return
 	}
 	response.OKWithData(nil, "update host success", c)
 }

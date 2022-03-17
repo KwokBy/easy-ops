@@ -38,11 +38,11 @@ func (w *WsSshHandler) WSSSH(c *gin.Context) {
 	// TODO: 主机信息从数据库获取
 	machine := models.Host{
 		HostName: "106.55.161.12",
-		Host:     "106.55.161.12",
+		Host:     "106.55.161.12:22",
 		Port:     22,
 		Name:     "root",
 		Password: "Gl@987963951",
-		SSHType:  "password",
+		SSHType:  "ssh-password",
 	}
 	// 从url中获取terminal大小
 	cols, err := strconv.Atoi(c.DefaultQuery("cols", "120"))

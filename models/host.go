@@ -4,7 +4,7 @@ import "time"
 
 type Host struct {
 	ID          int64     `gorm:"column:id" json:"id" form:"id"`
-	Owner       string    `gorm:"column:owener" json:"owner" form:"owner"`
+	Owner       string    `gorm:"column:owner" json:"owner" form:"owner"`
 	HostName    string    `gorm:"column:host_name" json:"host_name" form:"host_name"`
 	Host        string    `gorm:"column:host" json:"host" form:"host"`
 	Name        string    `gorm:"column:name" json:"name" form:"name"`
@@ -15,6 +15,7 @@ type Host struct {
 	SSHKeyPath  string    `gorm:"column:ssh_key_path" json:"ssh_key_path" form:"ssh_key_path"`
 	UpdatedTime time.Time `gorm:"column:updated_time" json:"updated_time" form:"updated_time"`
 	CreatedTime time.Time `gorm:"column:created_time" json:"created_time" form:"created_time"`
+	User        string    `gorm:"column:user" json:"user" form:"user"`
 }
 
 func (h *Host) TableName() string {

@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"encoding/base64"
 	"encoding/json"
-	"fmt"
 	"io"
 	"io/ioutil"
 	"log"
@@ -23,17 +22,16 @@ func NewSSHClient(h models.Host) (*ssh.Client, error) {
 	config := &ssh.ClientConfig{
 		// ssh 连接time out 时间一秒钟, 如果ssh验证错误 会在一秒内返回
 		Timeout:         time.Second,
-		User:            h.Name,
+		User:            h.User,
 		HostKeyCallback: ssh.InsecureIgnoreHostKey(),
 	}
 	// 判断登录类型
-	if h.SSHType == "password" {
+	if h.SSHType == "ssh-password" {
 		config.Auth = []ssh.AuthMethod{ssh.Password(h.Password)}
 	} else {
 		config.Auth = []ssh.AuthMethod{publicKeyAuthFunc(h.SSHKeyPath)}
 	}
-	addr := fmt.Sprintf("%s:%d", h.Host, h.Port)
-	client, err := ssh.Dial("tcp", addr, config)
+	client, err := ssh.Dial("tcp", h.Host, config)
 	if err != nil {
 		zlog.Errorf("[NewSSHClient] Dial error: %s", err.Error())
 		return nil, err
