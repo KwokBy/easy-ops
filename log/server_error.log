@@ -156,3 +156,10 @@
 2022/03/17 - 10:11:05.731	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	add host error: Error 1054: Unknown column 'owener' in 'field list'
 2022/03/17 - 10:11:05.732	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	add host error: Error 1054: Unknown column 'owener' in 'field list'
 2022/03/17 - 10:13:25.193	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	add host error: json: cannot unmarshal string into Go struct field Host.port of type int64
+2022/03/18 - 00:26:35.553	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	update host error: Error 1292: Incorrect datetime value: '0000-00-00' for column 'created_time' at row 1
+2022/03/18 - 00:26:35.569	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	update host error: Error 1292: Incorrect datetime value: '0000-00-00' for column 'created_time' at row 1
+2022/03/18 - 00:28:42.614	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	add host error: json: cannot unmarshal string into Go struct field Host.port of type int64
+2022/03/18 - 00:44:59.394	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	add host error: json: cannot unmarshal string into Go struct field Host.port of type int64
+2022/03/18 - 00:46:28.689	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	add host error: json: cannot unmarshal string into Go struct field Host.port of type int64
+2022/03/18 - 00:48:10.573	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	add host error: json: cannot unmarshal string into Go struct field Host.port of type int64
+2022/03/18 - 00:50:29.215	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	update host error: json: cannot unmarshal string into Go struct field Host.port of type int64

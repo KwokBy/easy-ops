@@ -54,15 +54,20 @@ func (h *HostHandler) AddHost(c *gin.Context) {
 	response.OKWithData(nil, "add host success", c)
 }
 
+// DeleteHostReq 删除主机请求参数
+type DeleteHostReq struct {
+	HostID int64 `json:"host_id"`
+}
+
 // DeleteHost 删除主机
 func (h *HostHandler) DeleteHost(c *gin.Context) {
-	var id int64
-	if err := c.ShouldBind(&id); err != nil {
+	var req DeleteHostReq
+	if err := c.ShouldBind(&req); err != nil {
 		zlog.Errorf("delete host error: %s", err.Error())
 		response.FailWithData(err, "delete host error", c)
 		return
 	}
-	if err := h.hostService.DeleteHost(c, id); err != nil {
+	if err := h.hostService.DeleteHost(c, req.HostID); err != nil {
 		zlog.Errorf("delete host error: %s", err.Error())
 		response.FailWithData(err, "delete host error", c)
 		return

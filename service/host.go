@@ -35,7 +35,10 @@ func (h *hostService) GetHostsByUsername(ctx context.Context, owner string) (
 func (h *hostService) AddHost(ctx context.Context, host models.Host) error {
 	host.UpdatedTime = time.Now()
 	host.CreatedTime = time.Now()
+	// TODO 使用前端传入的用户名
 	host.Owner = "doubleguo"
+	// TODO 查询主机信息
+
 	host.Host = fmt.Sprintf("%s:%d", host.HostName, host.Port)
 	// 使用公秘钥
 	host.SSHType = "ssh-key"
@@ -60,9 +63,12 @@ func (h *hostService) DeleteHost(ctx context.Context, id int64) error {
 
 // UpdateHost 更新主机信息
 func (h *hostService) UpdateHost(ctx context.Context, host models.Host) error {
+	host.UpdatedTime = time.Now()
 	if err := h.hostRepo.UpdateHost(ctx, host); err != nil {
 		zlog.Errorf("update host error: %s", err.Error())
 		return err
 	}
 	return nil
 }
+
+// 查询主机信息
