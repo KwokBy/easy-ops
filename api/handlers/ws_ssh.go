@@ -7,6 +7,7 @@ import (
 
 	"github.com/KwokBy/easy-ops/pkg/ssh"
 	"github.com/KwokBy/easy-ops/pkg/validate"
+	"github.com/KwokBy/easy-ops/pkg/zlog"
 	"github.com/gorilla/websocket"
 
 	"github.com/KwokBy/easy-ops/models"
@@ -45,6 +46,7 @@ func (w *WsSshHandler) WSSSH(c *gin.Context) {
 		Password: "Gl@987963951",
 		SSHType:  "ssh-password",
 	}
+
 	// 从url中获取terminal大小
 	cols, err := strconv.Atoi(c.DefaultQuery("cols", "120"))
 	if validate.IsWSError(wsConn, err) {
@@ -54,7 +56,11 @@ func (w *WsSshHandler) WSSSH(c *gin.Context) {
 	if validate.IsWSError(wsConn, err) {
 		return
 	}
-
+	id, err := strconv.Atoi(c.DefaultQuery("id", "-1"))
+	if validate.IsWSError(wsConn, err) {
+		return
+	}
+	zlog.Infof("id: %d, cols: %d, rows: %d", id, cols, rows)
 	// 创建ssh客户端
 	client, err := ssh.NewSSHClient(machine)
 	if validate.IsWSError(wsConn, err) {

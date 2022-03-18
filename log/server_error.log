@@ -177,3 +177,327 @@
 2022/03/18 - 15:09:50.774	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
 2022/03/18 - 15:09:54.613	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
 2022/03/18 - 15:09:54.614	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 15:52:10.931	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 15:52:10.933	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 15:52:22.273	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 15:52:22.274	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 15:52:28.618	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 15:52:28.620	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 15:52:53.513	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 15:52:53.514	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 15:53:02.595	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 15:53:02.595	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 16:06:41.730	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 16:06:41.733	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 17:02:20.510	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 17:02:20.513	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 17:03:39.662	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 17:03:39.663	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 17:04:00.621	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 17:04:00.621	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:35:30.621	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 18:35:32.521	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 18:35:32.682	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 18:35:34.691	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 18:35:34.692	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:35:37.312	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 18:35:37.442	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 18:35:50.564	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:35:50.570	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:35:53.599	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:35:53.599	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:36:05.346	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:36:05.348	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:36:07.180	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:36:07.182	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:36:23.436	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:36:23.437	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:37:09.579	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:37:09.580	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:37:17.086	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 18:37:17.086	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:37:26.720	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:37:26.728	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:37:28.994	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:37:28.994	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:37:38.218	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:37:38.220	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:37:54.052	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:37:54.053	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:38:10.184	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 18:38:10.302	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 18:38:15.861	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:38:15.863	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:38:19.602	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:38:19.604	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:38:33.432	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:38:33.434	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:38:36.628	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:38:36.629	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:38:38.329	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:38:38.332	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:38:41.737	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:38:41.739	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:38:51.040	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 18:38:51.041	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:39:02.494	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 18:41:01.874	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:41:01.875	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:41:03.359	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:41:03.360	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 18:41:39.805	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 18:41:39.809	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 19:10:21.028	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 19:10:21.124	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 19:10:23.122	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 19:10:23.123	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 19:10:26.964	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 19:10:26.964	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 19:10:27.798	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 19:10:27.800	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[flushComboOutput] WriteMessage error: websocket: close sent
+2022/03/18 - 19:10:27.800	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 19:10:27.801	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SendComboOutput] flushComboOutput error: websocket: close sent
+2022/03/18 - 19:10:30.202	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 19:10:30.203	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 19:10:33.742	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 19:10:33.742	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 19:10:50.803	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 19:10:50.804	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 21:42:55.773	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 21:42:55.774	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 21:45:18.819	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 21:45:18.930	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 22:00:02.214	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:00:02.218	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:00:02.224	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:00:02.226	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:00:02.239	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:00:02.241	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:00:02.245	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:00:02.250	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:00:02.217	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:00:02.257	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:00:02.223	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:00:02.225	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:00:02.234	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:00:02.264	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:00:02.210	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:00:02.270	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:00:02.253	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:00:02.253	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:00:02.253	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:00:02.253	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:00:02.220	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:00:02.258	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:00:02.259	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:00:02.212	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:00:02.269	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:00:02.270	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:00:02.271	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:00:02.293	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:00:02.293	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:00:02.293	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:18:56.522	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:18:56.522	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:34.952	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:34.954	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:34.956	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:34.952	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:34.954	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:34.952	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:34.955	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:34.955	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:34.955	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:34.956	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:34.956	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:34.957	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:34.957	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:34.958	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:34.958	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:34.959	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:34.959	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:34.967	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:34.961	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:34.962	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:34.962	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:34.962	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:34.958	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:34.965	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:34.966	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:34.966	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:34.967	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:34.965	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:34.970	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:34.972	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:57.482	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:57.481	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:57.488	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:57.487	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:57.487	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:57.487	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:57.482	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:57.489	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:57.489	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:57.489	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:57.490	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:57.490	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:23:57.492	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:57.492	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:57.493	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:57.495	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:57.495	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:23:57.495	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.395	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.398	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.397	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.401	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.403	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.404	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.405	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.400	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.402	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.402	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.404	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.405	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.405	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.407	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.407	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.407	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.408	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.408	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.408	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.409	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.409	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.411	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.414	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.406	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:26:31.416	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.416	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.417	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.418	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.418	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.419	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.419	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.419	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.420	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.420	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.422	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:26:31.422	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:28:16.622	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[NewSSHClient] Dial error: dial tcp 106.55.161.12:22: i/o timeout
+2022/03/18 - 22:28:54.632	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:28:54.633	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:28:54.635	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:28:54.633	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:28:54.631	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:28:54.634	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:28:54.634	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:28:54.633	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:28:54.639	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:28:54.639	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:28:54.637	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:28:54.641	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:28:54.641	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:28:54.644	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:37:59.439	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:37:59.440	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:37:59.442	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:37:59.444	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:52:55.369	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 22:52:56.580	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 22:52:56.706	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 22:53:03.203	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 22:53:03.302	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 22:54:20.708	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:54:20.708	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:54:20.710	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:54:20.711	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:54:20.709	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:54:20.709	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:54:20.711	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:54:20.708	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:54:20.713	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:54:20.713	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:54:20.715	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:54:20.715	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:54:20.719	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:54:20.720	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:55:02.251	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 22:55:02.307	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 22:55:27.312	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:55:27.313	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:55:27.315	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 22:55:27.314	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:55:27.313	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 22:55:27.319	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:02:05.096	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 23:02:05.098	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 23:02:05.098	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:02:05.097	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:02:05.096	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 23:02:05.098	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 23:02:05.100	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:02:05.101	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:02:05.102	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 23:02:05.103	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:04:49.098	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 23:04:49.100	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 23:04:49.099	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:04:49.100	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 23:04:49.100	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 23:04:49.102	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:04:49.105	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:04:49.105	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:04:49.105	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 23:04:49.109	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:05:15.077	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 23:05:15.077	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 23:05:15.077	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:05:15.078	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:05:15.079	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 23:05:15.081	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:06:07.293	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:06:07.294	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:06:17.906	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:06:17.907	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:07:37.628	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:07:37.628	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:07:40.489	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:07:40.490	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:07:42.270	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:07:42.270	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:07:43.194	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:07:43.196	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:07:45.318	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:07:45.319	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:09:01.238	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:09:01.239	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:09:04.665	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:09:04.666	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:17:05.078	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:17:05.079	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:18:48.872	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 23:18:48.872	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:19:06.180	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:19:06.181	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:19:51.338	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:19:51.339	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:19:57.060	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:19:57.061	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:20:05.547	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:20:05.548	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:27:32.485	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:27:32.486	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:27:37.259	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:27:37.260	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:27:40.294	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:27:40.294	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:27:42.495	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:27:42.496	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:27:44.702	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:27:44.703	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:29:36.679	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1001 (going away)
+2022/03/18 - 23:29:36.680	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:29:44.977	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:29:44.978	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 23:29:48.625	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 23:29:48.626	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
