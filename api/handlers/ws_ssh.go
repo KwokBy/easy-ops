@@ -41,6 +41,7 @@ func (w *WsSshHandler) WSSSH(c *gin.Context) {
 		Host:     "106.55.161.12:22",
 		Port:     22,
 		Name:     "root",
+		User:     "root",
 		Password: "Gl@987963951",
 		SSHType:  "ssh-password",
 	}

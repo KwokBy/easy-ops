@@ -26,6 +26,8 @@ type HostService interface {
 	DeleteHost(ctx context.Context, id int64) error
 	// UpdateHost 更新主机信息
 	UpdateHost(ctx context.Context, host models.Host) error
+	// VerifyHost 校验主机信息
+	VerifyHost(ctx context.Context, host models.Host) error
 }
 
 type MirrorService interface {

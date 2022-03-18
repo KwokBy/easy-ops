@@ -163,3 +163,17 @@
 2022/03/18 - 00:46:28.689	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	add host error: json: cannot unmarshal string into Go struct field Host.port of type int64
 2022/03/18 - 00:48:10.573	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	add host error: json: cannot unmarshal string into Go struct field Host.port of type int64
 2022/03/18 - 00:50:29.215	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	update host error: json: cannot unmarshal string into Go struct field Host.port of type int64
+2022/03/18 - 14:08:50.858	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[NewSSHClient] Dial error: dial tcp 127.0.0.1:22: i/o timeout
+2022/03/18 - 14:08:50.958	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	verify host error: dial tcp 127.0.0.1:22: i/o timeout
+2022/03/18 - 14:08:50.959	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	verify host error: dial tcp 127.0.0.1:22: i/o timeout
+2022/03/18 - 14:08:53.629	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[NewSSHClient] Dial error: dial tcp 127.0.0.1:22: i/o timeout
+2022/03/18 - 14:08:53.629	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	verify host error: dial tcp 127.0.0.1:22: i/o timeout
+2022/03/18 - 14:08:53.630	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	verify host error: dial tcp 127.0.0.1:22: i/o timeout
+2022/03/18 - 14:15:59.529	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[NewSSHClient] Dial error: ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain
+2022/03/18 - 14:16:10.917	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[NewSSHClient] Dial error: ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain
+2022/03/18 - 14:17:22.253	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 14:17:22.364	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] DecodeString error: illegal base64 data at input byte 0
+2022/03/18 - 15:09:50.772	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 15:09:50.774	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal
+2022/03/18 - 15:09:54.613	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[ReceiveWsMsg] ReadMessage error: websocket: close 1005 (no status)
+2022/03/18 - 15:09:54.614	[31merror[0m	D:/code/easy-ops/pkg/zlog/zlog.go:82	[SessionWait] Wait error: wait: remote command exited without exit status or exit signal

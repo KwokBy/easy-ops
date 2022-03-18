@@ -16,6 +16,7 @@ type Host struct {
 	UpdatedTime time.Time `gorm:"column:updated_time" json:"updated_time" form:"updated_time"`
 	CreatedTime time.Time `gorm:"column:created_time" json:"created_time" form:"created_time"`
 	User        string    `gorm:"column:user" json:"user" form:"user"`
+	Status      int64     `gorm:"column:status" json:"status" form:"status"`
 }
 
 func (h *Host) TableName() string {

@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/KwokBy/easy-ops/models"
+	"github.com/KwokBy/easy-ops/pkg/ssh"
 	"github.com/KwokBy/easy-ops/pkg/zlog"
 	"github.com/KwokBy/easy-ops/repo"
 )
@@ -30,6 +31,11 @@ func (h *hostService) GetHostsByUsername(ctx context.Context, owner string) (
 	}
 	return hosts, nil
 }
+
+const (
+	hostVerifySucc = 1
+	hostVerifyFail = 0
+)
 
 // AddHost 添加主机
 func (h *hostService) AddHost(ctx context.Context, host models.Host) error {
@@ -72,3 +78,19 @@ func (h *hostService) UpdateHost(ctx context.Context, host models.Host) error {
 }
 
 // 查询主机信息
+
+// VerifyHost 校验主机信息
+func (h *hostService) VerifyHost(ctx context.Context, host models.Host) error {
+	_, err := ssh.NewSSHClient(host)
+	host.UpdatedTime = time.Now()
+	host.Status = hostVerifySucc
+	if err != nil {
+		host.Status = hostVerifyFail
+		zlog.Errorf("verify host error: %s", err.Error())
+	}
+	if err := h.hostRepo.UpdateHost(ctx, host); err != nil {
+		zlog.Errorf("update host error: %s", err.Error())
+		return err
+	}
+	return err
+}

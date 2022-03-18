@@ -32,6 +32,7 @@ func (r *Router) With(engine *gin.Engine) {
 		host.POST("/add", r.Host.AddHost)
 		host.POST("/delete", r.Host.DeleteHost)
 		host.POST("/update", r.Host.UpdateHost)
+		host.POST("/verify", r.Host.VerifyHost)
 	}
 	engine.GET("/getAsyncRoutes", func(c *gin.Context) {
 		response.OKWithData([]PermissionRouter{

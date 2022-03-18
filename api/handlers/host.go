@@ -90,3 +90,19 @@ func (h *HostHandler) UpdateHost(c *gin.Context) {
 	}
 	response.OKWithData(nil, "update host success", c)
 }
+
+// VerifyHost 验证主机
+func (h *HostHandler) VerifyHost(c *gin.Context) {
+	var host models.Host
+	if err := c.ShouldBind(&host); err != nil {
+		zlog.Errorf("verify host error: %s", err.Error())
+		response.FailWithData(err, "verify host error", c)
+		return
+	}
+	if err := h.hostService.VerifyHost(c, host); err != nil {
+		zlog.Errorf("verify host error: %s", err.Error())
+		response.FailWithData(err, "verify host error", c)
+		return
+	}
+	response.OKWithData(nil, "verify host success", c)
+}
