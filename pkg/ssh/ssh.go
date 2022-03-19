@@ -33,7 +33,6 @@ func NewSSHClient(h models.Host) (*ssh.Client, error) {
 	}
 	client, err := ssh.Dial("tcp", h.Host, config)
 	if err != nil {
-		zlog.Errorf("[NewSSHClient] Dial error: %s", err.Error())
 		return nil, err
 	}
 	return client, nil
@@ -43,13 +42,11 @@ func NewSSHClient(h models.Host) (*ssh.Client, error) {
 func RunCommand(client *ssh.Client, cmd string) (string, error) {
 	session, err := client.NewSession()
 	if err != nil {
-		zlog.Errorf("[RunCommand] NewSession error: %s", err.Error())
 		return "", err
 	}
 	defer session.Close()
 	output, err := session.CombinedOutput(cmd)
 	if err != nil {
-		zlog.Errorf("RunCommand error: %s", err)
 		return "", err
 	}
 	return string(output), nil
@@ -98,7 +95,6 @@ type SSHConn struct {
 func NewSSHConn(cols, rows int, sshClient *ssh.Client) (*SSHConn, error) {
 	sshSession, err := sshClient.NewSession()
 	if err != nil {
-		zlog.Errorf("[NewSSHConn] NewSession error: %s", err.Error())
 		return nil, err
 	}
 
@@ -123,13 +119,11 @@ func NewSSHConn(cols, rows int, sshClient *ssh.Client) (*SSHConn, error) {
 	}
 
 	if err := sshSession.RequestPty("xterm", rows, cols, modes); err != nil {
-		zlog.Errorf("[NewSSHConn] RequestPty error: %s", err.Error())
 		return nil, err
 	}
 
 	// start remote shell
 	if err := sshSession.Shell(); err != nil {
-		zlog.Errorf("[NewSSHConn] Shell error: %s", err.Error())
 		return nil, err
 	}
 	return &SSHConn{

@@ -40,10 +40,10 @@ func init() {
 	})
 	core := [...]zapcore.Core{
 		// TODO 路径后续接入配置文件
-		getEncoderCore("./log/server_debug.log", debugPriority),
-		getEncoderCore("./log/server_info.log", infoPriority),
-		getEncoderCore("./log/server_warn.log", warnPriority),
-		getEncoderCore("./log/server_error.log", errorPriority),
+		getEncoderCore("../log/server_debug.log", debugPriority),
+		getEncoderCore("../log/server_info.log", infoPriority),
+		getEncoderCore("../log/server_warn.log", warnPriority),
+		getEncoderCore("../log/server_error.log", errorPriority),
 	}
 	logger := zap.New(zapcore.NewTee(core[:]...), zap.AddCaller())
 	logger = logger.WithOptions(zap.AddCaller())
