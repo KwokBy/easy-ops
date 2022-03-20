@@ -1,6 +1,8 @@
 package ssh
 
 import (
+	"fmt"
+
 	"github.com/KwokBy/easy-ops/models"
 )
 
@@ -10,7 +12,7 @@ func RunSSHTerminal(h models.Host) error {
 		return err
 	}
 	defer client.Close()
-	_, err = RunCommand(client, "cd /home;ls")
+	str, err := RunCommand(client, "cd /home;ls")
+	fmt.Println(str)
 	return err
 }
-

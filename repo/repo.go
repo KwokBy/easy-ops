@@ -54,8 +54,16 @@ type MirrorRepo interface {
 }
 
 type TaskRepo interface {
-// GetTasksByUsername return tasks by username
-GetTasksByUsername(ctx context.Context, username string) ([]models.Task, error)
+	// GetTasksByUsername return tasks by username
+	GetTasksByUsername(ctx context.Context, username string) ([]models.Task, error)
 	// AddTask add task
 	AddTask(ctx context.Context, task models.Task) error
+	// GetTaskAndHosts  return task and hosts
+	GetTaskAndHosts(ctx context.Context, taskId int64, hostIds []int64) (models.Task, []models.Host, error)
+	// UpdateTaskStatus update task status
+	UpdateTaskStatus(ctx context.Context, taskId int64, status int) error
+	// UpdateTaskEntryId update task entry id
+	UpdateTaskEntryId(ctx context.Context, taskId int64, entryIds string) error
+	// GetTaskByID return task by id
+	GetTaskByID(ctx context.Context, taskId int64) (models.Task, error)
 }

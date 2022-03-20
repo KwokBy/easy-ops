@@ -243,3 +243,14 @@ func flushComboOutput(w *wsBufferWriter, wsConn *websocket.Conn) error {
 	}
 	return nil
 }
+
+// ClientAndExec 建立ssh连接，并执行命令
+func ClientAndExec(host models.Host, cmd string) (string, error) {
+	client, err := NewSSHClient(host)
+	if err != nil {
+		return "", err
+	}
+	defer client.Close()
+	str, err := RunCommand(client, cmd)
+	return str, err
+}

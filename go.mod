@@ -20,6 +20,8 @@ require (
 	github.com/golang/mock v1.6.0
 	github.com/gorilla/websocket v1.5.0
 	github.com/mitchellh/go-homedir v1.1.0
+	github.com/robfig/cron v1.2.0 // indirect
+	github.com/robfig/cron/v3 v3.0.0 // indirect
 	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0 // indirect
 )
