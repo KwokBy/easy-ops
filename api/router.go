@@ -14,6 +14,7 @@ type Router struct {
 	User  handlers.UserHandler
 	WsSsh handlers.WsSshHandler
 	Host  handlers.HostHandler
+	Task  handlers.TaskHandler
 }
 
 func (r *Router) With(engine *gin.Engine) {
@@ -33,6 +34,18 @@ func (r *Router) With(engine *gin.Engine) {
 		host.POST("/delete", r.Host.DeleteHost)
 		host.POST("/update", r.Host.UpdateHost)
 		host.POST("/verify", r.Host.VerifyHost)
+	}
+	wsSsh := engine.Group("/api/v1/ws")
+	{
+		wsSsh.GET("/ssh", r.WsSsh.WSSSH)
+	}
+	task := engine.Group("/api/v1/task")
+	{
+		task.POST("/get", r.Task.GetTasks)
+		task.POST("/add", r.Task.AddTask)
+		task.POST("exec", r.Task.ExecuteTask)
+		task.POST("/stop", r.Task.StopTask)
+		task.POST("/addAndRun", r.Task.AddTaskAndExecute)
 	}
 	engine.GET("/getAsyncRoutes", func(c *gin.Context) {
 		response.OKWithData([]PermissionRouter{
@@ -71,10 +84,7 @@ func (r *Router) With(engine *gin.Engine) {
 		},
 			"获取成功", c)
 	})
-	wsSsh := engine.Group("/api/v1/ws")
-	{
-		wsSsh.GET("/ssh", r.WsSsh.WSSSH)
-	}
+
 }
 
 type PermissionRouter struct {

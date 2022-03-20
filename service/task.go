@@ -126,3 +126,13 @@ func (s *taskService) UpdateTask(ctx context.Context, task models.Task) error {
 
 	return nil
 }
+
+// GetTasksByUsername 获取用户的任务列表
+func (s *taskService) GetTasksByUsername(ctx context.Context, userName string) ([]models.Task, error) {
+	tasks, err := s.taskRepo.GetTasksByUsername(ctx, userName)
+	if err != nil {
+		zlog.Errorf("get tasks by user name error, err: %v", err)
+		return nil, err
+	}
+	return tasks, nil
+}
