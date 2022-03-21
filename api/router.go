@@ -43,7 +43,7 @@ func (r *Router) With(engine *gin.Engine) {
 	{
 		task.POST("/get", r.Task.GetTasks)
 		task.POST("/add", r.Task.AddTask)
-		task.POST("exec", r.Task.ExecuteTask)
+		task.POST("/exec", r.Task.ExecuteTask)
 		task.POST("/stop", r.Task.StopTask)
 		task.POST("/addAndRun", r.Task.AddTaskAndExecute)
 	}

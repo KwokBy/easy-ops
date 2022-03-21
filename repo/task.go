@@ -19,7 +19,7 @@ func NewMysqlTaskRepo(DB *gorm.DB) TaskRepo {
 func (m *mysqlTaskRepo) GetTasksByUsername(ctx context.Context, username string) (
 	[]models.Task, error) {
 	var tasks []models.Task
-	if err := m.DB.Model(&tasks).Where("username = ?", username).Error; err != nil {
+	if err := m.DB.Where("username = ?", username).Find(&tasks).Error; err != nil {
 		return nil, err
 	}
 	return tasks, nil
