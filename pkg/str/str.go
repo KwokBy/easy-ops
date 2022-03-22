@@ -21,8 +21,11 @@ func Strings2Int64s(strs []string) ([]int64, error) {
 // Int64s2String converts a slice of int64s to a slice of string.
 func Int64s2String(int64s []int64) (string, error) {
 	b, err := json.Marshal(int64s)
-	if err != nil {
-		return "", err
-	}
-	return string(b), nil
+	return string(b), err
+}
+
+func String2Int64s(str string) ([]int64, error) {
+	var int64s []int64
+	err := json.Unmarshal([]byte(str), &int64s)
+	return int64s, err
 }

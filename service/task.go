@@ -3,6 +3,7 @@ package service
 import (
 	"context"
 	"strings"
+	"time"
 
 	"github.com/KwokBy/easy-ops/models"
 	"github.com/KwokBy/easy-ops/pkg/ssh"
@@ -25,8 +26,17 @@ func NewTaskService(taskRepo repo.TaskRepo) TaskService {
 }
 
 // AddRunCmdTask 添加运行命令任务
-func (s *taskService) AddTask(ctx context.Context, task models.Task) error {
+func (s *taskService) AddTask(ctx context.Context, taskDTO models.TaskDTO) error {
 	// 数据加入数据库
+	task, err := taskDTO.ToPOJO()
+	if err != nil {
+		return err
+	}
+	task.CreatedTime = time.Now()
+	task.UpdatedTime = time.Now()
+	task.Status = TaskStatusStop
+	task.Username = "doubleguo"
+
 	s.taskRepo.AddTask(ctx, task)
 	return nil
 }
@@ -34,6 +44,8 @@ func (s *taskService) AddTask(ctx context.Context, task models.Task) error {
 // AddRunCmdTask 添加运行命令任务
 func (s *taskService) AddTaskAndRun(ctx context.Context, task models.Task) error {
 	// 数据加入数据库
+	task.CreatedTime = time.Now()
+	task.UpdatedTime = time.Now()
 	if err := s.taskRepo.AddTask(ctx, task); err != nil {
 		zlog.Errorf("add task error, err: %v", err)
 		return err
@@ -128,11 +140,20 @@ func (s *taskService) UpdateTask(ctx context.Context, task models.Task) error {
 }
 
 // GetTasksByUsername 获取用户的任务列表
-func (s *taskService) GetTasksByUsername(ctx context.Context, userName string) ([]models.Task, error) {
+func (s *taskService) GetTasksByUsername(ctx context.Context, userName string) ([]models.TaskDTO, error) {
 	tasks, err := s.taskRepo.GetTasksByUsername(ctx, userName)
 	if err != nil {
 		zlog.Errorf("get tasks by user name error, err: %v", err)
 		return nil, err
 	}
-	return tasks, nil
+	var taskDTOs []models.TaskDTO
+	for _, task := range tasks {
+		taskDTO, err := task.ToDTO()
+		if err != nil {
+			zlog.Errorf("task to dto error, err: %v", err)
+			return nil, err
+		}
+		taskDTOs = append(taskDTOs, taskDTO)
+	}
+	return taskDTOs, nil
 }

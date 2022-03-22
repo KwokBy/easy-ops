@@ -35,9 +35,9 @@ type MirrorService interface {
 
 type TaskService interface {
 	// GetTasksByUsername 根据用户名获取任务列表
-	GetTasksByUsername(ctx context.Context, userName string) ([]models.Task, error)
+	GetTasksByUsername(ctx context.Context, userName string) ([]models.TaskDTO, error)
 	// AddTask 添加任务
-	AddTask(ctx context.Context, task models.Task) error
+	AddTask(ctx context.Context, task models.TaskDTO) error
 	// AddTaskAndRun 添加任务并执行
 	AddTaskAndRun(ctx context.Context, task models.Task) error
 	// ExecuteTask 执行任务
