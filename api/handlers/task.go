@@ -57,13 +57,13 @@ func (h *TaskHandler) AddTask(c *gin.Context) {
 
 // AddTaskAndExecute 添加任务并执行
 func (h *TaskHandler) AddTaskAndExecute(c *gin.Context) {
-	var task models.Task
-	if err := c.ShouldBind(&task); err != nil {
+	var taskDTO models.TaskDTO
+	if err := c.ShouldBind(&taskDTO); err != nil {
 		zlog.Errorf("add task error: %s", err.Error())
 		response.FailWithData(err, "add task error", c)
 		return
 	}
-	if err := h.taskService.AddTaskAndRun(c, task); err != nil {
+	if err := h.taskService.AddTaskAndRun(c, taskDTO); err != nil {
 		zlog.Errorf("add task error: %s", err.Error())
 		response.FailWithData(err, "add task error", c)
 		return
@@ -73,13 +73,13 @@ func (h *TaskHandler) AddTaskAndExecute(c *gin.Context) {
 
 // ExecuteTask 执行任务
 func (h *TaskHandler) ExecuteTask(c *gin.Context) {
-	var task models.Task
-	if err := c.ShouldBind(&task); err != nil {
+	var taskDTO models.TaskDTO
+	if err := c.ShouldBind(&taskDTO); err != nil {
 		zlog.Errorf("execute task error: %s", err.Error())
 		response.FailWithData(err, "execute task error", c)
 		return
 	}
-	if err := h.taskService.ExecuteTask(c, task); err != nil {
+	if err := h.taskService.ExecuteTask(c, taskDTO); err != nil {
 		zlog.Errorf("execute task error: %s", err.Error())
 		response.FailWithData(err, "execute task error", c)
 		return
@@ -89,7 +89,7 @@ func (h *TaskHandler) ExecuteTask(c *gin.Context) {
 
 // StopTasks 停止任务 struct
 type StopTasksReq struct {
-	TaskID int64 `json:"id"`
+	TaskID int64 `json:"task_id"`
 }
 
 // StopTask 停止任务
@@ -100,10 +100,27 @@ func (h *TaskHandler) StopTask(c *gin.Context) {
 		response.FailWithData(err, "stop task error", c)
 		return
 	}
+	zlog.Infof("stop task: %d", req.TaskID)
 	if err := h.taskService.StopTask(c, req.TaskID); err != nil {
 		zlog.Errorf("stop task error: %s", err.Error())
 		response.FailWithData(err, "stop task error", c)
 		return
 	}
 	response.OKWithData(nil, "stop task success", c)
+}
+
+// ExecuteTest 执行测试任务
+func (h *TaskHandler) ExecuteTest(c *gin.Context) {
+	var taskDTO models.TaskDTO
+	if err := c.ShouldBind(&taskDTO); err != nil {
+		zlog.Errorf("execute task error: %s", err.Error())
+		response.FailWithData(err, "execute task error", c)
+		return
+	}
+	if err := h.taskService.ExecuteTest(c, taskDTO); err != nil {
+		zlog.Errorf("execute task error: %s", err.Error())
+		response.FailWithData(err, "execute task error", c)
+		return
+	}
+	response.OKWithData(nil, "execute task success", c)
 }

@@ -38,7 +38,7 @@ func (m *mysqlTaskRepo) GetTaskAndHosts(ctx context.Context, taskId int64, hostI
 	models.Task, []models.Host, error) {
 	var task models.Task
 	var hosts []models.Host
-	if err := m.DB.Model(&task).Where("id = ?", taskId).Error; err != nil {
+	if err := m.DB.Where("id = ?", taskId).First(&task).Error; err != nil {
 		return task, hosts, err
 	}
 	if err := m.DB.Model(&models.Host{}).Where("id in (?)", hostIds).
@@ -58,7 +58,7 @@ func (m *mysqlTaskRepo) UpdateTaskStatus(ctx context.Context, taskId int64, stat
 
 // UpdateTaskEntryId 更新任务EntryId
 func (m *mysqlTaskRepo) UpdateTaskEntryId(ctx context.Context, taskId int64, entryIds string) error {
-	if err := m.DB.Model(&models.Task{}).Where("id = ?", taskId).Update("entry_ids", entryIds).Error; err != nil {
+	if err := m.DB.Model(&models.Task{}).Where("id = ?", taskId).Update("exec_ids", entryIds).Error; err != nil {
 		return err
 	}
 	return nil
@@ -67,8 +67,16 @@ func (m *mysqlTaskRepo) UpdateTaskEntryId(ctx context.Context, taskId int64, ent
 // GetTaskByID 根据ID获取任务
 func (m *mysqlTaskRepo) GetTaskByID(ctx context.Context, id int64) (models.Task, error) {
 	var task models.Task
-	if err := m.DB.Model(&task).Where("id = ?", id).Error; err != nil {
+	if err := m.DB.Where("id = ?", id).Find(&task).Error; err != nil {
 		return task, err
 	}
 	return task, nil
+}
+
+// UpdateTask 更新任务
+func (m *mysqlTaskRepo) UpdateTask(ctx context.Context, task models.Task) error {
+	if err := m.DB.Save(&task).Error; err != nil {
+		return err
+	}
+	return nil
 }

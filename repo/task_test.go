@@ -36,7 +36,7 @@ func Test_mysqlTaskRepo_GetTaskAndHost(t *testing.T) {
 			args: args{
 				ctx:     context.Background(),
 				hostIds: []int64{1, 2, 3},
-				taskId:  0,
+				taskId:  1,
 			},
 			// want:    nil,
 			wantErr: false,
@@ -64,8 +64,8 @@ func Test_mysqlTaskRepo_GetTasksByUsername(t *testing.T) {
 		"easy_ops",
 	)), &gorm.Config{})
 	type args struct {
-		ctx      context.Context
-		username string
+		ctx context.Context
+		id  int64
 	}
 	tests := []struct {
 		name    string
@@ -77,8 +77,8 @@ func Test_mysqlTaskRepo_GetTasksByUsername(t *testing.T) {
 			name: "Test_mysqlMirrorRepo_GetMirrorsByAdmin",
 			m:    &mysqlTaskRepo{db},
 			args: args{
-				ctx:      context.Background(),
-				username: "doubleguo",
+				ctx: context.Background(),
+				id:  1,
 			},
 			// want:    nil,
 			wantErr: false,
@@ -86,7 +86,7 @@ func Test_mysqlTaskRepo_GetTasksByUsername(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := tt.m.GetTasksByUsername(tt.args.ctx, tt.args.username)
+			got, err := tt.m.GetTaskByID(tt.args.ctx, tt.args.id)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("mysqlTaskRepo.GetTasksByUsername() error = %v, wantErr %v", err, tt.wantErr)
 				return

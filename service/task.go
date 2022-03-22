@@ -2,7 +2,6 @@ package service
 
 import (
 	"context"
-	"strings"
 	"time"
 
 	"github.com/KwokBy/easy-ops/models"
@@ -42,15 +41,19 @@ func (s *taskService) AddTask(ctx context.Context, taskDTO models.TaskDTO) error
 }
 
 // AddRunCmdTask 添加运行命令任务
-func (s *taskService) AddTaskAndRun(ctx context.Context, task models.Task) error {
+func (s *taskService) AddTaskAndRun(ctx context.Context, taskDTO models.TaskDTO) error {
 	// 数据加入数据库
-	task.CreatedTime = time.Now()
-	task.UpdatedTime = time.Now()
+	taskDTO.CreatedTime = time.Now()
+	taskDTO.UpdatedTime = time.Now()
+	task, err := taskDTO.ToPOJO()
+	if err != nil {
+		return err
+	}
 	if err := s.taskRepo.AddTask(ctx, task); err != nil {
 		zlog.Errorf("add task error, err: %v", err)
 		return err
 	}
-	if err := s.ExecuteTask(ctx, task); err != nil {
+	if err := s.ExecuteTask(ctx, taskDTO); err != nil {
 		zlog.Errorf("execute task error, err: %v", err)
 		return err
 	}
@@ -58,15 +61,10 @@ func (s *taskService) AddTaskAndRun(ctx context.Context, task models.Task) error
 }
 
 // ExecuteTask 执行任务
-func (s *taskService) ExecuteTask(ctx context.Context, task models.Task) error {
+func (s *taskService) ExecuteTask(ctx context.Context, taskDTO models.TaskDTO) error {
 
-	hostIDs, err := str.Strings2Int64s(strings.Split(task.HostIDs, ","))
-	if err != nil {
-		zlog.Errorf("task.host_ids to int64 array error, err: %v", err)
-		return err
-	}
 	// 获取主机列表
-	_, hosts, err := s.taskRepo.GetTaskAndHosts(ctx, task.ID, hostIDs)
+	_, hosts, err := s.taskRepo.GetTaskAndHosts(ctx, taskDTO.ID, taskDTO.HostIDs)
 	if err != nil {
 		zlog.Errorf("get task and hosts error, err: %v", err)
 		return err
@@ -74,8 +72,8 @@ func (s *taskService) ExecuteTask(ctx context.Context, task models.Task) error {
 	var entryIDs []int64
 	// 执行命令
 	for _, host := range hosts {
-		entryID, err := s.cron.AddFunc(task.Spec, func() {
-			ssh.ClientAndExec(host, task.Content)
+		entryID, err := s.cron.AddFunc(taskDTO.Spec, func() {
+			ssh.ClientAndExec(host, taskDTO.Content)
 		})
 		if err != nil {
 			zlog.Errorf("host %s add task , err: %v", host.Name, err)
@@ -83,16 +81,42 @@ func (s *taskService) ExecuteTask(ctx context.Context, task models.Task) error {
 		}
 		entryIDs = append(entryIDs, int64(entryID))
 	}
-	task.ExecIds, err = str.Int64s2String(entryIDs)
+	taskDTO.ExecIds = entryIDs
+	task, err := taskDTO.ToPOJO()
 	if err != nil {
-		zlog.Errorf("entryIDs to string error, err: %v", err)
 		return err
 	}
-	if err := s.taskRepo.UpdateTaskEntryId(ctx, task.ID, task.ExecIds); err != nil {
-		zlog.Errorf("update task entry id error, err: %v", err)
+	task.Status = TaskStatusNotSchedule
+	if err := s.taskRepo.UpdateTask(ctx, task); err != nil {
+		zlog.Errorf("update task error, err: %v", err)
 		return err
 	}
+	// if err := s.taskRepo.UpdateTaskEntryId(ctx, task.ID, task.ExecIds); err != nil {
+	// 	zlog.Errorf("update task entry id error, err: %v", err)
+	// 	return err
+	// }
 	s.cron.Start()
+	return nil
+}
+
+// ExecuteTestTask 执行测试任务
+func (s *taskService) ExecuteTest(ctx context.Context, taskDTO models.TaskDTO) error {
+
+	// 获取主机列表
+	_, hosts, err := s.taskRepo.GetTaskAndHosts(ctx, taskDTO.ID, taskDTO.HostIDs)
+	if err != nil {
+		zlog.Errorf("get task and hosts error, err: %v", err)
+		return err
+	}
+	// 执行命令
+	for _, host := range hosts {
+		result, err := ssh.ClientAndExec(host, taskDTO.Content)
+		if err != nil {
+			zlog.Errorf("host %s exec task , err: %v", host.Name, err)
+			return err
+		}
+		zlog.Infof("host %s result: %s", host.Name, result)
+	}
 	return nil
 }
 
@@ -119,7 +143,8 @@ func (s *taskService) StopTask(ctx context.Context, id int64) error {
 		return err
 	}
 	s.cron.Stop()
-	entryIDs, err := str.Strings2Int64s(strings.Split(task.ExecIds, ","))
+	zlog.Infof("stop task %s", task)
+	entryIDs, err := str.String2Int64s(task.ExecIds)
 	if err != nil {
 		zlog.Errorf("task.exec_ids to int64 array error, err: %v", err)
 		return err

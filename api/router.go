@@ -46,6 +46,7 @@ func (r *Router) With(engine *gin.Engine) {
 		task.POST("/exec", r.Task.ExecuteTask)
 		task.POST("/stop", r.Task.StopTask)
 		task.POST("/addAndRun", r.Task.AddTaskAndExecute)
+		task.POST("/test", r.Task.ExecuteTest)
 	}
 	engine.GET("/getAsyncRoutes", func(c *gin.Context) {
 		response.OKWithData([]PermissionRouter{

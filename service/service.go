@@ -39,9 +39,11 @@ type TaskService interface {
 	// AddTask 添加任务
 	AddTask(ctx context.Context, task models.TaskDTO) error
 	// AddTaskAndRun 添加任务并执行
-	AddTaskAndRun(ctx context.Context, task models.Task) error
+	AddTaskAndRun(ctx context.Context, task models.TaskDTO) error
 	// ExecuteTask 执行任务
-	ExecuteTask(ctx context.Context, task models.Task) error
+	ExecuteTask(ctx context.Context, task models.TaskDTO) error
+	// ExecuteTest 执行测试任务
+	ExecuteTest(ctx context.Context, task models.TaskDTO) error
 	// StopTask 停止任务
 	StopTask(ctx context.Context, id int64) error
 	// DeleteTask

@@ -7,7 +7,7 @@ import (
 )
 
 type Task struct {
-	ID          int64     `gorm:"column:id" json:"id" form:"id"`
+	ID          int64     `gorm:"primary_key" json:"id" form:"id"`
 	Username    string    `gorm:"column:username" json:"username" form:"username"`
 	Name        string    `gorm:"column:name" json:"name" form:"name"`
 	Content     string    `gorm:"column:content" json:"content" form:"content"`

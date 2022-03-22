@@ -66,4 +66,6 @@ type TaskRepo interface {
 	UpdateTaskEntryId(ctx context.Context, taskId int64, entryIds string) error
 	// GetTaskByID return task by id
 	GetTaskByID(ctx context.Context, taskId int64) (models.Task, error)
+	// UpdateTask update task
+	UpdateTask(ctx context.Context, task models.Task) error
 }

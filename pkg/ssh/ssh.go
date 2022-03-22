@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/base64"
 	"encoding/json"
+	"fmt"
 	"io"
 	"io/ioutil"
 	"log"
@@ -251,6 +252,7 @@ func ClientAndExec(host models.Host, cmd string) (string, error) {
 		return "", err
 	}
 	defer client.Close()
+	fmt.Println("[ClientAndExec] client: ")
 	str, err := RunCommand(client, cmd)
 	return str, err
 }
