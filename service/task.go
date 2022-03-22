@@ -34,7 +34,7 @@ func (s *taskService) AddTask(ctx context.Context, taskDTO models.TaskDTO) error
 	}
 	task.CreatedTime = time.Now()
 	task.UpdatedTime = time.Now()
-	task.Status = TaskStatusStop
+	task.Status = TaskStatusInactivated
 	task.Username = "doubleguo"
 
 	s.taskRepo.AddTask(ctx, task)
@@ -97,10 +97,18 @@ func (s *taskService) ExecuteTask(ctx context.Context, task models.Task) error {
 }
 
 const (
+	// TaskStatusInactivated 未激活
+	TaskStatusInactivated = 0
+	// TaskStatusNotSchedule 待调度
+	TaskStatusNotSchedule = 1
 	// TaskStatusRun 执行中
-	TaskStatusRun = 1
-	// TaskStatusStop 停止
-	TaskStatusStop = 2
+	TaskStatusRun = 2
+	// TaskStatusFinish 已完成
+	TaskStatusFinish = 3
+	// TaskStatusFail 失败
+	TaskStatusFail = 4
+	// TaskStatusCancel 已取消
+	TaskStatusCancel = 5
 )
 
 // 停止某个任务，
@@ -119,7 +127,7 @@ func (s *taskService) StopTask(ctx context.Context, id int64) error {
 	for _, entryID := range entryIDs {
 		s.cron.Remove(cron.EntryID(entryID))
 	}
-	if err := s.taskRepo.UpdateTaskStatus(ctx, id, TaskStatusStop); err != nil {
+	if err := s.taskRepo.UpdateTaskStatus(ctx, id, TaskStatusInactivated); err != nil {
 		zlog.Errorf("update task status error, err: %v", err)
 		return err
 	}

@@ -41,13 +41,13 @@ func (h *TaskHandler) GetTasks(c *gin.Context) {
 
 // AddTask 添加任务
 func (h *TaskHandler) AddTask(c *gin.Context) {
-	var task models.TaskDTO
-	if err := c.ShouldBind(&task); err != nil {
+	var taskDTO models.TaskDTO
+	if err := c.ShouldBind(&taskDTO); err != nil {
 		zlog.Errorf("add task error: %s", err.Error())
 		response.FailWithData(err, "add task error", c)
 		return
 	}
-	if err := h.taskService.AddTask(c, task); err != nil {
+	if err := h.taskService.AddTask(c, taskDTO); err != nil {
 		zlog.Errorf("add task error: %s", err.Error())
 		response.FailWithData(err, "add task error", c)
 		return
