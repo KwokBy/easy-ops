@@ -13,14 +13,16 @@ import (
 )
 
 type taskService struct {
-	taskRepo repo.TaskRepo
-	cron     *cron.Cron
+	taskRepo        repo.TaskRepo
+	cron            *cron.Cron
+	execHistoryRepo repo.ExecHistoryRepo
 }
 
-func NewTaskService(taskRepo repo.TaskRepo) TaskService {
+func NewTaskService(taskRepo repo.TaskRepo, execHistoryRepo repo.ExecHistoryRepo) TaskService {
 	return &taskService{
-		taskRepo: taskRepo,
-		cron:     cron.New(),
+		taskRepo:        taskRepo,
+		cron:            cron.New(),
+		execHistoryRepo: execHistoryRepo,
 	}
 }
 
@@ -91,31 +93,56 @@ func (s *taskService) ExecuteTask(ctx context.Context, taskDTO models.TaskDTO) e
 		zlog.Errorf("update task error, err: %v", err)
 		return err
 	}
-	// if err := s.taskRepo.UpdateTaskEntryId(ctx, task.ID, task.ExecIds); err != nil {
-	// 	zlog.Errorf("update task entry id error, err: %v", err)
-	// 	return err
-	// }
 	s.cron.Start()
 	return nil
 }
 
+const (
+	ExecHistoryTypeTest      = 1
+	ExecHistoryTypeRun       = 2
+	ExecHistoryStatusSuccess = 1
+	ExecHistoryStatusFailed  = 2
+)
+
 // ExecuteTestTask 执行测试任务
 func (s *taskService) ExecuteTest(ctx context.Context, taskDTO models.TaskDTO) error {
-
 	// 获取主机列表
 	_, hosts, err := s.taskRepo.GetTaskAndHosts(ctx, taskDTO.ID, taskDTO.HostIDs)
 	if err != nil {
 		zlog.Errorf("get task and hosts error, err: %v", err)
 		return err
 	}
-	// 执行命令
+	var execHistorys []models.ExecHistory
+	// 计算执行id，对于每个任务唯一
+	execID, err := s.execHistoryRepo.GetCountGroupByExecID(ctx, taskDTO.ID)
+	if err != nil {
+		zlog.Errorf("get count group by exec id error, err: %v", err)
+		return err
+	}
+	execID++
 	for _, host := range hosts {
+		execHistory := models.ExecHistory{
+			TaskId:      taskDTO.ID,
+			HostName:    host.HostName,
+			CreatedTime: time.Now(),
+			UpdatedTime: time.Now(),
+			Status:      ExecHistoryStatusSuccess,
+			Type:        ExecHistoryTypeTest,
+			ExecId:      execID,
+		}
+		// 执行命令
 		result, err := ssh.ClientAndExec(host, taskDTO.Content)
 		if err != nil {
 			zlog.Errorf("host %s exec task , err: %v", host.Name, err)
-			return err
+			execHistory.Status = ExecHistoryStatusFailed
 		}
-		zlog.Infof("host %s result: %s", host.Name, result)
+		execHistory.Content = result
+		execHistorys = append(execHistorys, execHistory)
+	}
+	// 保存执行记录
+	if err := s.execHistoryRepo.BatchAddExecHistory(ctx, execHistorys); err != nil {
+		zlog.Errorf("batch add exec history error, err: %v", err)
+		return err
 	}
 	return nil
 }

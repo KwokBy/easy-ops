@@ -30,14 +30,18 @@ func InitServer() *app.Server {
 	hostService := service.NewHostService(hostRepo)
 	hostHandler := handlers.NewHostHandler(hostService)
 	taskRepo := repo.NewMysqlTaskRepo(db)
-	taskService := service.NewTaskService(taskRepo)
+	execHistoryRepo := repo.NewMysqlExecHistoryRepo(db)
+	taskService := service.NewTaskService(taskRepo, execHistoryRepo)
 	taskHandler := handlers.NewTaskHandler(taskService)
+	execHistoryService := service.NewExecHistoryService(execHistoryRepo)
+	execHistoryHandler := handlers.NewExecHistoryHandler(execHistoryService)
 	apiRouter := &api.Router{
-		Demo:  demoHandler,
-		User:  userHandler,
-		WsSsh: wsSshHandler,
-		Host:  hostHandler,
-		Task:  taskHandler,
+		Demo:        demoHandler,
+		User:        userHandler,
+		WsSsh:       wsSshHandler,
+		Host:        hostHandler,
+		Task:        taskHandler,
+		execHistory: execHistoryHandler,
 	}
 	server := app.NewServer(engine, apiRouter)
 	return server

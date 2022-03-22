@@ -49,3 +49,8 @@ type TaskService interface {
 	// DeleteTask
 	DeleteTask(ctx context.Context, id int64) error
 }
+
+type ExecHistoryService interface {
+	// GetExecHistoriesByTaskID 获取任务执行历史
+	GetExecHistoriesByTaskID(ctx context.Context, taskID int64) ([][]models.ExecHistory, error)
+}

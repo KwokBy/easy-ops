@@ -10,44 +10,15 @@ import (
 )
 
 type Router struct {
-	Demo  handlers.DemoHandler
-	User  handlers.UserHandler
-	WsSsh handlers.WsSshHandler
-	Host  handlers.HostHandler
-	Task  handlers.TaskHandler
+	Demo        handlers.DemoHandler
+	User        handlers.UserHandler
+	WsSsh       handlers.WsSshHandler
+	Host        handlers.HostHandler
+	Task        handlers.TaskHandler
+	execHistory handlers.ExecHistoryHandler
 }
 
 func (r *Router) With(engine *gin.Engine) {
-	demo := engine.Group("/api/v1/demo")
-	{
-		demo.GET("/", r.Demo.GetLongDemo)
-		demo.GET("/ws", r.Demo.Wshandler)
-	}
-	user := engine.Group("/api/v1/user")
-	{
-		user.POST("/login", r.User.Login)
-	}
-	host := engine.Group("/api/v1/host")
-	{
-		host.POST("/get", r.Host.GetHosts)
-		host.POST("/add", r.Host.AddHost)
-		host.POST("/delete", r.Host.DeleteHost)
-		host.POST("/update", r.Host.UpdateHost)
-		host.POST("/verify", r.Host.VerifyHost)
-	}
-	wsSsh := engine.Group("/api/v1/ws")
-	{
-		wsSsh.GET("/ssh", r.WsSsh.WSSSH)
-	}
-	task := engine.Group("/api/v1/task")
-	{
-		task.POST("/get", r.Task.GetTasks)
-		task.POST("/add", r.Task.AddTask)
-		task.POST("/exec", r.Task.ExecuteTask)
-		task.POST("/stop", r.Task.StopTask)
-		task.POST("/addAndRun", r.Task.AddTaskAndExecute)
-		task.POST("/test", r.Task.ExecuteTest)
-	}
 	engine.GET("/getAsyncRoutes", func(c *gin.Context) {
 		response.OKWithData([]PermissionRouter{
 			{
@@ -85,6 +56,41 @@ func (r *Router) With(engine *gin.Engine) {
 		},
 			"获取成功", c)
 	})
+
+	demo := engine.Group("/api/v1/demo")
+	{
+		demo.GET("/", r.Demo.GetLongDemo)
+		demo.GET("/ws", r.Demo.Wshandler)
+	}
+	user := engine.Group("/api/v1/user")
+	{
+		user.POST("/login", r.User.Login)
+	}
+	host := engine.Group("/api/v1/host")
+	{
+		host.POST("/get", r.Host.GetHosts)
+		host.POST("/add", r.Host.AddHost)
+		host.POST("/delete", r.Host.DeleteHost)
+		host.POST("/update", r.Host.UpdateHost)
+		host.POST("/verify", r.Host.VerifyHost)
+	}
+	wsSsh := engine.Group("/api/v1/ws")
+	{
+		wsSsh.GET("/ssh", r.WsSsh.WSSSH)
+	}
+	task := engine.Group("/api/v1/task")
+	{
+		task.POST("/get", r.Task.GetTasks)
+		task.POST("/add", r.Task.AddTask)
+		task.POST("/exec", r.Task.ExecuteTask)
+		task.POST("/stop", r.Task.StopTask)
+		task.POST("/addAndRun", r.Task.AddTaskAndExecute)
+		task.POST("/test", r.Task.ExecuteTest)
+	}
+	execHistory := engine.Group("/api/v1/execHistory")
+	{
+		execHistory.POST("/get", r.execHistory.GetExecHistory)
+	}
 
 }
 
