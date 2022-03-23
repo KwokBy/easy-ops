@@ -13,16 +13,20 @@ import (
 )
 
 type taskService struct {
-	taskRepo        repo.TaskRepo
-	cron            *cron.Cron
+	taskRepo            repo.TaskRepo
+	cron                *cron.Cron
 	execHistoryInfoRepo repo.ExecHistoryInfoRepo
+	execHistoryRepo     repo.ExecHistoryRepo
 }
 
-func NewTaskService(taskRepo repo.TaskRepo, execHistoryInfoRepo repo.ExecHistoryInfoRepo) TaskService {
+func NewTaskService(taskRepo repo.TaskRepo,
+	execHistoryInfoRepo repo.ExecHistoryInfoRepo,
+	execHistoryRepo repo.ExecHistoryRepo) TaskService {
 	return &taskService{
-		taskRepo:        taskRepo,
-		cron:            cron.New(),
+		taskRepo:            taskRepo,
+		cron:                cron.New(),
 		execHistoryInfoRepo: execHistoryInfoRepo,
+		execHistoryRepo:     execHistoryRepo,
 	}
 }
 
@@ -101,7 +105,7 @@ const (
 	ExecHistoryTypeTest      = 1
 	ExecHistoryTypeRun       = 2
 	ExecHistoryStatusSuccess = 1
-	ExecHistoryStatusFailed  = 2
+	ExecHistoryStatusFailed  = 0
 )
 
 // ExecuteTestTask 执行测试任务
@@ -114,16 +118,23 @@ func (s *taskService) ExecuteTest(ctx context.Context, taskDTO models.TaskDTO) e
 	}
 	var execHistorys []models.ExecHistoryInfo
 	// 计算执行id，对于每个任务唯一
-	execID, err := s.execHistoryInfoRepo.GetCountGroupByExecID(ctx, taskDTO.ID)
+	execID, err := s.execHistoryRepo.GetExecHistoryCountByTaskID(ctx, taskDTO.ID)
 	if err != nil {
 		zlog.Errorf("get count group by exec id error, err: %v", err)
 		return err
 	}
 	execID++
+	execHistory := models.ExecHistory{
+		TaskID:   taskDTO.ID,
+		ExecID:   execID,
+		ExecTime: time.Now(),
+		Status:   ExecHistoryStatusSuccess,
+	}
 	for _, host := range hosts {
-		execHistory := models.ExecHistoryInfo{
+		currentTime := time.Now()
+		execHistoryInfo := models.ExecHistoryInfo{
 			TaskId:      taskDTO.ID,
-			HostName:    host.HostName,
+			HostName:    host.Name,
 			CreatedTime: time.Now(),
 			UpdatedTime: time.Now(),
 			Status:      ExecHistoryStatusSuccess,
@@ -132,16 +143,23 @@ func (s *taskService) ExecuteTest(ctx context.Context, taskDTO models.TaskDTO) e
 		}
 		// 执行命令
 		result, err := ssh.ClientAndExec(host, taskDTO.Content)
+		timeConsume := time.Since(currentTime)
 		if err != nil {
 			zlog.Errorf("host %s exec task , err: %v", host.Name, err)
+			execHistoryInfo.Status = ExecHistoryStatusFailed
 			execHistory.Status = ExecHistoryStatusFailed
 		}
-		execHistory.Content = result
-		execHistorys = append(execHistorys, execHistory)
+		execHistoryInfo.Content = result
+		execHistoryInfo.TimeConsume = timeConsume.Seconds()
+		execHistorys = append(execHistorys, execHistoryInfo)
 	}
 	// 保存执行记录
+	if err := s.execHistoryRepo.AddExecHistory(ctx, execHistory); err != nil {
+		zlog.Errorf("add exec history error, err: %v", err)
+		return err
+	}
 	if err := s.execHistoryInfoRepo.BatchAddExecHistory(ctx, execHistorys); err != nil {
-		zlog.Errorf("batch add exec history error, err: %v", err)
+		zlog.Errorf("batch add exec history info error, err: %v", err)
 		return err
 	}
 	return nil

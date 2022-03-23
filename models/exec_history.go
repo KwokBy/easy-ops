@@ -4,9 +4,9 @@ import "time"
 
 type ExecHistory struct {
 	Id       int64     `gorm:"column:id" json:"id"`
-	ExecId   int       `gorm:"column:exec_id" json:"exec_id"`
+	ExecID   int64       `gorm:"column:exec_id" json:"exec_id"`
 	ExecTime time.Time `gorm:"column:exec_time" json:"exec_time"`
-	TaskId   int64     `gorm:"column:task_id" json:"task_id"`
+	TaskID   int64     `gorm:"column:task_id" json:"task_id"`
 	Status   int64     `gorm:"column:status" json:"status"` //一组任务只有有一个失败视为失败
 }
 

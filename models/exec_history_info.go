@@ -11,7 +11,7 @@ type ExecHistoryInfo struct {
 	HostName    string    `gorm:"column:host_name" json:"host_name"` //主机名
 	UpdatedTime time.Time `gorm:"column:updated_time" json:"updated_time"`
 	CreatedTime time.Time `gorm:"column:created_time" json:"created_time"`
-	ExecId      int       `gorm:"column:exec_id" json:"exec_id"` //执行id用来标识同一批执行的任务
+	ExecId      int64     `gorm:"column:exec_id" json:"exec_id"`           //执行id用来标识同一批执行的任务
 	TimeConsume float64   `gorm:"column:time_consume" json:"time_consume"` // 耗时
 }
 

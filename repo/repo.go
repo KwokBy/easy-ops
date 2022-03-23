@@ -80,4 +80,16 @@ type ExecHistoryInfoRepo interface {
 		[]models.ExecHistoryInfo, error)
 	// GetCountGroupByExecID 获取某个Task下的执行次数
 	GetCountGroupByExecID(ctx context.Context, taskID int64) (int, error)
+	// GetExecHistoryByTaskIDAndExecID
+	GetExecHistoryByTaskIDAndExecID(ctx context.Context, taskID int64, execID int64) (
+		[]models.ExecHistoryInfo, error)
+}
+
+type ExecHistoryRepo interface {
+	// AddExecHistory 添加执行历史
+	AddExecHistory(ctx context.Context, execHistory models.ExecHistory) error
+	// GetExecHistoryByTaskID 根据TaskID获取执行历史
+	GetExecHistoryByTaskID(ctx context.Context, taskID int64) ([]models.ExecHistory, error)
+	// GetExecHistoryCountByTaskID 获取某个Task下的执行次数
+	GetExecHistoryCountByTaskID(ctx context.Context, taskID int64) (int64, error)
 }

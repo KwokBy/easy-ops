@@ -2,7 +2,6 @@ package service
 
 import (
 	"context"
-	"sort"
 
 	"github.com/KwokBy/easy-ops/models"
 	"github.com/KwokBy/easy-ops/repo"
@@ -18,37 +17,22 @@ func NewExecHistoryInfoService(execHistoryInfoRepo repo.ExecHistoryInfoRepo) Exe
 	}
 }
 
-// GetExecHistoriesByTaskID 根据任务ID获取执行历史列表
-func (s *execHistoryInfoService) GetExecHistoriesByTaskID(ctx context.Context, taskID int64) ([][]models.ExecHistoryInfo, error) {
-	execHistories, err := s.execHistoryInfoRepo.GetExecHistoryByTaskID(ctx, taskID)
+// GetExecHistoryInfos 获取执行历史列表
+func (s *execHistoryInfoService) GetExecHistoryInfos(ctx context.Context, taskID, execID int64) (models.ExecHistoryDTO, error) {
+	execHistoryInfos, err := s.execHistoryInfoRepo.GetExecHistoryByTaskIDAndExecID(ctx, taskID, execID)
 	if err != nil {
-		return nil, err
+		return models.ExecHistoryDTO{}, err
 	}
-	return splitSlice(execHistories), nil
-}
-
-//按某个字段排序
-type sortByExecID []models.ExecHistoryInfo
-
-func (s sortByExecID) Len() int           { return len(s) }
-func (s sortByExecID) Swap(i, j int)      { s[i], s[j] = s[j], s[i] }
-func (s sortByExecID) Less(i, j int) bool { return s[i].ExecId < s[j].ExecId }
-
-//切片分组
-func splitSlice(list []models.ExecHistoryInfo) [][]models.ExecHistoryInfo {
-	sort.Sort(sortByExecID(list))
-	returnData := make([][]models.ExecHistoryInfo, 0)
-	i := 0
-	var j int
-	for {
-		if i >= len(list) {
-			break
-		}
-		for j = i + 1; j < len(list) && list[i].ExecId == list[j].ExecId; j++ {
-		}
-
-		returnData = append(returnData, list[i:j])
-		i = j
+	resultCount := [2]int{}
+	sumCount := 0.0
+	for _, execHistoryInfo := range execHistoryInfos {
+		resultCount[execHistoryInfo.Status]++
+		sumCount += execHistoryInfo.TimeConsume
 	}
-	return returnData
+	return models.ExecHistoryDTO{
+		ExecHistories: execHistoryInfos,
+		SuccessCount:  resultCount[0],
+		FailCount:     resultCount[1],
+		AvgCount:      sumCount / float64(len(execHistoryInfos)),
+	}, nil
 }

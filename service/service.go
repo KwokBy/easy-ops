@@ -51,6 +51,11 @@ type TaskService interface {
 }
 
 type ExecHistoryInfoService interface {
+	// GetExecHistoryInfos
+	GetExecHistoryInfos(ctx context.Context, taskID, execID int64) (models.ExecHistoryDTO, error)
+}
+
+type ExecHistoryService interface {
 	// GetExecHistoriesByTaskID 获取任务执行历史
-	GetExecHistoriesByTaskID(ctx context.Context, taskID int64) ([][]models.ExecHistoryInfo, error)
+	GetExecHistoriesByTaskID(ctx context.Context, taskID int64) ([]models.ExecHistory, error)
 }

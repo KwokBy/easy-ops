@@ -19,17 +19,18 @@ func NewExecHistoryInfoHandler(execHistoryInfoService service.ExecHistoryInfoSer
 
 type GetExecHistoryReq struct {
 	TaskID int64 `json:"task_id"`
+	ExecID int64 `json:"exec_id"`
 }
 
 // GetExecHistory 获取执行历史
-func (h *ExecHistoryInfoHandler) GetExecHistory(c *gin.Context) {
+func (h *ExecHistoryInfoHandler) GetExecHistoryInfo(c *gin.Context) {
 	var req GetExecHistoryReq
 	if err := c.ShouldBind(&req); err != nil {
 		zlog.Errorf("get exec history error: %s", err.Error())
 		response.FailWithData(err, "get exec history error", c)
 		return
 	}
-	execHistory, err := h.execHistoryInfoService.GetExecHistoriesByTaskID(c, req.TaskID)
+	execHistory, err := h.execHistoryInfoService.GetExecHistoryInfos(c, req.TaskID, req.ExecID)
 	if err != nil {
 		zlog.Errorf("get exec history error: %s", err.Error())
 		response.FailWithData(err, "get exec history error", c)

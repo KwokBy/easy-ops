@@ -10,11 +10,12 @@ import (
 )
 
 type Router struct {
-	Demo        handlers.DemoHandler
-	User        handlers.UserHandler
-	WsSsh       handlers.WsSshHandler
-	Host        handlers.HostHandler
-	Task        handlers.TaskHandler
+	Demo            handlers.DemoHandler
+	User            handlers.UserHandler
+	WsSsh           handlers.WsSshHandler
+	Host            handlers.HostHandler
+	Task            handlers.TaskHandler
+	ExecHistory     handlers.ExecHistoryHandler
 	ExecHistoryInfo handlers.ExecHistoryInfoHandler
 }
 
@@ -87,9 +88,13 @@ func (r *Router) With(engine *gin.Engine) {
 		task.POST("/addAndRun", r.Task.AddTaskAndExecute)
 		task.POST("/test", r.Task.ExecuteTest)
 	}
+	execHistoryInfo := engine.Group("/api/v1/execHistoryInfo")
+	{
+		execHistoryInfo.POST("/get", r.ExecHistoryInfo.GetExecHistoryInfo)
+	}
 	execHistory := engine.Group("/api/v1/execHistory")
 	{
-		execHistory.POST("/get", r.ExecHistoryInfo.GetExecHistory)
+		execHistory.POST("/get", r.ExecHistory.GetExecHistories)
 	}
 
 }
