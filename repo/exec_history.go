@@ -27,7 +27,7 @@ func (h *mysqlExecHistoryRepo) AddExecHistory(ctx context.Context, execHistory m
 func (h *mysqlExecHistoryRepo) GetExecHistoryByTaskID(ctx context.Context, taskID int64) (
 	[]models.ExecHistory, error) {
 	var execHistories []models.ExecHistory
-	if err := h.DB.Where("task_id = ?", taskID).Find(&execHistories).Error; err != nil {
+	if err := h.DB.Where("task_id = ?", taskID).Order("exec_time DESC").Find(&execHistories).Error; err != nil {
 		return nil, err
 	}
 	return execHistories, nil
@@ -40,4 +40,4 @@ func (h *mysqlExecHistoryRepo) GetExecHistoryCountByTaskID(ctx context.Context, 
 		return 0, err
 	}
 	return count, nil
-} 
+}

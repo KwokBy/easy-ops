@@ -143,13 +143,15 @@ func (s *taskService) ExecuteTest(ctx context.Context, taskDTO models.TaskDTO) e
 		}
 		// 执行命令
 		result, err := ssh.ClientAndExec(host, taskDTO.Content)
+		execHistoryInfo.Content = result
 		timeConsume := time.Since(currentTime)
 		if err != nil {
 			zlog.Errorf("host %s exec task , err: %v", host.Name, err)
 			execHistoryInfo.Status = ExecHistoryStatusFailed
 			execHistory.Status = ExecHistoryStatusFailed
+			execHistoryInfo.Content = err.Error()
 		}
-		execHistoryInfo.Content = result
+
 		execHistoryInfo.TimeConsume = timeConsume.Seconds()
 		execHistorys = append(execHistorys, execHistoryInfo)
 	}

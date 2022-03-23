@@ -61,7 +61,7 @@ func (h *mysqlExecHistoryInfoRepo) GetCountGroupByExecID(ctx context.Context, ta
 func (h *mysqlExecHistoryInfoRepo) GetExecHistoryByTaskIDAndExecID(ctx context.Context, taskID int64, execID int64) (
 	[]models.ExecHistoryInfo, error) {
 	var execHistories []models.ExecHistoryInfo
-	if err := h.DB.Where("task_id = ? and exec_id = ?", taskID, execID).Find(&execHistories).Error; err != nil {
+	if err := h.DB.Where("task_id = ? and exec_id = ?", taskID, execID).Order("created_time DESC").Find(&execHistories).Error; err != nil {
 		return nil, err
 	}
 	return execHistories, nil
