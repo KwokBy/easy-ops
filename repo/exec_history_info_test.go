@@ -23,14 +23,14 @@ func Test_mysqlExecHistoryRepo_GetCountGroupByExecID(t *testing.T) {
 	}
 	tests := []struct {
 		name    string
-		h       *mysqlExecHistoryRepo
+		h       *mysqlExecHistoryInfoRepo
 		args    args
 		want    int
 		wantErr bool
 	}{
 		{
 			name: "Test_mysqlExecHistoryRepo_GetCountGroupByExecID",
-			h:    &mysqlExecHistoryRepo{db},
+			h:    &mysqlExecHistoryInfoRepo{db},
 			args: args{
 				ctx:    context.Background(),
 				taskID: 1,

@@ -70,14 +70,14 @@ type TaskRepo interface {
 	UpdateTask(ctx context.Context, task models.Task) error
 }
 
-type ExecHistoryRepo interface {
+type ExecHistoryInfoRepo interface {
 	// AddExecHistory 添加执行历史
-	AddExecHistory(ctx context.Context, execHistory models.ExecHistory) error
+	AddExecHistory(ctx context.Context, execHistory models.ExecHistoryInfo) error
 	// BatchAddExecHistory 批量添加执行历史
-	BatchAddExecHistory(ctx context.Context, execHistories []models.ExecHistory) error
+	BatchAddExecHistory(ctx context.Context, execHistories []models.ExecHistoryInfo) error
 	// GetExecHistoryByTaskID 根据TaskID获取执行历史
 	GetExecHistoryByTaskID(ctx context.Context, taskID int64) (
-		[]models.ExecHistory, error)
+		[]models.ExecHistoryInfo, error)
 	// GetCountGroupByExecID 获取某个Task下的执行次数
 	GetCountGroupByExecID(ctx context.Context, taskID int64) (int, error)
 }

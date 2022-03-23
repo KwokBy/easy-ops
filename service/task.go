@@ -15,14 +15,14 @@ import (
 type taskService struct {
 	taskRepo        repo.TaskRepo
 	cron            *cron.Cron
-	execHistoryRepo repo.ExecHistoryRepo
+	execHistoryInfoRepo repo.ExecHistoryInfoRepo
 }
 
-func NewTaskService(taskRepo repo.TaskRepo, execHistoryRepo repo.ExecHistoryRepo) TaskService {
+func NewTaskService(taskRepo repo.TaskRepo, execHistoryInfoRepo repo.ExecHistoryInfoRepo) TaskService {
 	return &taskService{
 		taskRepo:        taskRepo,
 		cron:            cron.New(),
-		execHistoryRepo: execHistoryRepo,
+		execHistoryInfoRepo: execHistoryInfoRepo,
 	}
 }
 
@@ -112,16 +112,16 @@ func (s *taskService) ExecuteTest(ctx context.Context, taskDTO models.TaskDTO) e
 		zlog.Errorf("get task and hosts error, err: %v", err)
 		return err
 	}
-	var execHistorys []models.ExecHistory
+	var execHistorys []models.ExecHistoryInfo
 	// 计算执行id，对于每个任务唯一
-	execID, err := s.execHistoryRepo.GetCountGroupByExecID(ctx, taskDTO.ID)
+	execID, err := s.execHistoryInfoRepo.GetCountGroupByExecID(ctx, taskDTO.ID)
 	if err != nil {
 		zlog.Errorf("get count group by exec id error, err: %v", err)
 		return err
 	}
 	execID++
 	for _, host := range hosts {
-		execHistory := models.ExecHistory{
+		execHistory := models.ExecHistoryInfo{
 			TaskId:      taskDTO.ID,
 			HostName:    host.HostName,
 			CreatedTime: time.Now(),
@@ -140,7 +140,7 @@ func (s *taskService) ExecuteTest(ctx context.Context, taskDTO models.TaskDTO) e
 		execHistorys = append(execHistorys, execHistory)
 	}
 	// 保存执行记录
-	if err := s.execHistoryRepo.BatchAddExecHistory(ctx, execHistorys); err != nil {
+	if err := s.execHistoryInfoRepo.BatchAddExecHistory(ctx, execHistorys); err != nil {
 		zlog.Errorf("batch add exec history error, err: %v", err)
 		return err
 	}

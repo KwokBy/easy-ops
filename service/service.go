@@ -50,7 +50,7 @@ type TaskService interface {
 	DeleteTask(ctx context.Context, id int64) error
 }
 
-type ExecHistoryService interface {
+type ExecHistoryInfoService interface {
 	// GetExecHistoriesByTaskID 获取任务执行历史
-	GetExecHistoriesByTaskID(ctx context.Context, taskID int64) ([][]models.ExecHistory, error)
+	GetExecHistoriesByTaskID(ctx context.Context, taskID int64) ([][]models.ExecHistoryInfo, error)
 }

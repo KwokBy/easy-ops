@@ -7,13 +7,13 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-type ExecHistoryHandler struct {
-	execHistoryService service.ExecHistoryService
+type ExecHistoryInfoHandler struct {
+	execHistoryInfoService service.ExecHistoryInfoService
 }
 
-func NewExecHistoryHandler(execHistoryService service.ExecHistoryService) ExecHistoryHandler {
-	return ExecHistoryHandler{
-		execHistoryService: execHistoryService,
+func NewExecHistoryInfoHandler(execHistoryInfoService service.ExecHistoryInfoService) ExecHistoryInfoHandler {
+	return ExecHistoryInfoHandler{
+		execHistoryInfoService: execHistoryInfoService,
 	}
 }
 
@@ -22,14 +22,14 @@ type GetExecHistoryReq struct {
 }
 
 // GetExecHistory 获取执行历史
-func (h *ExecHistoryHandler) GetExecHistory(c *gin.Context) {
+func (h *ExecHistoryInfoHandler) GetExecHistory(c *gin.Context) {
 	var req GetExecHistoryReq
 	if err := c.ShouldBind(&req); err != nil {
 		zlog.Errorf("get exec history error: %s", err.Error())
 		response.FailWithData(err, "get exec history error", c)
 		return
 	}
-	execHistory, err := h.execHistoryService.GetExecHistoriesByTaskID(c, req.TaskID)
+	execHistory, err := h.execHistoryInfoService.GetExecHistoriesByTaskID(c, req.TaskID)
 	if err != nil {
 		zlog.Errorf("get exec history error: %s", err.Error())
 		response.FailWithData(err, "get exec history error", c)

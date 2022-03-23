@@ -15,7 +15,7 @@ type Router struct {
 	WsSsh       handlers.WsSshHandler
 	Host        handlers.HostHandler
 	Task        handlers.TaskHandler
-	execHistory handlers.ExecHistoryHandler
+	ExecHistoryInfo handlers.ExecHistoryInfoHandler
 }
 
 func (r *Router) With(engine *gin.Engine) {
@@ -89,7 +89,7 @@ func (r *Router) With(engine *gin.Engine) {
 	}
 	execHistory := engine.Group("/api/v1/execHistory")
 	{
-		execHistory.POST("/get", r.execHistory.GetExecHistory)
+		execHistory.POST("/get", r.ExecHistoryInfo.GetExecHistory)
 	}
 
 }
