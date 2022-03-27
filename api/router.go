@@ -17,6 +17,7 @@ type Router struct {
 	Task            handlers.TaskHandler
 	ExecHistory     handlers.ExecHistoryHandler
 	ExecHistoryInfo handlers.ExecHistoryInfoHandler
+	Image           handlers.ImageHandler
 }
 
 func (r *Router) With(engine *gin.Engine) {
@@ -96,7 +97,10 @@ func (r *Router) With(engine *gin.Engine) {
 	{
 		execHistory.POST("/get", r.ExecHistory.GetExecHistories)
 	}
-
+	image := engine.Group("/api/v1/image")
+	{
+		image.GET("/debug", r.Image.Debug)
+	}
 }
 
 type PermissionRouter struct {

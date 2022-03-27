@@ -38,6 +38,7 @@ func InitServer() *app.Server {
 	execHistoryHandler := handlers.NewExecHistoryHandler(execHistoryService)
 	execHistoryInfoService := service.NewExecHistoryInfoService(execHistoryInfoRepo)
 	execHistoryInfoHandler := handlers.NewExecHistoryInfoHandler(execHistoryInfoService)
+	imageHandler := handlers.NewImageHandler()
 	apiRouter := &api.Router{
 		Demo:            demoHandler,
 		User:            userHandler,
@@ -46,6 +47,7 @@ func InitServer() *app.Server {
 		Task:            taskHandler,
 		ExecHistory:     execHistoryHandler,
 		ExecHistoryInfo: execHistoryInfoHandler,
+		Image:           imageHandler,
 	}
 	server := app.NewServer(engine, apiRouter)
 	return server

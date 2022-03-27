@@ -36,6 +36,7 @@ func InitServer() *app.Server {
 		handlers.NewTaskHandler,
 		handlers.NewExecHistoryInfoHandler,
 		handlers.NewExecHistoryHandler,
+		handlers.NewImageHandler,
 		router,
 		app.NewServer,
 		app.NewGinEngine,

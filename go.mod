@@ -17,9 +17,13 @@ require (
 require (
 	github.com/BurntSushi/toml v1.0.0 // indirect
 	github.com/DATA-DOG/go-sqlmock v1.5.0
+	github.com/containerd/containerd v1.6.2 // indirect
+	github.com/docker/distribution v2.8.1+incompatible // indirect
+	github.com/docker/docker v20.10.14+incompatible // indirect
 	github.com/golang/mock v1.6.0
 	github.com/gorilla/websocket v1.5.0
 	github.com/mitchellh/go-homedir v1.1.0
+	github.com/opencontainers/image-spec v1.0.2 // indirect
 	github.com/robfig/cron v1.2.0 // indirect
 	github.com/robfig/cron/v3 v3.0.0 // indirect
 	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
