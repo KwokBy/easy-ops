@@ -2,6 +2,8 @@ package docker
 
 import (
 	"context"
+	"encoding/base64"
+	"encoding/json"
 	"io"
 
 	"github.com/docker/docker/api/types"
@@ -25,18 +27,18 @@ func ExecContainer(client *client.Client, imageName string, cmd []string) (types
 	// 	panic(err)
 	// }
 	containerName := "test001"
-	err := client.ContainerStart(context.Background(), containerName, types.ContainerStartOptions{})
-	if err != nil {
-		panic(err)
-	}
+	// err := client.ContainerStart(context.Background(), containerName, types.ContainerStartOptions{})
+	// if err != nil {
+	// 	panic(err)
+	// }
 	// 创建一个新的 exec 配置来运行一个 exec 进程。
 	cli, err := client.ContainerExecCreate(context.Background(), containerName, types.ExecConfig{
 		AttachStdin:  true,
 		AttachStdout: true,
 		AttachStderr: true,
 		Tty:          true,
-		//[]string{"/bin/bash", "-c", "echo hello"},
-		Cmd: cmd,
+		Cmd:          []string{"/bin/bash"},
+		// Cmd: cmd,
 	})
 	if err != nil {
 		panic(err)
@@ -49,18 +51,37 @@ func ExecContainer(client *client.Client, imageName string, cmd []string) (types
 	if err != nil {
 		panic(err)
 	}
+
 	return hr, nil
 }
+
+type wsMsg struct {
+	Type int    `json:"type"`
+	Cmd  string `json:"cmd"`
+	Cols int    `json:"cols"`
+	Rows int    `json:"rows"`
+}
+
+const (
+	wsMsgCmd    = 1
+	wsMsgResize = 2
+)
 
 // WsReaderCopy 将前端的输入转发到终端
 func WsReaderCopy(reader *websocket.Conn, writer io.Writer) {
 	for {
-		messageType, p, err := reader.ReadMessage()
+		_, data, err := reader.ReadMessage()
 		if err != nil {
 			return
 		}
-		if messageType == websocket.TextMessage {
-			writer.Write(p)
+		var msg wsMsg
+		if err = json.Unmarshal(data, &msg); err != nil {
+			return
+		}
+		switch msg.Type {
+		case wsMsgCmd:
+			decodeBytes, _ := base64.StdEncoding.DecodeString(msg.Cmd)
+			writer.Write(decodeBytes)
 		}
 	}
 }
@@ -71,7 +92,7 @@ func WsWriterCopy(writer *websocket.Conn, reader io.Reader) {
 	for {
 		nr, err := reader.Read(buf)
 		if nr > 0 {
-			err := writer.WriteMessage(websocket.BinaryMessage, buf[0:nr])
+			err := writer.WriteMessage(websocket.TextMessage, buf[0:nr])
 			if err != nil {
 				return
 			}
