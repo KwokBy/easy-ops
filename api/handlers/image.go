@@ -30,7 +30,8 @@ func (h ImageHandler) Debug(c *gin.Context) {
 	}
 	cli.NegotiateAPIVersion(c)
 	defer cli.Close()
-	hr, err := docker.ExecContainer(cli, "test", []string{"/bin/bash"})
+	d := docker.NewDocker(cli)
+	hr, err := d.ExecContainer("test001")
 	if err != nil {
 		zlog.Errorf("exec container error: %s", err.Error())
 		response.FailWithData(err, "exec container error", c)

@@ -4,47 +4,91 @@ import (
 	"context"
 	"encoding/base64"
 	"encoding/json"
+	"errors"
 	"io"
+	"io/ioutil"
+	"strings"
 
 	"github.com/docker/docker/api/types"
+	"github.com/docker/docker/api/types/container"
 	"github.com/docker/docker/client"
 	"github.com/gorilla/websocket"
 )
 
-// ExecContainer 运行容器并返回连接
-func ExecContainer(client *client.Client, imageName string, cmd []string) (types.HijackedResponse, error) {
-	// containerName := fmt.Sprintf("%s-%s", imageName, time.Now().Format("20060102150405"))
+type Docker struct {
+	client *client.Client
+}
 
-	// _, err := client.ContainerCreate(context.Background(), &container.Config{
-	// 	Image:        imageName,
-	// 	Cmd:          []string{"echo", "hello world"},
-	// 	Tty:          false,
-	// 	AttachStdin:  true,
-	// 	AttachStdout: true,
-	// 	AttachStderr: true,
-	// }, nil, nil, nil, containerName)
-	// if err != nil {
-	// 	panic(err)
-	// }
-	containerName := "test001"
-	// err := client.ContainerStart(context.Background(), containerName, types.ContainerStartOptions{})
-	// if err != nil {
-	// 	panic(err)
-	// }
+func NewDocker(c *client.Client) *Docker {
+	return &Docker{
+		client: c,
+	}
+}
+
+// CreateImageByDockerFile 创建镜像
+func (d *Docker) CreateImageByDockerFile(dockerTarFile io.Reader, imageName, project string) error {
+	// 创建镜像
+	output, err := d.client.ImageBuild(context.Background(), dockerTarFile, types.ImageBuildOptions{
+		Tags:       []string{imageName},
+		Dockerfile: "Dockerfile",
+		Labels: map[string]string{
+			project: "project",
+		},
+	})
+	if err != nil {
+		return err
+	}
+	defer output.Body.Close()
+
+	// 读取镜像的输出
+	body, err := ioutil.ReadAll(output.Body)
+	if err != nil {
+		return err
+	}
+	// 判断构建是否成功
+	if strings.Contains(string(body), "error") {
+		return errors.New("build image to docker error")
+	}
+	return nil
+}
+
+// CreateAndRunContainer 创建并运行容器
+func (d *Docker) CreateContainer(imageName, containerName string) error {
+	// 创建容器
+	_, err := d.client.ContainerCreate(context.Background(), &container.Config{
+		Image:        imageName,
+		Cmd:          []string{"echo hello world"},
+		Tty:          false,
+		AttachStdin:  true,
+		AttachStdout: true,
+		AttachStderr: true,
+	}, nil, nil, nil, containerName)
+	if err != nil {
+		return err
+	}
+	// 启动容器
+	err = d.client.ContainerStart(context.Background(), containerName, types.ContainerStartOptions{})
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+// ExecContainer 运行容器并返回连接
+func (d *Docker) ExecContainer(containerName string) (types.HijackedResponse, error) {
 	// 创建一个新的 exec 配置来运行一个 exec 进程。
-	cli, err := client.ContainerExecCreate(context.Background(), containerName, types.ExecConfig{
+	cli, err := d.client.ContainerExecCreate(context.Background(), containerName, types.ExecConfig{
 		AttachStdin:  true,
 		AttachStdout: true,
 		AttachStderr: true,
 		Tty:          true,
 		Cmd:          []string{"/bin/bash"},
-		// Cmd: cmd,
 	})
 	if err != nil {
 		panic(err)
 	}
 	// 将与container的连接附加到上面的exec进程
-	hr, err := client.ContainerExecAttach(context.Background(), cli.ID, types.ExecStartCheck{
+	hr, err := d.client.ContainerExecAttach(context.Background(), cli.ID, types.ExecStartCheck{
 		Detach: false,
 		Tty:    true,
 	})
@@ -53,6 +97,37 @@ func ExecContainer(client *client.Client, imageName string, cmd []string) (types
 	}
 
 	return hr, nil
+}
+
+// PushImageToRegistry 将镜像推送到镜像仓库
+func (d *Docker) PushImageToRegistry(imageName, username, password string) error {
+	authConfig := types.AuthConfig{
+		Username:      "admin",
+		Password:      "123456",
+		ServerAddress: "https://index.docker.io/v1/",
+	}
+	encodeAuth, err := json.Marshal(authConfig)
+	if err != nil {
+		return err
+	}
+	// 将镜像推送到镜像仓库
+	output, err := d.client.ImagePush(context.Background(), imageName, types.ImagePushOptions{
+		RegistryAuth: base64.URLEncoding.EncodeToString(encodeAuth),
+	})
+	if err != nil {
+		return err
+	}
+	defer output.Close()
+	// 读取镜像的输出
+	body, err := ioutil.ReadAll(output)
+	if err != nil {
+		return err
+	}
+	// 判断构建是否成功
+	if strings.Contains(string(body), "error") {
+		return errors.New("push image to registry error")
+	}
+	return nil
 }
 
 type wsMsg struct {
