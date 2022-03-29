@@ -41,18 +41,6 @@ type HostRepo interface {
 	DeleteHost(ctx context.Context, id int64) error
 }
 
-// MirrorRepo represent the mirror repository contract
-type MirrorRepo interface {
-	// GetMirrorsByAdmin return mirrors by admin
-	GetMirrorsByAdmin(ctx context.Context, admin string) ([]models.Mirror, error)
-	// AddAdmin add admin
-	AddAdmin(ctx context.Context, mirrorId, admin string) error
-	// AddMirror add mirror
-	AddMirror(ctx context.Context, mirror models.Mirror) error
-	// DeleteMirror delete mirror
-	DeleteMirror(ctx context.Context, id int64) error
-}
-
 type TaskRepo interface {
 	// GetTasksByUsername return tasks by username
 	GetTasksByUsername(ctx context.Context, username string) ([]models.Task, error)
