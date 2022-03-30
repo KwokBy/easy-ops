@@ -1,6 +1,8 @@
 package docker
 
 import (
+	"archive/tar"
+	"bytes"
 	"context"
 	"encoding/base64"
 	"encoding/json"
@@ -26,11 +28,15 @@ func NewDocker(c *client.Client) *Docker {
 }
 
 // CreateImageByDockerFile 创建镜像
-func (d *Docker) CreateImageByDockerFile(dockerTarFile io.Reader, imageName, project string) error {
+func (d *Docker) CreateImageByDockerFile(dockerFile string, imageName, project string) error {
+	dockerTarFile, err := createDockerTarFile(dockerFile)
+	if err != nil {
+		return err
+	}
 	// 创建镜像
 	output, err := d.client.ImageBuild(context.Background(), dockerTarFile, types.ImageBuildOptions{
 		Tags:       []string{imageName},
-		Dockerfile: "Dockerfile",
+		Dockerfile: "dockerfile",
 		Labels: map[string]string{
 			project: "project",
 		},
@@ -56,9 +62,9 @@ func (d *Docker) CreateImageByDockerFile(dockerTarFile io.Reader, imageName, pro
 func (d *Docker) CreateContainer(imageName, containerName string) error {
 	// 创建容器
 	_, err := d.client.ContainerCreate(context.Background(), &container.Config{
-		Image:        imageName,
-		Cmd:          []string{"echo hello world"},
-		Tty:          false,
+		Image: imageName,
+		// Cmd:          []string{"/bin/bash"},
+		Tty:          true,
 		AttachStdin:  true,
 		AttachStdout: true,
 		AttachStderr: true,
@@ -102,8 +108,8 @@ func (d *Docker) ExecContainer(containerName string) (types.HijackedResponse, er
 // PushImageToRegistry 将镜像推送到镜像仓库
 func (d *Docker) PushImageToRegistry(imageName, username, password string) error {
 	authConfig := types.AuthConfig{
-		Username:      "admin",
-		Password:      "123456",
+		Username:      username,
+		Password:      password,
 		ServerAddress: "https://index.docker.io/v1/",
 	}
 	encodeAuth, err := json.Marshal(authConfig)
@@ -128,6 +134,24 @@ func (d *Docker) PushImageToRegistry(imageName, username, password string) error
 		return errors.New("push image to registry error")
 	}
 	return nil
+}
+
+// createDockerTarFile 创建dockerfile
+func createDockerTarFile(dockerfile string) (io.Reader, error) {
+	var buf bytes.Buffer
+	tw := tar.NewWriter(&buf)
+	hdr := &tar.Header{
+		Name: "dockerfile",
+		Mode: 0600,
+		Size: int64(len([]byte(dockerfile))),
+	}
+
+	tw.WriteHeader(hdr)
+	_, err := tw.Write([]byte(dockerfile))
+	if err != nil {
+		return nil, err
+	}
+	return &buf, nil
 }
 
 type wsMsg struct {

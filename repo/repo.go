@@ -81,3 +81,17 @@ type ExecHistoryRepo interface {
 	// GetExecHistoryCountByTaskID 获取某个Task下的执行次数
 	GetExecHistoryCountByTaskID(ctx context.Context, taskID int64) (int64, error)
 }
+
+type ImageRepo interface {
+	// GetImageByOwner 获取某个用户的镜像
+	GetImageByOwner(ctx context.Context, username string) (
+		[]models.Image, error)
+	// AddImage 添加镜像
+	AddImage(ctx context.Context, image models.Image) error
+	// GetImageByImageID 获取某些镜像
+	GetImageByImageID(ctx context.Context, imageID int64) (
+		[]models.Image, error)
+	// GetImageByID 获取某个镜像
+	GetImageByID(ctx context.Context, id int) (
+		models.Image, error)
+}

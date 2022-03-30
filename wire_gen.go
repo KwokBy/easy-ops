@@ -38,7 +38,9 @@ func InitServer() *app.Server {
 	execHistoryHandler := handlers.NewExecHistoryHandler(execHistoryService)
 	execHistoryInfoService := service.NewExecHistoryInfoService(execHistoryInfoRepo)
 	execHistoryInfoHandler := handlers.NewExecHistoryInfoHandler(execHistoryInfoService)
-	imageHandler := handlers.NewImageHandler()
+	imageRepo := repo.NewMysqlImageRepo(db)
+	imageService := service.NewImageService(imageRepo)
+	imageHandler := handlers.NewImageHandler(imageService)
 	apiRouter := &api.Router{
 		Demo:            demoHandler,
 		User:            userHandler,

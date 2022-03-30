@@ -4,6 +4,7 @@ import (
 	"context"
 
 	"github.com/KwokBy/easy-ops/models"
+	"github.com/docker/docker/api/types"
 )
 
 type IDemoService interface {
@@ -61,4 +62,10 @@ type ExecHistoryService interface {
 }
 
 type ImageService interface {
+	// DebugImage 测试镜像
+	DebugImage(ctx context.Context, id int) (types.HijackedResponse, error)
+	// SaveImage 保存镜像
+	SaveImage(ctx context.Context, image models.Image) error
+	// GetImageByOwner 根据用户名获取镜像列表
+	GetImages(ctx context.Context, username string) ([]models.Image, error)
 }
