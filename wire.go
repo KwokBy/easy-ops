@@ -20,6 +20,7 @@ func InitServer() *app.Server {
 	wire.Build(
 		app.InitGormMySql,
 		repo.NewMysqlDemoRepo,
+		repo.NewMysqlUserRepo,
 		repo.NewMysqlHostRepo,
 		repo.NewMysqlTaskRepo,
 		repo.NewMysqlExecHistoryInfoRepo,
@@ -27,6 +28,7 @@ func InitServer() *app.Server {
 		repo.NewMysqlImageRepo,
 		service.NewDemoService,
 		service.NewHostService,
+		service.NewUserService,
 		service.NewTaskService,
 		service.NewExecHistoryInfoService,
 		service.NewExecHistoryService,

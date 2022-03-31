@@ -19,8 +19,7 @@ func NewMysqlUserRepo(DB *gorm.DB) UserRepo {
 func (u *mysqlUserRepo) GetUsersByNameAndPwd(ctx context.Context, name, pwd string) (
 	models.User, error) {
 	var user models.User
-	if err := u.DB.Model(user).
-		Where("user_name = ? and password_hash = ?", name, pwd).Error; err != nil {
+	if err := u.DB.Where("username = ? and password_hash = ?", name, pwd).Find(&user).Error; err != nil {
 		return models.User{}, err
 	}
 	return user, nil
@@ -63,7 +62,7 @@ func (u *mysqlUserRepo) GetUsers(ctx context.Context) ([]models.User, error) {
 func (u *mysqlUserRepo) GetUserByName(ctx context.Context, name string) (
 	models.User, error) {
 	var user models.User
-	if err := u.DB.Model(user).Where("user_name = ?", name).Error; err != nil {
+	if err := u.DB.Where("username = ?", name).Find(&user).Error; err != nil {
 		return models.User{}, err
 	}
 	return user, nil

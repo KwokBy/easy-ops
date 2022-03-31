@@ -67,8 +67,9 @@ func (r *Router) With(engine *gin.Engine) {
 	user := engine.Group("/api/v1/user")
 	{
 		user.POST("/login", r.User.Login)
+		user.POST("/refreshToken", r.User.RefreshToken)
 	}
-	host := engine.Group("/api/v1/host")
+	host := engine.Group("/api/v1/host", JWTAuth())
 	{
 		host.POST("/get", r.Host.GetHosts)
 		host.POST("/add", r.Host.AddHost)
@@ -80,7 +81,7 @@ func (r *Router) With(engine *gin.Engine) {
 	{
 		wsSsh.GET("/ssh", r.WsSsh.WSSSH)
 	}
-	task := engine.Group("/api/v1/task")
+	task := engine.Group("/api/v1/task", JWTAuth())
 	{
 		task.POST("/get", r.Task.GetTasks)
 		task.POST("/add", r.Task.AddTask)
@@ -89,15 +90,15 @@ func (r *Router) With(engine *gin.Engine) {
 		task.POST("/addAndRun", r.Task.AddTaskAndExecute)
 		task.POST("/test", r.Task.ExecuteTest)
 	}
-	execHistoryInfo := engine.Group("/api/v1/execHistoryInfo")
+	execHistoryInfo := engine.Group("/api/v1/execHistoryInfo", JWTAuth())
 	{
 		execHistoryInfo.POST("/get", r.ExecHistoryInfo.GetExecHistoryInfo)
 	}
-	execHistory := engine.Group("/api/v1/execHistory")
+	execHistory := engine.Group("/api/v1/execHistory", JWTAuth())
 	{
 		execHistory.POST("/get", r.ExecHistory.GetExecHistories)
 	}
-	image := engine.Group("/api/v1/image")
+	image := engine.Group("/api/v1/image", JWTAuth())
 	{
 		image.GET("/debug", r.Image.Debug)
 		image.POST("/get", r.Image.GetImages)

@@ -16,6 +16,8 @@ type UserService interface {
 	Login(ctx context.Context, username, password string) (models.User, error)
 	// Register 注册
 	Register(ctx context.Context, username, password string) (models.User, error)
+	// GenerateToken 生成token
+	GenerateToken(ctx context.Context, oldToken models.Token) (models.Token, error)
 }
 
 type HostService interface {

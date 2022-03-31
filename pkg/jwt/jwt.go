@@ -20,12 +20,13 @@ type Token struct {
 }
 
 // New 创建一个新的Token
-func New(data Data) (string, error) {
+func New(data Data) (string, int64, error) {
+	expireTime := time.Now().Add(time.Hour * 1)
 	// 使用SigningMethodHS256生成签名的方法
 	claims := jwt.NewWithClaims(jwt.SigningMethodHS256, Token{
 		&jwt.RegisteredClaims{
 			// 过期时间
-			ExpiresAt: jwt.NewNumericDate(time.Now().Add(time.Hour * 24)),
+			ExpiresAt: jwt.NewNumericDate(expireTime),
 			// 签名时间
 			IssuedAt: jwt.NewNumericDate(time.Now()),
 		},
@@ -34,9 +35,9 @@ func New(data Data) (string, error) {
 	// TODO 签名用配置文件管理
 	token, err := claims.SignedString([]byte("secret"))
 	if err != nil {
-		return "", err
+		return "", -1, err
 	}
-	return token, nil
+	return token, expireTime.Unix(), nil
 }
 
 // IsValid 校验token是否有效
