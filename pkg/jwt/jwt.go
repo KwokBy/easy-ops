@@ -11,6 +11,7 @@ import (
 
 type Data struct {
 	UserID int64 `json:"user_id"`
+	RoleID int64 `json:"role_id"`
 }
 
 // Token JWT
@@ -59,8 +60,8 @@ func IsValid(token string) (bool, error) {
 	return true, nil
 }
 
-// GetUserIDFromToken 获取用户ID
-func GetUserIDFromToken(token string) (int64, error) {
+// GetDataFromToken 获取Data
+func GetUserIDFromToken(token string) (Data, error) {
 	// TODO 签名用配置文件管理
 	tt, err := jwt.ParseWithClaims(token, &Token{}, func(token *jwt.Token) (interface{}, error) {
 		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
@@ -69,17 +70,17 @@ func GetUserIDFromToken(token string) (int64, error) {
 		return []byte("secret"), nil
 	})
 	if err != nil {
-		return -1, fmt.Errorf("parse jwt failed: %v", err)
+		return Data{}, fmt.Errorf("parse jwt failed: %v", err)
 	}
 
 	if claims, ok := tt.Claims.(*Token); ok && tt.Valid {
-		return claims.Data.UserID, nil
+		return claims.Data, nil
 	}
-	return -1, fmt.Errorf("failed to get userid")
+	return Data{}, fmt.Errorf("failed to get data")
 }
 
-// GetUserIDFromHTTPRequest 从HTTP请求中的jwt获取UserID
-func GetUserIDFromHTTPRequest(r *http.Request) (int64, error) {
+// GetDataFromHTTPRequest 从HTTP请求中的jwt获取Data
+func GetDataFromHTTPRequest(r *http.Request) (Data, error) {
 	token := r.Header.Get("Authorization")
 	return GetUserIDFromToken(token)
 }

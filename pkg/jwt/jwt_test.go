@@ -7,12 +7,12 @@ import (
 )
 
 func TestNew(t *testing.T) {
-	token, _, err := New(Data{1})
+	token, _, err := New(Data{1,888})
 	assert.NoError(t, err)
 	t.Log(token)
 	userID, err := GetUserIDFromToken(token)
 	assert.NoError(t, err)
-	assert.Equal(t, int64(1), userID)
+	assert.Equal(t, Data{1,888}, userID)
 }
 
 func TestIsValid(t *testing.T) {

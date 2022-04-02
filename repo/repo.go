@@ -95,3 +95,16 @@ type ImageRepo interface {
 	GetImageByID(ctx context.Context, id int) (
 		models.Image, error)
 }
+
+type RoleRepo interface {
+	// GetRoleByID 获取某个角色
+	GetRoleByID(ctx context.Context, id int64) (models.Role, error)
+	// AddRole 添加角色
+	AddRole(ctx context.Context, role models.Role) error
+	// GetRoles 获取所有角色
+	GetRoles(ctx context.Context) ([]models.Role, error)
+	// DeleteRole 删除角色
+	DeleteRole(ctx context.Context, id int64) error
+	// UpdateRole 更新角色
+	UpdateRole(ctx context.Context, role models.Role) error
+}

@@ -1,12 +1,18 @@
 package api
 
 import (
+	"fmt"
 	"net/http"
+	"strconv"
 
 	"github.com/KwokBy/easy-ops/api/handlers"
+	"github.com/KwokBy/easy-ops/pkg/casbin"
 	"github.com/KwokBy/easy-ops/pkg/jwt"
 	"github.com/KwokBy/easy-ops/pkg/response"
+	"github.com/KwokBy/easy-ops/pkg/zlog"
 	"github.com/gin-gonic/gin"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
 )
 
 type Router struct {
@@ -69,7 +75,7 @@ func (r *Router) With(engine *gin.Engine) {
 		user.POST("/login", r.User.Login)
 		user.POST("/refreshToken", r.User.RefreshToken)
 	}
-	host := engine.Group("/api/v1/host", JWTAuth())
+	host := engine.Group("/api/v1/host", JWTAuth(), CasbinHandler())
 	{
 		host.POST("/get", r.Host.GetHosts)
 		host.POST("/add", r.Host.AddHost)
@@ -98,7 +104,7 @@ func (r *Router) With(engine *gin.Engine) {
 	{
 		execHistory.POST("/get", r.ExecHistory.GetExecHistories)
 	}
-	image := engine.Group("/api/v1/image", JWTAuth())
+	image := engine.Group("/api/v1/image").Use(JWTAuth())
 	{
 		image.GET("/debug", r.Image.Debug)
 		image.POST("/get", r.Image.GetImages)
@@ -126,6 +132,7 @@ type Child struct {
 	Meta Meta   `json:"meta"`
 }
 
+// JWTAuth gin middleware
 func JWTAuth() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		token := c.Request.Header.Get("Authorization")
@@ -150,6 +157,60 @@ func JWTAuth() gin.HandlerFunc {
 			c.JSON(http.StatusUnauthorized, gin.H{
 				"code":    http.StatusUnauthorized,
 				"message": "token 已过期",
+			})
+			c.Abort()
+			return
+		}
+		c.Next()
+	}
+}
+
+// CasbinHandler casbin handler
+func CasbinHandler() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		// 获取请求方法
+		method := c.Request.Method
+		// 获取请求路径
+		path := c.Request.URL.Path
+		zlog.Info("path:", path)
+		// 根据token获取角色id
+		data, err := jwt.GetDataFromHTTPRequest(c.Request)
+		if err != nil {
+			c.JSON(http.StatusUnauthorized, gin.H{
+				"code":    http.StatusUnauthorized,
+				"message": "token 无效",
+			})
+			c.Abort()
+			return
+		}
+		// 判断策略是否存在
+		db, err := gorm.Open(mysql.Open(fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=True&loc=Local&&timeout=30s",
+			"root",
+			"Gl987963951",
+			"127.0.0.1",
+			3306,
+			"easy_ops",
+		)), &gorm.Config{})
+		if err != nil {
+			panic(err)
+		}
+		e, err := casbin.Casbin(db)
+		if err != nil {
+			panic(err)
+		}
+		ok, err := e.Enforce(strconv.FormatInt(data.RoleID, 10), path, method)
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{
+				"code":    http.StatusInternalServerError,
+				"message": "服务器内部错误",
+			})
+			c.Abort()
+			return
+		}
+		if !ok {
+			c.JSON(http.StatusForbidden, gin.H{
+				"code":    http.StatusForbidden,
+				"message": "无权限访问",
 			})
 			c.Abort()
 			return

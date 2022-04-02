@@ -10,7 +10,7 @@ type User struct {
 	AccessToken  string    `gorm:"column:access_token" json:"access_token" form:"access_token"`
 	TokenExpired string    `gorm:"column:token_expired" json:"token_expired" form:"token_expired"`
 	Type         string    `gorm:"column:type" json:"type" form:"type"`
-	RoleId       int64     `gorm:"column:role_id" json:"role_id" form:"role_id"`
+	RoleID       int64     `gorm:"column:role_id" json:"role_id" form:"role_id"`
 	LastIp       string    `gorm:"column:last_ip" json:"last_ip" form:"last_ip"`
 	WxToken      string    `gorm:"column:wx_token" json:"wx_token" form:"wx_token"`
 	UpdatedTime  time.Time `gorm:"column:updated_time" json:"updated_time" form:"updated_time"`

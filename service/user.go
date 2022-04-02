@@ -72,7 +72,7 @@ func (u *userService) GenerateToken(ctx context.Context, oldToken models.Token) 
 			return oldToken, fmt.Errorf("token不匹配")
 		}
 	}
-	token, expireTime, err := jwt.New(jwt.Data{UserID: user.ID})
+	token, expireTime, err := jwt.New(jwt.Data{UserID: user.ID,RoleID: user.RoleID})
 	if err != nil {
 		zlog.Errorf("[GenerateToken] 获取token失败: %s", err.Error())
 		return models.Token{}, fmt.Errorf("获取token失败: %s", err.Error())
