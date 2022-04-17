@@ -66,7 +66,7 @@ func (i *imageService) SaveImage(ctx context.Context, image models.Image) error 
 	image.Version = str.VersionIncrease(image.Version)
 	if image.ImageID == "" {
 		image.ImageID = fmt.Sprintf("%s-%s", image.Name, time.Now().Format("20060102150405"))
-		image.Owner = "troublekwok"
+		image.Owner = "doubleguo"
 	}
 	if err := i.imageRepo.AddImage(ctx, image); err != nil {
 		zlog.Errorf("add image error: %s", err.Error())

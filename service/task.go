@@ -24,10 +24,17 @@ func NewTaskService(taskRepo repo.TaskRepo,
 	execHistoryRepo repo.ExecHistoryRepo) TaskService {
 	return &taskService{
 		taskRepo:            taskRepo,
-		cron:                cron.New(),
+		cron:                newWithSeconds(),
 		execHistoryInfoRepo: execHistoryInfoRepo,
 		execHistoryRepo:     execHistoryRepo,
 	}
+}
+
+// 返回一个支持至 秒 级别的 cron
+func newWithSeconds() *cron.Cron {
+	secondParser := cron.NewParser(cron.Second | cron.Minute |
+		cron.Hour | cron.Dom | cron.Month | cron.DowOptional | cron.Descriptor)
+	return cron.New(cron.WithParser(secondParser), cron.WithChain())
 }
 
 // AddRunCmdTask 添加运行命令任务
@@ -79,7 +86,8 @@ func (s *taskService) ExecuteTask(ctx context.Context, taskDTO models.TaskDTO) e
 	// 执行命令
 	for _, host := range hosts {
 		entryID, err := s.cron.AddFunc(taskDTO.Spec, func() {
-			ssh.ClientAndExec(host, taskDTO.Content)
+			str, err := ssh.ClientAndExec(host, taskDTO.Content)
+			zlog.Infof("exec task %s on host %s, result: %s, err: %v", taskDTO.Content, host.HostName, str, err)
 		})
 		if err != nil {
 			zlog.Errorf("host %s add task , err: %v", host.Name, err)

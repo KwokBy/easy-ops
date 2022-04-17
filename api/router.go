@@ -28,39 +28,40 @@ type Router struct {
 
 func (r *Router) With(engine *gin.Engine) {
 	engine.GET("/getAsyncRoutes", func(c *gin.Context) {
+
 		response.OKWithData([]PermissionRouter{
-			{
-				Path:     "/permission",
-				Name:     "permission",
-				Redirect: "/permission/page/index",
-				Meta: Meta{
-					Title: "menus.permission",
-					Icon:  "lollipop",
-					I18n:  true,
-					Rank:  3,
-				},
-				Children: []Child{
-					{
-						Path: "/permission/page/index",
-						Name: "permissionPage",
-						Meta: Meta{
-							Title: "menus.permissionPage",
-							I18n:  true,
-							Rank:  3,
-						},
-					},
-					{
-						Path: "/permission/button/index",
-						Name: "permissionButton",
-						Meta: Meta{
-							Title:     "menus.permissionButton",
-							I18n:      true,
-							Authority: []string{"v-admin"},
-							Rank:      3,
-						},
-					},
-				},
-			},
+			// {
+			// 	Path:     "/permission",
+			// 	Name:     "permission",
+			// 	Redirect: "/permission/page/index",
+			// 	Meta: Meta{
+			// 		Title: "menus.permission",
+			// 		Icon:  "lollipop",
+			// 		I18n:  true,
+			// 		Rank:  3,
+			// 	},
+			// 	Children: []Child{
+			// 		{
+			// 			Path: "/permission/page/index",
+			// 			Name: "permissionPage",
+			// 			Meta: Meta{
+			// 				Title: "menus.permissionPage",
+			// 				I18n:  true,
+			// 				Rank:  3,
+			// 			},
+			// 		},
+			// 		{
+			// 			Path: "/permission/button/index",
+			// 			Name: "permissionButton",
+			// 			Meta: Meta{
+			// 				Title:     "menus.permissionButton",
+			// 				I18n:      true,
+			// 				Authority: []string{"v-admin"},
+			// 				Rank:      3,
+			// 			},
+			// 		},
+			// 	},
+			// },
 		},
 			"获取成功", c)
 	})
@@ -104,7 +105,7 @@ func (r *Router) With(engine *gin.Engine) {
 	{
 		execHistory.POST("/get", r.ExecHistory.GetExecHistories)
 	}
-	image := engine.Group("/api/v1/image").Use(JWTAuth())
+	image := engine.Group("/api/v1/image")
 	{
 		image.GET("/debug", r.Image.Debug)
 		image.POST("/get", r.Image.GetImages)

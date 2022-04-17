@@ -38,7 +38,7 @@ func New(data Data) (string, int64, error) {
 	if err != nil {
 		return "", -1, err
 	}
-	return token, expireTime.Unix(), nil
+	return token, expireTime.UnixNano(), nil
 }
 
 // IsValid 校验token是否有效

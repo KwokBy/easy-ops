@@ -31,8 +31,8 @@ func (s *execHistoryInfoService) GetExecHistoryInfos(ctx context.Context, taskID
 	}
 	return models.ExecHistoryDTO{
 		ExecHistories: execHistoryInfos,
-		SuccessCount:  resultCount[0],
-		FailCount:     resultCount[1],
+		SuccessCount:  resultCount[1],
+		FailCount:     resultCount[0],
 		AvgCount:      sumCount / float64(len(execHistoryInfos)),
 	}, nil
 }

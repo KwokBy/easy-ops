@@ -1,6 +1,8 @@
 package handlers
 
 import (
+	"fmt"
+
 	"github.com/KwokBy/easy-ops/models"
 	"github.com/KwokBy/easy-ops/pkg/response"
 	"github.com/KwokBy/easy-ops/pkg/zlog"
@@ -51,6 +53,9 @@ func (h *HostHandler) AddHost(c *gin.Context) {
 		response.FailWithData(err, "add host error", c)
 		return
 	}
+	host.SSHType = "ssh-password"
+	host.Host = fmt.Sprint(host.Host, ":", host.Port)
+	h.hostService.VerifyHost(c, host)
 	response.OKWithData(nil, "add host success", c)
 }
 
