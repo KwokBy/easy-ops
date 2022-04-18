@@ -11,9 +11,9 @@ import (
 
 func Test_mysqlTaskRepo_GetTaskAndHost(t *testing.T) {
 	db, _ := gorm.Open(mysql.Open(fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=True&loc=Local&&timeout=30s",
-		"root",
-		"Gl987963951",
-		"127.0.0.1",
+		"easy_ops",
+		"Gl@987963951",
+		"42.192.11.9",
 		3306,
 		"easy_ops",
 	)), &gorm.Config{})
@@ -57,9 +57,9 @@ func Test_mysqlTaskRepo_GetTaskAndHost(t *testing.T) {
 
 func Test_mysqlTaskRepo_GetTasksByUsername(t *testing.T) {
 	db, _ := gorm.Open(mysql.Open(fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=True&loc=Local&&timeout=30s",
-		"root",
-		"Gl987963951",
-		"127.0.0.1",
+		"easy_ops",
+		"Gl@987963951",
+		"42.192.11.9",
 		3306,
 		"easy_ops",
 	)), &gorm.Config{})
