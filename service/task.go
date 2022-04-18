@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+	"math/rand"
 	"time"
 
 	"github.com/KwokBy/easy-ops/models"
@@ -84,17 +85,67 @@ func (s *taskService) ExecuteTask(ctx context.Context, taskDTO models.TaskDTO) e
 	}
 	var entryIDs []int64
 	// 执行命令
-	for _, host := range hosts {
-		entryID, err := s.cron.AddFunc(taskDTO.Spec, func() {
-			str, err := ssh.ClientAndExec(host, taskDTO.Content)
-			zlog.Infof("exec task %s on host %s, result: %s, err: %v", taskDTO.Content, host.HostName, str, err)
-		})
+	// for _, host := range hosts {
+	entryID, err := s.cron.AddFunc(taskDTO.Spec, func() {
+		// str, err := ssh.ClientAndExec(host, taskDTO.Content)
+		// zlog.Infof("exec task %s on host %s, result: %s, err: %v", taskDTO.Content, host.HostName, str, err)
+		var execHistorys []models.ExecHistoryInfo
+		// 计算执行id，对于每个任务唯一
+		execID, err := s.execHistoryRepo.GetExecHistoryCountByTaskID(ctx, taskDTO.ID)
 		if err != nil {
-			zlog.Errorf("host %s add task , err: %v", host.Name, err)
-			return err
+			rand.Seed(time.Now().UnixNano())
+			execID = rand.Int63()
+			zlog.Errorf("get count group by exec id error, err: %v", err)
+			// return err
 		}
-		entryIDs = append(entryIDs, int64(entryID))
-	}
+		execID++
+		execHistory := models.ExecHistory{
+			TaskID:   taskDTO.ID,
+			ExecID:   execID,
+			ExecTime: time.Now(),
+			Status:   ExecHistoryStatusSuccess,
+		}
+		for _, host := range hosts {
+			currentTime := time.Now()
+			execHistoryInfo := models.ExecHistoryInfo{
+				TaskId:      taskDTO.ID,
+				HostName:    host.Name,
+				CreatedTime: time.Now(),
+				UpdatedTime: time.Now(),
+				Status:      ExecHistoryStatusSuccess,
+				Type:        ExecHistoryTypeTest,
+				ExecId:      execID,
+			}
+			// 执行命令
+			result, err := ssh.ClientAndExec(host, taskDTO.Content)
+			execHistoryInfo.Content = result
+			timeConsume := time.Since(currentTime)
+			if err != nil {
+				zlog.Errorf("host %s exec task , err: %v", host.Name, err)
+				execHistoryInfo.Status = ExecHistoryStatusFailed
+				execHistory.Status = ExecHistoryStatusFailed
+				execHistoryInfo.Content = err.Error()
+			}
+
+			execHistoryInfo.TimeConsume = timeConsume.Seconds()
+			execHistorys = append(execHistorys, execHistoryInfo)
+		}
+		// 保存执行记录
+		if err := s.execHistoryRepo.AddExecHistory(ctx, execHistory); err != nil {
+			zlog.Errorf("add exec history error, err: %v", err)
+			// return err
+		}
+		if err := s.execHistoryInfoRepo.BatchAddExecHistory(ctx, execHistorys); err != nil {
+			zlog.Errorf("batch add exec history info error, err: %v", err)
+			// return err
+		}
+	})
+	// if err != nil {
+	// 	zlog.Errorf("host %s add task , err: %v", host.Name, err)
+	// 	return err
+	// }
+	entryIDs = append(entryIDs, int64(entryID))
+	// }
 	taskDTO.ExecIds = entryIDs
 	task, err := taskDTO.ToPOJO()
 	if err != nil {
