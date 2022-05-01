@@ -66,17 +66,18 @@ func (r *Router) With(engine *gin.Engine) {
 			"获取成功", c)
 	})
 
-	demo := engine.Group("/api/v1/demo")
+	
+	demo := engine.Group("/api/v1/demo", Cors())
 	{
 		demo.GET("/", r.Demo.GetLongDemo)
 		demo.GET("/ws", r.Demo.Wshandler)
 	}
-	user := engine.Group("/api/v1/user")
+	user := engine.Group("/api/v1/user", Cors())
 	{
 		user.POST("/login", r.User.Login)
 		user.POST("/refreshToken", r.User.RefreshToken)
 	}
-	host := engine.Group("/api/v1/host", JWTAuth(), CasbinHandler())
+	host := engine.Group("/api/v1/host", JWTAuth(), CasbinHandler(), Cors())
 	{
 		host.POST("/get", r.Host.GetHosts)
 		host.POST("/add", r.Host.AddHost)
@@ -84,11 +85,11 @@ func (r *Router) With(engine *gin.Engine) {
 		host.POST("/update", r.Host.UpdateHost)
 		host.POST("/verify", r.Host.VerifyHost)
 	}
-	wsSsh := engine.Group("/api/v1/ws")
+	wsSsh := engine.Group("/api/v1/ws", Cors())
 	{
 		wsSsh.GET("/ssh", r.WsSsh.WSSSH)
 	}
-	task := engine.Group("/api/v1/task", JWTAuth())
+	task := engine.Group("/api/v1/task", JWTAuth(), Cors())
 	{
 		task.POST("/get", r.Task.GetTasks)
 		task.POST("/add", r.Task.AddTask)
@@ -97,15 +98,15 @@ func (r *Router) With(engine *gin.Engine) {
 		task.POST("/addAndRun", r.Task.AddTaskAndExecute)
 		task.POST("/test", r.Task.ExecuteTest)
 	}
-	execHistoryInfo := engine.Group("/api/v1/execHistoryInfo", JWTAuth())
+	execHistoryInfo := engine.Group("/api/v1/execHistoryInfo", JWTAuth(), Cors())
 	{
 		execHistoryInfo.POST("/get", r.ExecHistoryInfo.GetExecHistoryInfo)
 	}
-	execHistory := engine.Group("/api/v1/execHistory", JWTAuth())
+	execHistory := engine.Group("/api/v1/execHistory", JWTAuth(), Cors())
 	{
 		execHistory.POST("/get", r.ExecHistory.GetExecHistories)
 	}
-	image := engine.Group("/api/v1/image")
+	image := engine.Group("/api/v1/image", Cors())
 	{
 		image.GET("/debug", r.Image.Debug)
 		image.POST("/get", r.Image.GetImages)
@@ -216,6 +217,26 @@ func CasbinHandler() gin.HandlerFunc {
 			c.Abort()
 			return
 		}
+		c.Next()
+	}
+}
+
+// Cors 直接放行所有跨域请求并放行所有 OPTIONS 方法
+func Cors() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		method := c.Request.Method
+		origin := c.Request.Header.Get("Origin")
+		c.Header("Access-Control-Allow-Origin", origin)
+		c.Header("Access-Control-Allow-Headers", "Content-Type,AccessToken,X-CSRF-Token, Authorization, Token,X-Token,X-User-Id")
+		c.Header("Access-Control-Allow-Methods", "POST, GET, OPTIONS,DELETE,PUT")
+		c.Header("Access-Control-Expose-Headers", "Content-Length, Access-Control-Allow-Origin, Access-Control-Allow-Headers, Content-Type")
+		c.Header("Access-Control-Allow-Credentials", "true")
+
+		// 放行所有OPTIONS方法
+		if method == "OPTIONS" {
+			c.AbortWithStatus(http.StatusNoContent)
+		}
+		// 处理请求
 		c.Next()
 	}
 }
