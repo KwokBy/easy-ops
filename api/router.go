@@ -6,6 +6,7 @@ import (
 	"strconv"
 
 	"github.com/KwokBy/easy-ops/api/handlers"
+	"github.com/KwokBy/easy-ops/configs"
 	"github.com/KwokBy/easy-ops/pkg/casbin"
 	"github.com/KwokBy/easy-ops/pkg/jwt"
 	"github.com/KwokBy/easy-ops/pkg/response"
@@ -66,7 +67,6 @@ func (r *Router) With(engine *gin.Engine) {
 			"获取成功", c)
 	})
 
-	
 	demo := engine.Group("/api/v1/demo", Cors())
 	{
 		demo.GET("/", r.Demo.GetLongDemo)
@@ -185,13 +185,14 @@ func CasbinHandler() gin.HandlerFunc {
 			c.Abort()
 			return
 		}
+		config := configs.New()
 		// 判断策略是否存在
 		db, err := gorm.Open(mysql.Open(fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=True&loc=Local&&timeout=30s",
-			"easy_ops",
-			"Gl@987963951",
-			"42.192.11.9",
-			3306,
-			"easy_ops",
+			config.DB.User,
+			config.DB.Password,
+			config.DB.Host,
+			config.DB.Port,
+			config.DB.Name,
 		)), &gorm.Config{})
 		if err != nil {
 			panic(err)
@@ -224,19 +225,19 @@ func CasbinHandler() gin.HandlerFunc {
 // Cors 直接放行所有跨域请求并放行所有 OPTIONS 方法
 func Cors() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		method := c.Request.Method
-		origin := c.Request.Header.Get("Origin")
-		c.Header("Access-Control-Allow-Origin", origin)
-		c.Header("Access-Control-Allow-Headers", "Content-Type,AccessToken,X-CSRF-Token, Authorization, Token,X-Token,X-User-Id")
-		c.Header("Access-Control-Allow-Methods", "POST, GET, OPTIONS,DELETE,PUT")
-		c.Header("Access-Control-Expose-Headers", "Content-Length, Access-Control-Allow-Origin, Access-Control-Allow-Headers, Content-Type")
-		c.Header("Access-Control-Allow-Credentials", "true")
+		// method := c.Request.Method
+		// origin := c.Request.Header.Get("Origin")
+		// c.Header("Access-Control-Allow-Origin", origin)
+		// c.Header("Access-Control-Allow-Headers", "Content-Type,AccessToken,X-CSRF-Token, Authorization, Token,X-Token,X-User-Id")
+		// c.Header("Access-Control-Allow-Methods", "POST, GET, OPTIONS,DELETE,PUT")
+		// c.Header("Access-Control-Expose-Headers", "Content-Length, Access-Control-Allow-Origin, Access-Control-Allow-Headers, Content-Type")
+		// c.Header("Access-Control-Allow-Credentials", "true")
 
-		// 放行所有OPTIONS方法
-		if method == "OPTIONS" {
-			c.AbortWithStatus(http.StatusNoContent)
-		}
-		// 处理请求
+		// // 放行所有OPTIONS方法
+		// if method == "OPTIONS" {
+		// 	c.AbortWithStatus(http.StatusNoContent)
+		// }
+		// // 处理请求
 		c.Next()
 	}
 }

@@ -1,9 +1,9 @@
 db:
-  password: '12345678'
+  password: 'Gl987963951'
   port: 3306
   log: true
   host: '127.0.0.1'
   user: 'root'
-  name: 'kwok_ops'
+  name: 'easy_ops'
 jwt:
   secret: 'secret'

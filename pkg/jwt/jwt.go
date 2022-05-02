@@ -21,7 +21,7 @@ type Token struct {
 }
 
 // New 创建一个新的Token
-func New(data Data) (string, int64, error) {
+func New(data Data, secret string) (string, int64, error) {
 	expireTime := time.Now().Add(time.Hour * 1)
 	// 使用SigningMethodHS256生成签名的方法
 	claims := jwt.NewWithClaims(jwt.SigningMethodHS256, Token{
@@ -34,7 +34,7 @@ func New(data Data) (string, int64, error) {
 		data,
 	})
 	// TODO 签名用配置文件管理
-	token, err := claims.SignedString([]byte("secret"))
+	token, err := claims.SignedString([]byte(secret))
 	if err != nil {
 		return "", -1, err
 	}

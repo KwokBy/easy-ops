@@ -62,3 +62,64 @@ func (u *UserHandler) RefreshToken(c *gin.Context) {
 	}
 	response.OKWithData(token, "refresh token success", c)
 }
+
+type PasswordResetReq struct {
+	Username string `json:"username"`
+}
+
+// // PasswordReset 密码重置
+// func (u *UserHandler) PasswordReset(c *gin.Context) {
+// 	var req PasswordResetReq
+// 	if err := c.ShouldBind(&req); err != nil {
+// 		zlog.Errorf("password reset error: %s", err.Error())
+// 		response.FailWithData(err, "password reset error", c)
+// 		return
+// 	}
+// 	if err := u.userService.PasswordReset(c, req.Username); err != nil {
+// 		zlog.Errorf("password reset error: %s", err.Error())
+// 		response.FailWithData(err, "password reset error", c)
+// 		return
+// 	}
+// 	response.OK("password reset success", c)
+// }
+
+type RoleSetReq struct {
+	Username string `json:"username"`
+	Role     string `json:"role"`
+}
+
+// // RoleSet 角色设置
+// func (u *UserHandler) RoleSet(c *gin.Context) {
+// 	var req models.RoleSetReq
+// 	if err := c.ShouldBind(&req); err != nil {
+// 		zlog.Errorf("role set error: %s", err.Error())
+// 		response.FailWithData(err, "role set error", c)
+// 		return
+// 	}
+// 	if err := u.userService.RoleSet(c, req); err != nil {
+// 		zlog.Errorf("role set error: %s", err.Error())
+// 		response.FailWithData(err, "role set error", c)
+// 		return
+// 	}
+// 	response.OK("role set success", c)
+// }
+
+type DeleteUserReq struct {
+	Username string `json:"username"`
+}
+
+// // DeleteUser 删除用户
+// func (u *UserHandler) DeleteUser(c *gin.Context) {
+// 	var req DeleteUserReq
+// 	if err := c.ShouldBind(&req); err != nil {
+// 		zlog.Errorf("delete user error: %s", err.Error())
+// 		response.FailWithData(err, "delete user error", c)
+// 		return
+// 	}
+// 	if err := u.userService.DeleteUser(c, req.Username); err != nil {
+// 		zlog.Errorf("delete user error: %s", err.Error())
+// 		response.FailWithData(err, "delete user error", c)
+// 		return
+// 	}
+// 	response.OK("delete user success", c)
+// }

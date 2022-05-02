@@ -7,7 +7,7 @@ import (
 )
 
 func TestNew(t *testing.T) {
-	token, _, err := New(Data{1,888})
+	token, _, err := New(Data{1,888},"secret")
 	assert.NoError(t, err)
 	t.Log(token)
 	userID, err := GetUserIDFromToken(token)

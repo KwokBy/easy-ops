@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/KwokBy/easy-ops/configs"
 	"github.com/KwokBy/easy-ops/models"
 	"github.com/KwokBy/easy-ops/pkg/jwt"
 	"github.com/KwokBy/easy-ops/pkg/zlog"
@@ -72,7 +73,8 @@ func (u *userService) GenerateToken(ctx context.Context, oldToken models.Token) 
 			return oldToken, fmt.Errorf("token不匹配")
 		}
 	}
-	token, expireTime, err := jwt.New(jwt.Data{UserID: user.ID,RoleID: user.RoleID})
+	config := configs.New()
+	token, expireTime, err := jwt.New(jwt.Data{UserID: user.ID, RoleID: user.RoleID}, config.JWT.Secret)
 	if err != nil {
 		zlog.Errorf("[GenerateToken] 获取token失败: %s", err.Error())
 		return models.Token{}, fmt.Errorf("获取token失败: %s", err.Error())

@@ -97,3 +97,23 @@ func (h ImageHandler) GetImages(c *gin.Context) {
 	}
 	response.OKWithData(images, "list image success", c)
 }
+
+type deleteImageReq struct {
+	ID int `json:"id"`
+}
+
+// Delete 删除镜像
+func (h ImageHandler) Delete(c *gin.Context) {
+	var req deleteImageReq
+	if err := c.ShouldBind(&req); err != nil {
+		zlog.Errorf("delete image error: %s", err.Error())
+		response.FailWithData(err, "delete image error", c)
+		return
+	}
+	// if err := h.imageService.DeleteImage(c, req.ID); err != nil {
+	// 	zlog.Errorf("delete image error: %s", err.Error())
+	// 	response.FailWithData(err, "delete image error", c)
+	// 	return
+	// }
+	response.OK("delete image success", c)
+}
