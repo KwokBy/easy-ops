@@ -14,3 +14,8 @@ type DB struct {
 type JWT struct {
 	Secret string `yaml:"secret"`
 }
+
+type Docker struct {
+	Username string `yaml:"username"`
+	Password string `yaml:"password"`
+}

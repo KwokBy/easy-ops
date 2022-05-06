@@ -201,3 +201,15 @@ func WsWriterCopy(writer *websocket.Conn, reader io.Reader) {
 		}
 	}
 }
+
+// DeleteImage 删除镜像
+func (d *Docker) DeleteImage(imageName string) error {
+	// 删除镜像
+	_, err := d.client.ImageRemove(context.Background(), imageName, types.ImageRemoveOptions{
+		Force: true,
+	})
+	if err != nil {
+		return err
+	}
+	return nil
+}

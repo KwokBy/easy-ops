@@ -10,6 +10,7 @@ import (
 type Configs struct {
 	DB  DB  `yaml:"db"`
 	JWT JWT `yaml:"jwt"`
+	Docker Docker `yaml:"docker"`
 }
 
 func New() *Configs {
