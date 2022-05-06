@@ -79,3 +79,55 @@ func (h *RoleHandler) DeleteRole(c *gin.Context) {
 // 	}
 // 	response.OKWithData(nil, "set role permissions success", c)
 // }
+
+type RolePermissionsReq struct {
+	RoleID int64 `json:"role_id"`
+}
+type RolePermissionsResp struct {
+	Apis  []models.Casbin   `json:"apis"`
+	Menus []models.AuthMenu `json:"menus"`
+}
+
+// 获取角色权限
+func (h *RoleHandler) GetRolePermissions(c *gin.Context) {
+
+	var req RolePermissionsReq
+	if err := c.ShouldBind(&req); err != nil {
+		zlog.Errorf("get role permissions error: %s", err.Error())
+		response.FailWithData(err, "get role permissions error", c)
+		return
+	}
+	apis, err := h.roleService.GetRoleAPIs(c, req.RoleID)
+	if err != nil {
+		zlog.Errorf("get role permissions error: %s", err.Error())
+		response.FailWithData(err, "get role permissions error", c)
+		return
+	}
+	menus, err := h.roleService.GetRoleResources(c, req.RoleID)
+	if err != nil {
+		zlog.Errorf("get role permissions error: %s", err.Error())
+		response.FailWithData(err, "get role permissions error", c)
+		return
+	}
+	response.OKWithData(RolePermissionsResp{
+		Apis:  apis,
+		Menus: menus,
+	}, "get role permissions success", c)
+}
+
+// GetRoleMenus 获取角色菜单
+func (h *RoleHandler) GetRoleMenus(c *gin.Context) {
+	var req RolePermissionsReq
+	if err := c.ShouldBind(&req); err != nil {
+		zlog.Errorf("get role menus error: %s", err.Error())
+		response.FailWithData(err, "get role menus error", c)
+		return
+	}
+	menus, err := h.roleService.GetRoleMenus(c, req.RoleID)
+	if err != nil {
+		zlog.Errorf("get role menus error: %s", err.Error())
+		response.FailWithData(err, "get role menus error", c)
+		return
+	}
+	response.OKWithData(menus, "get role menus success", c)
+}

@@ -25,6 +25,7 @@ type Router struct {
 	ExecHistory     handlers.ExecHistoryHandler
 	ExecHistoryInfo handlers.ExecHistoryInfoHandler
 	Image           handlers.ImageHandler
+	Role            handlers.RoleHandler
 }
 
 func (r *Router) With(engine *gin.Engine) {
@@ -116,6 +117,13 @@ func (r *Router) With(engine *gin.Engine) {
 		image.POST("/add", r.Image.Save)
 		image.POST("/delete", r.Image.Delete)
 	}
+	role := engine.Group("/api/v1/role", JWTAuth(), Cors())
+	{
+		role.POST("/get", r.Role.GetRoles)
+		role.POST("/add", r.Role.AddRole)
+		role.POST("/delete", r.Role.DeleteRole)
+	}
+
 }
 
 type PermissionRouter struct {

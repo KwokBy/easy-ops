@@ -61,3 +61,8 @@ func (s *roleService) GetRoleResources(ctx context.Context, id int64) ([]models.
 func (s *roleService) SetRoleResources(ctx context.Context, id int64, resources []models.AuthMenu) error {
 	return nil
 }
+
+// GetRoleMenus 获取角色菜单
+func (s *roleService) GetRoleMenus(ctx context.Context, id int64) ([]models.Menu, error) {
+	return []models.Menu{}, nil
+}
