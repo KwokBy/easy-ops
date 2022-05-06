@@ -21,7 +21,7 @@ type UserService interface {
 	// PasswordReset 密码重置
 	PasswordReset(ctx context.Context, username string) error
 	// RoleSet 角色设置
-	RoleSet(ctx context.Context, username string, roles []string) error
+	RoleSet(ctx context.Context, username string, roles []int64) error
 	// DeleteUser 删除用户
 	DeleteUser(ctx context.Context, username string) error
 }

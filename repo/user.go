@@ -49,6 +49,14 @@ func (u *mysqlUserRepo) DeleteUser(ctx context.Context, id int64) error {
 	return nil
 }
 
+// DeleteUserByName 删除用户
+func (u *mysqlUserRepo) DeleteUserByName(ctx context.Context, name string) error {
+	if err := u.DB.Delete(&models.User{}, "username = ?", name).Error; err != nil {
+		return err
+	}
+	return nil
+}
+
 // GetUsers 获取用户列表
 func (u *mysqlUserRepo) GetUsers(ctx context.Context) ([]models.User, error) {
 	var users []models.User

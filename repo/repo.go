@@ -27,6 +27,7 @@ type UserRepo interface {
 	GetUsers(ctx context.Context) ([]models.User, error)
 	// GetUserByName return user by name
 	GetUserByName(ctx context.Context, name string) (models.User, error)
+	DeleteUserByName(ctx context.Context, username string) error
 }
 
 // HostRepo represent the host repository contract
@@ -94,6 +95,8 @@ type ImageRepo interface {
 	// GetImageByID 获取某个镜像
 	GetImageByID(ctx context.Context, id int) (
 		models.Image, error)
+	// DeleteImage 删除某个镜像
+	DeleteImage(ctx context.Context, name, version string) error
 }
 
 type RoleRepo interface {
@@ -107,4 +110,16 @@ type RoleRepo interface {
 	DeleteRole(ctx context.Context, id int64) error
 	// UpdateRole 更新角色
 	UpdateRole(ctx context.Context, role models.Role) error
+}
+
+type ApiRepo interface {
+}
+
+type MenuRepo interface {
+}
+
+type AuthMenuRepo interface {
+}
+
+type CasbinRepo interface {
 }

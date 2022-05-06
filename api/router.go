@@ -76,6 +76,9 @@ func (r *Router) With(engine *gin.Engine) {
 	{
 		user.POST("/login", r.User.Login)
 		user.POST("/refreshToken", r.User.RefreshToken)
+		user.POST("resetPassword", r.User.PasswordReset)
+		user.POST("/setRole", r.User.RoleSet)
+		user.POST("/delete", r.User.Delete)
 	}
 	host := engine.Group("/api/v1/host", JWTAuth(), CasbinHandler(), Cors())
 	{
