@@ -18,6 +18,12 @@ type UserService interface {
 	Register(ctx context.Context, username, password string) (models.User, error)
 	// GenerateToken 生成token
 	GenerateToken(ctx context.Context, oldToken models.Token) (models.Token, error)
+	// PasswordReset 密码重置
+	PasswordReset(ctx context.Context, username string) error
+	// RoleSet 角色设置
+	RoleSet(ctx context.Context, username string, roles []string) error
+	// DeleteUser 删除用户
+	DeleteUser(ctx context.Context, username string) error
 }
 
 type HostService interface {
@@ -31,9 +37,6 @@ type HostService interface {
 	UpdateHost(ctx context.Context, host models.Host) error
 	// VerifyHost 校验主机信息
 	VerifyHost(ctx context.Context, host models.Host) error
-}
-
-type MirrorService interface {
 }
 
 type TaskService interface {
@@ -70,6 +73,8 @@ type ImageService interface {
 	SaveImage(ctx context.Context, image models.Image) error
 	// GetImageByOwner 根据用户名获取镜像列表
 	GetImages(ctx context.Context, username string) ([]models.Image, error)
+	// DeleteImage 删除镜像
+	DeleteImage(ctx context.Context, name, version string) error
 }
 
 type RoleService interface {
@@ -83,4 +88,12 @@ type RoleService interface {
 	UpdateRole(ctx context.Context, role models.Role) error
 	// GetRoles 获取角色列表
 	GetRoles(ctx context.Context) ([]models.Role, error)
+	// 获取角色API权限
+	GetRoleAPIs(ctx context.Context, id int64) ([]models.Casbin, error)
+	// 设置角色API权限
+	SetRoleAPIs(ctx context.Context, id int64, apis []models.Casbin) error
+	// 获取角色资源权限
+	GetRoleResources(ctx context.Context, id int64) ([]models.AuthMenu, error)
+	// 设置角色资源权限
+	SetRoleResources(ctx context.Context, id int64, resources []models.AuthMenu) error
 }

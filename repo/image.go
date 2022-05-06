@@ -52,3 +52,11 @@ func (m *mysqlImageRepo) GetImageByID(ctx context.Context, id int) (
 	}
 	return image, nil
 }
+
+// DeleteImage 删除镜像
+func (m *mysqlImageRepo) DeleteImage(ctx context.Context, name, version string) error {
+	if err := m.DB.Where("name = ? and version = ?", name, version).Delete(&models.Image{}).Error; err != nil {
+		return err
+	}
+	return nil
+}

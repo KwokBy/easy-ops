@@ -90,3 +90,8 @@ func (i *imageService) SaveImage(ctx context.Context, image models.Image) error 
 func (i *imageService) GetImages(ctx context.Context, username string) ([]models.Image, error) {
 	return i.imageRepo.GetImageByOwner(ctx, username)
 }
+
+// DeleteImage 删除镜像
+func (i *imageService) DeleteImage(ctx context.Context, name, version string) error {
+	return i.imageRepo.DeleteImage(ctx, name, version)
+}

@@ -111,6 +111,7 @@ func (r *Router) With(engine *gin.Engine) {
 		image.GET("/debug", r.Image.Debug)
 		image.POST("/get", r.Image.GetImages)
 		image.POST("/add", r.Image.Save)
+		image.POST("/delete", r.Image.Delete)
 	}
 }
 
