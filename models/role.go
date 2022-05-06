@@ -15,3 +15,4 @@ type Role struct {
 func (r *Role) TableName() string {
 	return "t_role"
 }
+

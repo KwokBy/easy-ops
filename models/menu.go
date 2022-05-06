@@ -2,7 +2,7 @@ package models
 
 import "time"
 
-type TMenus struct {
+type Menu struct {
 	ID          int64     `gorm:"column:id" json:"id"`
 	MenuID      int64     `gorm:"column:menu_id" json:"menu_id"`
 	CreatedTime time.Time `gorm:"column:created_time" json:"created_time"`
