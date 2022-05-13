@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+	"time"
 
 	"github.com/KwokBy/easy-ops/models"
 	"github.com/KwokBy/easy-ops/repo"
@@ -24,6 +25,8 @@ func (s *roleService) GetRoles(ctx context.Context) ([]models.Role, error) {
 
 // AddRole 添加角色
 func (s *roleService) AddRole(ctx context.Context, role models.Role) error {
+	role.CreatedTime = time.Now()
+	role.UpdatedTime = time.Now()
 	return s.roleRepo.AddRole(ctx, role)
 }
 

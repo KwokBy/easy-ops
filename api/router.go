@@ -117,7 +117,7 @@ func (r *Router) With(engine *gin.Engine) {
 		image.POST("/add", r.Image.Save)
 		image.POST("/delete", r.Image.Delete)
 	}
-	role := engine.Group("/api/v1/role", JWTAuth(), Cors())
+	role := engine.Group("/api/v1/role")
 	{
 		role.POST("/get", r.Role.GetRoles)
 		role.POST("/add", r.Role.AddRole)

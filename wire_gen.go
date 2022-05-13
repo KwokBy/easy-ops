@@ -43,6 +43,9 @@ func InitServer() *app.Server {
 	imageRepo := repo.NewMysqlImageRepo(db)
 	imageService := service.NewImageService(imageRepo)
 	imageHandler := handlers.NewImageHandler(imageService)
+	roleRepo := repo.NewMysqlRoleRepo(db)
+	roleService := service.NewRoleService(roleRepo)
+	roleHandler := handlers.NewRoleHandler(roleService)
 	apiRouter := &api.Router{
 		Demo:            demoHandler,
 		User:            userHandler,
@@ -52,6 +55,7 @@ func InitServer() *app.Server {
 		ExecHistory:     execHistoryHandler,
 		ExecHistoryInfo: execHistoryInfoHandler,
 		Image:           imageHandler,
+		Role:            roleHandler,
 	}
 	server := app.NewServer(engine, apiRouter)
 	return server
