@@ -103,15 +103,15 @@ func (h *RoleHandler) GetRolePermissions(c *gin.Context) {
 		response.FailWithData(err, "get role permissions error", c)
 		return
 	}
-	menus, err := h.roleService.GetRoleResources(c, req.RoleID)
-	if err != nil {
-		zlog.Errorf("get role permissions error: %s", err.Error())
-		response.FailWithData(err, "get role permissions error", c)
-		return
-	}
+	// menus, err := h.roleService.GetRoleResources(c, req.RoleID)
+	// if err != nil {
+	// 	zlog.Errorf("get role permissions error: %s", err.Error())
+	// 	response.FailWithData(err, "get role permissions error", c)
+	// 	return
+	// }
 	response.OKWithData(RolePermissionsResp{
 		Apis:  apis,
-		Menus: menus,
+		// Menus: menus,
 	}, "get role permissions success", c)
 }
 
@@ -130,4 +130,15 @@ func (h *RoleHandler) GetRoleMenus(c *gin.Context) {
 		return
 	}
 	response.OKWithData(menus, "get role menus success", c)
+}
+
+// GetApis 获取所有API
+func (h *RoleHandler) GetApis(c *gin.Context) {
+	apis, err := h.roleService.GetApis(c)
+	if err != nil {
+		zlog.Errorf("get apis error: %s", err.Error())
+		response.FailWithData(err, "get apis error", c)
+		return
+	}
+	response.OKWithData(apis, "get apis success", c)
 }

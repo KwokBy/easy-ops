@@ -16,7 +16,7 @@ func NewMysqlCasbinRepo(DB *gorm.DB) CasbinRepo {
 }
 
 // GetByRoleID 获取角色权限
-func (r *mysqlCasbinRepo) GetByRoleID(ctx context.Context, roleID int) ([]models.Casbin, error) {
+func (r *mysqlCasbinRepo) GetByRoleID(ctx context.Context, roleID int64) ([]models.Casbin, error) {
 	var casbins []models.Casbin
 	if err := r.DB.Where("v0 = ?", roleID).Find(&casbins).Error; err != nil {
 		return []models.Casbin{}, err

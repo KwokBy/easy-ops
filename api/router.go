@@ -122,6 +122,8 @@ func (r *Router) With(engine *gin.Engine) {
 		role.POST("/get", r.Role.GetRoles)
 		role.POST("/add", r.Role.AddRole)
 		role.POST("/delete", r.Role.DeleteRole)
+		role.POST("/getApi", r.Role.GetApis)
+		role.POST("/permissions", r.Role.GetRolePermissions)
 	}
 
 }

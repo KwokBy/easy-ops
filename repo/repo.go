@@ -113,6 +113,10 @@ type RoleRepo interface {
 }
 
 type ApiRepo interface {
+	// GetApis 获取所有接口
+	GetApis(ctx context.Context) ([]models.Api, error)
+	// GetApisByID 获取某个接口
+	GetApisByID(ctx context.Context, ids []int) ([]models.Api, error)
 }
 
 type MenuRepo interface {
@@ -122,4 +126,6 @@ type AuthMenuRepo interface {
 }
 
 type CasbinRepo interface {
+	// GetByRoleID 获取某个角色的所有权限
+	GetByRoleID(ctx context.Context, roleID int64) ([]models.Casbin, error)
 }

@@ -98,4 +98,7 @@ type RoleService interface {
 	SetRoleResources(ctx context.Context, id int64, resources []models.AuthMenu) error
 	// 获取角色菜单权限
 	GetRoleMenus(ctx context.Context, id int64) ([]models.Menu, error)
+	// GetApis 获取API权限
+	GetApis(ctx context.Context) ([]models.Api, error)
 }
+

@@ -9,12 +9,16 @@ import (
 )
 
 type roleService struct {
-	roleRepo repo.RoleRepo
+	roleRepo   repo.RoleRepo
+	apiRepo    repo.ApiRepo
+	casbinRepo repo.CasbinRepo
 }
 
-func NewRoleService(repo repo.RoleRepo) RoleService {
+func NewRoleService(repo repo.RoleRepo, api repo.ApiRepo, casbin repo.CasbinRepo) RoleService {
 	return &roleService{
 		roleRepo: repo,
+		apiRepo:  api,
+		casbinRepo: casbin,
 	}
 }
 
@@ -47,7 +51,7 @@ func (s *roleService) GetRoleByID(ctx context.Context, id int64) (models.Role, e
 
 // GetRoleAPIs
 func (s *roleService) GetRoleAPIs(ctx context.Context, id int64) ([]models.Casbin, error) {
-	return []models.Casbin{}, nil
+	return s.casbinRepo.GetByRoleID(ctx, id)
 }
 
 // SetRoleAPIs
@@ -68,4 +72,9 @@ func (s *roleService) SetRoleResources(ctx context.Context, id int64, resources 
 // GetRoleMenus 获取角色菜单
 func (s *roleService) GetRoleMenus(ctx context.Context, id int64) ([]models.Menu, error) {
 	return []models.Menu{}, nil
+}
+
+// GetApis 获取所有api
+func (s *roleService) GetApis(ctx context.Context) ([]models.Api, error) {
+	return s.apiRepo.GetApis(ctx)
 }

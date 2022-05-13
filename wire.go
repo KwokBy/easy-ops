@@ -27,6 +27,8 @@ func InitServer() *app.Server {
 		repo.NewMysqlExecHistoryRepo,
 		repo.NewMysqlImageRepo,
 		repo.NewMysqlRoleRepo,
+		repo.NewMysqlApiRepo,
+		repo.NewMysqlCasbinRepo,
 		service.NewRoleService,
 		service.NewDemoService,
 		service.NewHostService,
